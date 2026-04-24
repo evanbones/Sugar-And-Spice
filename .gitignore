@@ -1,0 +1,67 @@
+### Gradle ###
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/**/build/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/**/out/
+
+.run/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.eclipse/
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/**/bin/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+### Minecraft Modding ###
+run/
+!**/src/**/run/
+**/src/generated/**/.cache/
+repo/
+!**/src/**/repo/
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
+.env
+/mod/run/data
+/mod/run/downloads
+/mod/run/crash-reports
+/mod/run/.mixin.out
+/mod/run/debug
+/mod/run/schematics
+/mod/run/logs
+/mod/run/resourcepacks
+/mod/run/saves
+/mod/run/options.txt
+/mod/run/usercache.json
+/mod/run/.fabric/
+/mod/run/resources
+/mod/run/mods
+/run
+mod/run/fieldguide_cache/
+mod/run/.mixin.out
+mod/run/config/rrv/bookmarks.json
+mod/run/fancymenu_data/
+mod/run/command_history.txt
+mod/run/config/sodium-fingerprint.json
+mod/run/screenshots

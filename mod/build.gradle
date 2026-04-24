@@ -1,0 +1,461 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.141'
+    id 'idea'
+    id "me.modmuss50.mod-publish-plugin" version "1.1.0"
+}
+
+import groovy.json.JsonSlurper
+
+version = mod_version
+group = mod_group_id
+
+sourceSets.main.resources {
+    srcDir('src/generated/resources')
+    exclude("**/*.bbmodel")
+    exclude("src/generated/**/.cache")
+}
+
+ repositories {
+
+    exclusiveContent {
+
+        forRepository {
+
+            maven {
+
+                name = 'ParchmentMC'
+
+                url = 'https://maven.parchmentmc.org'
+
+            }
+
+        }
+
+        filter {
+
+            includeGroup "org.parchmentmc.data"
+
+        }
+
+    }
+
+    exclusiveContent {
+
+        forRepository {
+
+            maven {
+
+                name = "Modrinth"
+
+                url = "https://api.modrinth.com/maven"
+
+            }
+
+        }
+
+        filter {
+
+            includeGroup "maven.modrinth"
+
+        }
+
+    }
+
+    exclusiveContent {
+
+        forRepository {
+
+            maven {
+
+                name = "TerraformersMC"
+
+                url = "https://maven.terraformersmc.com/"
+
+            }
+
+        }
+
+        filter {
+
+            includeGroup("com.terraformersmc")
+
+            includeGroup("dev.emi")
+
+        }
+
+    }
+
+    exclusiveContent {
+
+        forRepository {
+
+            maven {
+
+                name = "cassian's maven"
+
+                url = "https://maven.cassian.cc/"
+
+            }
+
+        }
+
+        filter {
+
+            includeGroupAndSubgroups("cc.cassian")
+
+        }
+
+    }
+
+    exclusiveContent {
+
+        forRepository {
+
+            maven {
+
+                name = "Greenhouse Maven"
+
+                url = "https://maven.greenhouse.lgbt/releases/"
+
+            }
+
+        }
+
+        filter {
+
+            includeGroup "vectorwing"
+
+            includeGroupAndSubgroups("house.greenhouse")
+
+        }
+
+    }
+
+    exclusiveContent {
+
+        forRepository {
+
+            maven {
+
+                url = "https://maven.wispforest.io"
+
+            }
+
+        }
+
+        filter {
+
+            includeGroupAndSubgroups("io.wispforest")
+
+        }
+
+    }
+
+    exclusiveContent {
+
+        forRepository {
+
+            maven {
+
+                url = "https://jitpack.io"
+
+            }
+
+        }
+
+        filter {
+
+            includeGroup "com.github.Chocohead"
+
+        }
+
+    }
+
+    exclusiveContent {
+
+        forRepository {
+
+            maven {
+
+                url = "https://repo.sleeping.town/"
+
+            }
+
+        }
+
+        filter {
+
+            includeGroup "folk.sisby"
+
+        }
+
+    }
+
+    exclusiveContent {
+
+        forRepository {
+
+            maven {
+
+                name = "Fuzs Mod Resources"
+
+                url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+
+            }
+
+        }
+
+        filter {
+
+            includeGroupAndSubgroups "fuzs"
+
+        }
+
+    }
+
+    exclusiveContent {
+
+        forRepository {
+
+            maven {
+
+                name = "Architectury"
+
+                url = "https://maven.architectury.dev/"
+
+            }
+
+        }
+
+        filter {
+
+            includeGroupAndSubgroups("dev.architectury")
+
+            includeGroup("me.shedaniel.cloth")
+
+        }
+
+    }
+
+    exclusiveContent {
+
+        forRepository {
+
+            maven {
+
+                url = "https://jm.gserv.me/repository/maven-public/"
+
+            }
+
+        }
+
+        filter {
+
+            includeGroup("mysticdrew")
+
+        }
+
+    }
+
+    exclusiveContent {
+
+        forRepository {
+
+            maven {
+
+                url = "https://maven.nucleoid.xyz"
+
+            }
+
+        }
+
+        filter {
+
+            includeGroupAndSubgroups("xyz.nucleoid")
+
+        }
+
+    }
+
+    exclusiveContent {
+
+        forRepository {
+
+            maven {
+
+                url = "https://maven.isxander.dev/releases"
+
+                name = "Xander Maven"
+
+            }
+
+        }
+
+        filter {
+
+            includeGroupAndSubgroups("org.quiltmc.parsers")
+
+        }
+
+    }
+
+    exclusiveContent {
+
+        forRepository {
+
+            maven { url = "https://maven.bawnorton.com/releases" }
+
+        }
+
+        filter {
+
+            includeGroup("com.github.bawnorton.mixinsquared")
+
+        }
+
+    }
+
+
+    flatDir {
+
+        dirs("libs")
+
+    }
+
+    mavenCentral()
+
+}
+
+base {
+    archivesName = mod_id
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
+    }
+
+    runs {
+        client {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        server {
+            server()
+            programArgument '--nogui'
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        gameTestServer {
+            type = "gameTestServer"
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+dependencies {
+    // Add normal compileOnly mod dependencies here
+
+    def modsDir = rootProject.file("mods")
+    if (modsDir.exists()) {
+        modsDir.eachFile { modFile ->
+            if (!modFile.name.endsWith(".json")) return
+
+            def json = new JsonSlurper().parseText(modFile.text)
+            if (json.maven) {
+                runtimeOnly json.maven
+            }
+        }
+    }
+}
+
+var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+    ]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from "src/main/templates"
+    into "build/generated/sources/modMetadata"
+}
+
+sourceSets.main.resources.srcDir generateModMetadata
+neoForge.ideSyncTask generateModMetadata
+
+publishing {
+    publications {
+        register('mavenJava', MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "file://${project.projectDir}/repo"
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}
+
+publishMods {
+    file = tasks.named("jar").get().archiveFile
+    changelog = rootProject.file("CHANGELOG-LATEST.md").exists() ? rootProject.file("CHANGELOG-LATEST.md").text : ""
+    type = BETA
+    version = "${project.version} - ${project.minecraft_version}"
+    displayName = "Snips and Snails ${project.version}"
+    modLoaders.add("neoforge")
+
+    curseforge {
+        accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
+        projectId = "" // TODO
+        minecraftVersions.add(project.minecraft_version)
+        requires("cloth-config")
+    }
+
+    modrinth {
+        accessToken = providers.environmentVariable("MODRINTH_TOKEN")
+        projectId = "" // TODO
+        minecraftVersions.add(project.minecraft_version)
+        requires("cloth-config")
+    }
+}
