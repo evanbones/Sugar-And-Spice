@@ -1,0 +1,69 @@
+{
+  "schema_version": 2,
+  "failed_reloads_per_session": 5,
+  "default_overrides": {
+    "force_compatible": true
+  },
+  "pack_overrides": {
+    "1": [
+      "scholar:resourcepacks/colored_books",
+      "scholar:colored_books",
+      "Scholar: Colored Books"
+    ],
+    "2": [
+      "vanilla"
+    ],
+    "3": [
+      "resources/01_VanillaTweaks",
+      "resources/02_Peeves-1.19compatedit",
+      "resources/03_DetailBrushcompatedit",
+      "resources/04_RefinedArmourcompatedit",
+      "resources/05_ReImagineSimpleStorage",
+      "resources/06_SHCEnhancedFire",
+      "resources/07_CreateReoxidized",
+      "resources/08_CreatedUpdated",
+      "resources/09_createredonestones",
+      "resources/10_CreateStyleModdedCompats",
+      "resources/11_BatBackport",
+      "resources/12_VexBackport",
+      "resources/13_FarcrsRecrafted",
+      "resources/14_UpToScratch",
+      "resources/15_BetterMobModels",
+      "resources/16_QuarkVRO",
+      "resources/17_BagelsAnimalTweaks",
+      "resources/18_RemodeledRabbit",
+      "resources/19_WarmPolarBear",
+      "resources/20_AuthenticShadows",
+      "resources/21_BannerPatternClarity",
+      "resources/22_BagelsTextureTweaks",
+      "resources/23_VintagePhotography",
+      "resources/24_AquacultureFishedUp",
+      "resources/25_snipsandsnails",
+      "resources/26_EmiheadsBookshelves",
+      "resources/27_CrudeGlass",
+      "resources/28_GoldenCrit",
+      "resources/29_AdditionalResources",
+      "resources/30_BrushJuice",
+      "resources/31_Reincarnation",
+      "resources/32_MobCrates",
+      "resources/33_DerpWood",
+      "resources/99_RaspberryResources"
+    ],
+    "$$1": {
+      "hidden": true,
+      "required": false
+    },
+    "$$2": {
+      "hidden": false,
+      "required": true,
+      "fixed_position": true,
+      "default_position": "BOTTOM"
+    },
+    "$$3": {
+      "hidden": true,
+      "required": true,
+      "fixed_position": true,
+      "default_position": "BOTTOM"
+    }
+  }
+}

@@ -9,11 +9,10 @@ evaluationDependsOn(':mod')
 
 version = project.mod_version + "+" + project.minecraft_version
 
-import groovy.json.JsonSlurper
-import groovy.json.JsonBuilder
 
-import java.util.zip.ZipFile
-import java.net.URLEncoder
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+
 import java.nio.charset.StandardCharsets
 
 repositories {
@@ -83,7 +82,7 @@ def registerModrinthMavenEntry = { descriptorFile, mavenCoordinate, targetDirect
 
     modrinthEntries << [
             targetDirectory: targetDirectory,
-            output: fileInfo.flatMap { it.output }
+            output         : fileInfo.flatMap { it.output }
     ]
 }
 
@@ -134,7 +133,7 @@ def registerModrinthApiEntry = { descriptorFile, mavenCoordinate, targetDirector
 
     modrinthEntries << [
             targetDirectory: targetDirectory,
-            output: output
+            output         : output
     ]
 }
 
@@ -178,6 +177,10 @@ tasks.register("modrinthPackIndex") {
     dependsOn(modrinthEntryTasks)
     inputs.files(modrinthEntries.collect { it.output })
 
+    def packVersion = version.toString()
+    def mcVersion = project.minecraft_version.toString()
+    def neoVersion = project.neo_version.toString()
+
     def output = layout.buildDirectory.file("modrinth/modrinth.index.json")
     outputs.file output
 
@@ -186,23 +189,23 @@ tasks.register("modrinthPackIndex") {
     doLast {
         def mpi = [
                 "formatVersion": 1,
-                "game": "minecraft",
-                "versionId": version,
-                "name": "Sugar and Spice",
-                "dependencies": [
-                        "minecraft": "${project.minecraft_version}",
-                        "neoforge": "${project.neo_version}" 
+                "game"         : "minecraft",
+                "versionId"    : packVersion,
+                "name"         : "Sugar and Spice",
+                "dependencies" : [
+                        "minecraft": mcVersion,
+                        "neoforge" : neoVersion
                 ],
-                "files": modrinthEntries.collect { entry ->
+                "files"        : modrinthEntries.collect { entry ->
                     def info = new JsonSlurper().parse(entry.output.get().asFile)
                     def file = info.files[0]
                     [
-                            "path": entry.targetDirectory + "/" + file.filename,
-                            "hashes": file.hashes,
+                            "path"     : entry.targetDirectory + "/" + file.filename,
+                            "hashes"   : file.hashes,
                             "downloads": [
                                     file.url
                             ],
-                            "fileSize": file.size
+                            "fileSize" : file.size
                     ]
                 }
         ]
@@ -227,8 +230,10 @@ dependencies {
 }
 
 tasks.register("mrpack", Zip) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
     from modrinthPackIndex
-    from (overrides) {
+    from(overrides) {
         into "overrides"
     }
 
@@ -237,6 +242,10 @@ tasks.register("mrpack", Zip) {
     }
 
     from(project(":mod").tasks.named("jar")) {
+        into "overrides/mods"
+    }
+
+    from("mod/libs") {
         into "overrides/mods"
     }
 

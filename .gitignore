@@ -12,8 +12,6 @@ build/
 out/
 !**/src/**/out/
 
-.run/
-
 ### Eclipse ###
 .apt_generated
 .classpath
@@ -33,18 +31,12 @@ bin/
 .DS_Store
 
 ### Minecraft Modding ###
-run/
-!**/src/**/run/
-**/src/generated/**/.cache/
-repo/
-!**/src/**/repo/
-hs_err_*.log
-replay_*.log
-*.hprof
-*.jfr
-.env
-/mod/run/data
-/mod/run/downloads
+run/*
+mod/run/*
+!mod/run/config/
+mod/run/data
+mod/run/downloads
+mod/run/crash-reports
 /mod/run/crash-reports
 /mod/run/.mixin.out
 /mod/run/debug
