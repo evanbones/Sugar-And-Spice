@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "enable_accessories_integration": true,
+  "enable_curios_integration": true,
+  "enable_trinkets_integration": true
+}

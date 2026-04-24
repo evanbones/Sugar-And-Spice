@@ -14,7 +14,7 @@
 	/**
 	 * How much EMI should use tooltips and popups to show controls and information.
 	 */
-	help-level: normal;
+	help-level: none;
 
 	/**
 	 * Where EMI should pull stacks from to populate the index.
@@ -46,7 +46,7 @@
 	/**
 	 * Which action should be performed when clicking the recipe book.
 	 */
-	recipe-book-action: toggle-craftables;
+	recipe-book-action: toggle-visibility;
 
 	/**
 	 * Where to display status effects in the inventory.
@@ -61,12 +61,12 @@
 	/**
 	 * Whether to add mod name to tooltips
 	 */
-	append-mod-id: true;
+	append-mod-id: false;
 
 	/**
 	 * Whether to add mod name to item tooltips, in case another mod provides behavior
 	 */
-	append-item-mod-id: true;
+	append-item-mod-id: false;
 
 	/**
 	 * Prevents recipes being quick crafted from shifting around under the cursor.
@@ -98,7 +98,7 @@
 	/**
 	 * Which sidebar type to focus when the search is empty.
 	 */
-	empty-search-sidebar-focus: none;
+	empty-search-sidebar-focus: craftables;
 
 	/**
 	 * Whether the EMI config button should be visible.
@@ -114,19 +114,19 @@
 	 * The maximum height the recipe screen will grow to be if space is available in
 	 * pixels.
 	 */
-	maximum-recipe-screen-height: 256;
+	maximum-recipe-screen-height: 384;
 
 	/**
 	 * The minimum width of the recipe screen in pixels. Controls how many tabs there
 	 * can be, and where the page switching buttons go. The default is 176, the width
 	 * of most screens.
 	 */
-	minimum-recipe-screen-width: 176;
+	minimum-recipe-screen-width: 222;
 
 	/**
 	 * The amount of vertical margin to give in the recipe screen.
 	 */
-	vertical-margin: 20;
+	vertical-margin: 24;
 
 	/**
 	 * Where to show workstations in the recipe screen
@@ -136,12 +136,12 @@
 	/**
 	 * Display cost per batch when hovering a recipe output
 	 */
-	show-cost-per-batch: true;
+	show-cost-per-batch: false;
 
 	/**
 	 * Whether recipes should have a button to set as default.
 	 */
-	recipe-default-button: true;
+	recipe-default-button: false;
 
 	/**
 	 * Whether recipes should have a button to show the recipe tree.
@@ -156,7 +156,7 @@
 	/**
 	 * Whether recipes should have a button to take a screenshot of the recipe.
 	 */
-	recipe-screenshot-button: false;
+	recipe-screenshot-button: true;
 
 	/**
 	 * The GUI scale at which recipe screenshots are saved. Use 0 to use the current
@@ -167,17 +167,17 @@
 	/**
 	 * The pages in the left sidebar
 	 */
-	left-sidebar-pages: favorites;
+	left-sidebar-pages: craftables, favorites;
 
 	/**
 	 * The subpanels in the left sidebar
 	 */
-	left-sidebar-subpanels: none;
+	left-sidebar-subpanels: craft-history 1;
 
 	/**
 	 * How many columns and rows of ingredients to limit the left sidebar to
 	 */
-	left-sidebar-size: 12, 100;
+	left-sidebar-size: 9, 7;
 
 	/**
 	 * How much space to maintain between the left sidebar and obstructions, in pixels
@@ -187,7 +187,7 @@
 	/**
 	 * Where to position the left sidebar
 	 */
-	left-sidebar-align: left, top;
+	left-sidebar-align: center, center;
 
 	/**
 	 * Whether to render the header buttons and page count for the left sidebar
@@ -197,12 +197,12 @@
 	/**
 	 * Which theme to use for the left sidebar
 	 */
-	left-sidebar-theme: transparent;
+	left-sidebar-theme: vanilla;
 
 	/**
 	 * The pages in the right sidebar
 	 */
-	right-sidebar-pages: index, craftables;
+	right-sidebar-pages: index, lookup-history;
 
 	/**
 	 * The subpanels in the right sidebar
@@ -212,7 +212,7 @@
 	/**
 	 * How many columns and rows of ingredients to limit the right sidebar to
 	 */
-	right-sidebar-size: 12, 100;
+	right-sidebar-size: 8, 7;
 
 	/**
 	 * How much space to maintain between the right sidebar and obstructions, in pixels
@@ -222,7 +222,7 @@
 	/**
 	 * Where to position the right sidebar
 	 */
-	right-sidebar-align: right, top;
+	right-sidebar-align: center, center;
 
 	/**
 	 * Whether to render the header buttons and page count for the right sidebar
@@ -232,7 +232,7 @@
 	/**
 	 * Which theme to use for the right sidebar
 	 */
-	right-sidebar-theme: transparent;
+	right-sidebar-theme: vanilla;
 
 	/**
 	 * The pages in the top sidebar
@@ -310,7 +310,7 @@
 	/**
 	 * Toggle the visibility of EMI.
 	 */
-	toggle-visibility: "ctrl key.keyboard.o";
+	toggle-visibility: "shift key.keyboard.r";
 
 	/**
 	 * Focuses the search bar.
@@ -320,7 +320,7 @@
 	/**
 	 * Clears the search bar.
 	 */
-	clear-search: "key.keyboard.unknown";
+	clear-search: "key.keyboard.delete";
 
 	/**
 	 * Display the recipes for creating a stack.
@@ -458,7 +458,7 @@
 	/**
 	 * Whether to log untranslated tags as warnings.
 	 */
-	log-untranslated-tags: true;
+	log-untranslated-tags: false;
 
 	/**
 	 * Whether to log ingredients that don't have a representative tag as warnings.
@@ -468,14 +468,14 @@
 	/**
 	 * Whether hovering the output of a recipe should show the recipe's EMI ID.
 	 */
-	show-recipe-ids: false;
+	show-recipe-ids: true;
 
 	/**
 	 * Whether to display additional widgets added to recipes from other mods.
 	 * These are typically developer facing and compatibility related, and not useful
 	 * for players.
 	 */
-	show-recipe-decorators: true;
+	show-recipe-decorators: false;
 
 	/**
 	 * Whether stacks in the index should display a highlight if they have a recipe

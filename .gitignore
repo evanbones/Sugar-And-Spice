@@ -57,3 +57,6 @@ mod/run/fancymenu_data/
 mod/run/command_history.txt
 mod/run/config/sodium-fingerprint.json
 mod/run/screenshots
+*.toml.bak
+spark/tmp
+spark/tmp-client

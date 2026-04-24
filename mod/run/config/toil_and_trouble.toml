@@ -1,24 +1,24 @@
-			# Whether to only allow brewing if the Cauldron is heated.
-				# default: false
-				requiresHeat = false
-				# How much to speed up the brewing process if the Cauldron is heated.
-				# A value of 0.5 would halve the time it takes to brew a potion.
-				# default: 1.0
-				heatAmplification = 1.0
-				# How long should it take to brew a potion (in seconds).
-				# default: 3
-				brewingTime = 3
-				# Whether standing in a Cauldron should cause the entity to absorb the potion inside.
-				# default: true
-				cauldronsApplyEffects = true
-				# Allow Cauldrons to craft all recipes a Brewing Stand can.
-				# default: true
-				useBrewingStandRecipes = true
-				# Whether an item entity in a vanilla cauldron should change it to a Toil and Trouble Cauldron and insert the item into the Cauldron's inventory.
-				# default: true
-				itemEntitiesConvertCauldrons = true
+		# Whether to only allow brewing if the Cauldron is heated.
+		# default: false
+			requiresHeat = false
+			# How much to speed up the brewing process if the Cauldron is heated.
+			# A value of 0.5 would halve the time it takes to brew a potion.
+			# default: 1.0
+			heatAmplification = 1.0
+			# How long should it take to brew a potion (in seconds).
+			# default: 3
+			brewingTime = 3
+			# Whether standing in a Cauldron should cause the entity to absorb the potion inside.
+			# default: true
+		cauldronsApplyEffects = true
+	# Allow Cauldrons to craft all recipes a Brewing Stand can.
+		# default: true
+		useBrewingStandRecipes = true
+			# Whether an item entity in a vanilla cauldron should change it to a Toil and Trouble Cauldron and insert the item into the Cauldron's inventory.
+			# default: true
+			itemEntitiesConvertCauldrons = true
 
-				[client]
-					# Whether to show the current Cauldron Contents when right clicking on a cauldron.
-					# default: true
-					showContentsWhenInteracting = true
+			[client]
+				# Whether to show the current Cauldron Contents when right clicking on a cauldron.
+				# default: true
+			showContentsWhenInteracting = true

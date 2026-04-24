@@ -12,9 +12,12 @@
   "removeItemsFromInfoTabs": true,
   "removeItemsFromTrades": true,
   "removeMobEquipment": true,
-  "enableEmiRemoval": false,
+  "enableEmiRemoval": true,
   "showEmiToast": true,
   "showEmiChatMessages": true,
   "reloadAfterRemoval": false,
-  "blacklistedItems": []
+  "blacklistedItems": [
+    "minecraft:music_disc_lava_chicken",
+    "minecraft:painting"
+  ]
 }

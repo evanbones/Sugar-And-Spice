@@ -239,7 +239,7 @@ neoForge {
 }
 
 dependencies {
-    // Add normal compileOnly mod dependencies here
+    compileOnly "maven.modrinth:flw-vanillin:1.1.3"
 
     def modsDir = rootProject.file("mods")
     if (modsDir.exists()) {
