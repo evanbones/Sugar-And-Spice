@@ -21,6 +21,14 @@
     "curseForgeHash": 721102153,
     "modrinthHash": "829d33e71b30e9158d772f5963bb6020f6026d78"
   },
+  "advancements_arranged-1.21.1-1.2.jar": {
+    "jarName": "advancements_arranged-1.21.1-1.2.jar",
+    "modId": "advancements_arranged",
+    "name": "Advancements Arranged",
+    "version": "1.21.1-1.2",
+    "curseForgeHash": 2391103140,
+    "modrinthHash": "20fd070b6f35af867c07533a1139230a7911376d"
+  },
   "advancements_reloaded-0.6.1-neoforge-1.21.1.jar": {
     "jarName": "advancements_reloaded-0.6.1-neoforge-1.21.1.jar",
     "modId": "advancements_reloaded",
@@ -157,13 +165,13 @@
     "curseForgeHash": 1440957232,
     "modrinthHash": "c3e5733ba4503b102589a026000fd5ce0212f6f2"
   },
-  "connectiblechains-fabric-1.21.1-1.2.5.jar": {
-    "jarName": "connectiblechains-fabric-1.21.1-1.2.5.jar",
+  "connectiblechains-neoforge-1.21.1-1.2.5.jar": {
+    "jarName": "connectiblechains-neoforge-1.21.1-1.2.5.jar",
     "modId": "connectiblechains",
     "name": "Reconnectible Chains",
     "version": "1.2.5",
-    "curseForgeHash": 4043305863,
-    "modrinthHash": "01756c2dd19107303203a5cbda8441fe513495d8"
+    "curseForgeHash": 1087242067,
+    "modrinthHash": "874fac90a314f80c28e1564abc7070ca4bc3890a"
   },
   "connector-2.0.0-beta.14+1.21.1-full.jar": {
     "jarName": "connector-2.0.0-beta.14+1.21.1-full.jar",
@@ -631,13 +639,13 @@
     "curseForgeHash": 2834062069,
     "modrinthHash": "558e254c1c0b065fe0cc96c3a1ccf5255f3a3eca"
   },
-  "particular-1.1.2+1.21.jar": {
-    "jarName": "particular-1.1.2+1.21.jar",
+  "particular-1.21.1-NeoForge-1.1.7.jar": {
+    "jarName": "particular-1.21.1-NeoForge-1.1.7.jar",
     "modId": "particular",
     "name": "Particular",
-    "version": "1.1.2+1.21",
-    "curseForgeHash": 3429539369,
-    "modrinthHash": "aa59b31359c2211f4a2d401235c4926084d4f97e"
+    "version": "1.1.7",
+    "curseForgeHash": 3794983036,
+    "modrinthHash": "39d2fa3c396bf75a00078922dd6c2a7bf9f63f46"
   },
   "personality-1.21.1-5.0.1.jar": {
     "jarName": "personality-1.21.1-5.0.1.jar",

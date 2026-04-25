@@ -1,0 +1,33 @@
+can_edit = true
+#
+# If true, changes from dragging advancements aren't saved
+test_only = false
+#
+# It is recommended that additional size is added in increments of 16 so the background can tile nicely
+# Note: the vanilla size is (252, 140)
+# Default: 380
+# Range: 0 ~ 1024
+window_width = 380
+# Default: 204
+# Range: 0 ~ 1024
+window_height = 204
+#
+# Margins for splitting the advancement screen background into a nine-patch rect
+# The background can be located at minecraft:textures/gui/advancements/window
+# Default: 32
+# Range: 0 ~ 1024
+window_background_margin_x = 32
+# Default: 32
+# Range: 0 ~ 1024
+window_background_margin_y = 32
+#
+# Default: 0.25
+# Range: 0.0 ~ 1.0
+window_background_darkness = 0.25
+#
+# If arrows are drawn at the end of inter-advancement connectivity lines to indicate directionality
+draw_arrows = true
+#
+# Ordered list of root advancement IDs which dictates the order their corresponding tabs should be displayed
+# Non-listed tabs will be displayed after the end of the listed tabs in arbitrary order
+tab_sort_order = ["minecraft:story", "minecraft:husbandry", "minecraft:adventure", "minecraft:nether", "minecraft:end", "create:root", "simulated:root", "aeronautics:root", "offroad:root"]

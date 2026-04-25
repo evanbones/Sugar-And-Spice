@@ -1,6 +1,6 @@
-# Whether to only allow brewing if the Cauldron is heated.
-# default: false
-requiresHeat = false
+		# Whether to only allow brewing if the Cauldron is heated.
+			# default: false
+			requiresHeat = false
 # How much to speed up the brewing process if the Cauldron is heated.
 # A value of 0.5 would halve the time it takes to brew a potion.
 # default: 1.0
@@ -19,6 +19,6 @@ useBrewingStandRecipes = true
 itemEntitiesConvertCauldrons = true
 
 [client]
-	# Whether to show the current Cauldron Contents when right clicking on a cauldron.
-	# default: true
-	showContentsWhenInteracting = true
+# Whether to show the current Cauldron Contents when right clicking on a cauldron.
+# default: true
+showContentsWhenInteracting = true

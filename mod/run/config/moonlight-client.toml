@@ -11,7 +11,7 @@
 	#Allowed Values: FALSE, NO_GUI, TRUE
 	consistent_entity_renderer_shading = "NO_GUI"
 	#Enables some debug renderers. Require the use of the /supp debug command to enable their data being sent
-	debug_renderers = true
+	debug_renderers = false
 	#Show Item and Block tags on item tooltip
 	#Allowed Values: OFF, ON, ADVANCED_ONLY
-	tags_tooltips = "ON"
+	tags_tooltips = "ADVANCED_ONLY"

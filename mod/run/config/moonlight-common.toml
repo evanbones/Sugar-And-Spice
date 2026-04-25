@@ -9,9 +9,3 @@
 	faster_cache_search = true
 	#Global datapack folder. A folder where you can store and load datapacks for all your worlds automatically. Set to empty string to disable
 	global_datapacks_folder = "moonlight-global-datapacks"
-
-	[general.test_category]
-		#test comment 2 
-		# Default: 2.0
-		# Range: 0.0 ~ 22.0
-		test = 2.0
