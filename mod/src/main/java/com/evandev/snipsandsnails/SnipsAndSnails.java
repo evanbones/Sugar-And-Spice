@@ -4,11 +4,13 @@ import com.evandev.snipsandsnails.config.ConfigFileHandler;
 import com.evandev.snipsandsnails.config.LoggerNamePatternSelector;
 import com.evandev.snipsandsnails.config.Reconfigurator;
 import com.evandev.snipsandsnails.mixin.minecraft.MapColorAccessor;
+import com.evandev.snipsandsnails.namingunconvention.RandomNameGenerator;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.plugins.util.PluginRegistry;
@@ -20,6 +22,7 @@ import java.net.URI;
 public class SnipsAndSnails {
     public static final String MODID = "snipsandsnails";
     public static final Logger LOGGER = LogManager.getLogger("Snips and Snails");
+    public static final RandomNameGenerator RANDOM_NAME_GENERATOR = new RandomNameGenerator();
 
     /**
      * An arbitrary unique identifier to be passed to Log4j when loading our
@@ -33,6 +36,7 @@ public class SnipsAndSnails {
         CLASSLOADER = SnipsAndSnails.class.getClassLoader();
 
         modEventBus.addListener(this::setup);
+        modEventBus.addListener(this::registerClientReloadListeners);
 
         LOGGER.info("Starting Log4j reconfiguration.");
         loadPlugin();
@@ -46,6 +50,17 @@ public class SnipsAndSnails {
         }
 
         LOGGER.info("Finished Log4j reconfiguration.");
+    }
+
+    /**
+     * Prompts Log4j to scan for our {@link LoggerNamePatternSelector} plugin.
+     */
+    public static void loadPlugin() {
+        PluginRegistry.getInstance().loadFromBundle(BUNDLE_ID, CLASSLOADER);
+    }
+
+    private void registerClientReloadListeners(RegisterClientReloadListenersEvent event) {
+        event.registerReloadListener(RANDOM_NAME_GENERATOR);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -114,12 +129,5 @@ public class SnipsAndSnails {
 
             LOGGER.info("Successfully injected nicer map colors!");
         });
-    }
-
-    /**
-     * Prompts Log4j to scan for our {@link LoggerNamePatternSelector} plugin.
-     */
-    public static void loadPlugin() {
-        PluginRegistry.getInstance().loadFromBundle(BUNDLE_ID, CLASSLOADER);
     }
 }

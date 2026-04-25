@@ -237,6 +237,7 @@ neoForge {
 dependencies {
     compileOnly "maven.modrinth:flw-vanillin:1.1.3"
     compileOnly "maven.modrinth:particle-rain:v4-beta.9+1.21.1-neoforge"
+    compileOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
 
 }
 

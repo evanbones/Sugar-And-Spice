@@ -1,0 +1,1317 @@
+{
+  "ui.button.click": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "random/wood_click",
+        "pitch": 1,
+        "weight": 4
+      },
+      {
+        "name": "random/wood_click",
+        "pitch": 0.975,
+        "weight": 2
+      },
+      {
+        "name": "random/wood_click",
+        "pitch": 0.95
+      },
+      {
+        "name": "random/wood_click",
+        "pitch": 0.925
+      },
+      {
+        "name": "random/wood_click",
+        "pitch": 0.9
+      },
+      {
+        "name": "random/wood_click",
+        "pitch": 1.025,
+        "weight": 2
+      },
+      {
+        "name": "random/wood_click",
+        "pitch": 1.05
+      },
+      {
+        "name": "random/wood_click",
+        "pitch": 1.075
+      },
+      {
+        "name": "random/wood_click",
+        "pitch": 1.1
+      }
+    ]
+  },
+  "ui.toast.challenge_complete": {
+    "replace": true,
+    "sounds": [
+    ]
+  },
+  "ambient.cave": {
+    "replace": true,
+    "sounds": [
+      "ambient/cave/cave1",
+      "ambient/cave/cave2",
+      "ambient/cave/cave3",
+      "ambient/cave/cave4",
+      "ambient/cave/cave5",
+      "ambient/cave/cave6",
+      "ambient/cave/cave7",
+      "ambient/cave/cave8",
+      "ambient/cave/cave9",
+      "ambient/cave/cave10",
+      "ambient/cave/cave11",
+      "ambient/cave/cave12",
+      "ambient/cave/cave13",
+      "ambient/cave/cave14",
+      "ambient/cave/cave15",
+      "ambient/cave/cave16",
+      "ambient/cave/cave17",
+      "ambient/cave/cave18",
+      "ambient/cave/cave19",
+      "ambient/cave/cave20",
+      "ambient/cave/cave21",
+      "ambient/cave/cave22",
+      "ambient/cave/cave23"
+    ],
+    "subtitle": "subtitles.ambient.cave"
+  },
+  "music.creative": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music.game",
+        "type": "event"
+      },
+      {
+        "name": "music/game/creative/aria_math",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/biome_fest",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/blind_spots",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/dreiton",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/haunt_muskie",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/taswell",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/beginning",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/moog_city",
+        "stream": true
+      }
+    ]
+  },
+  "music.credits": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/end/alpha",
+        "stream": true
+      }
+    ]
+  },
+  "music.game": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/minecraft",
+        "stream": true
+      },
+      {
+        "name": "music/game/clark_chris",
+        "stream": true
+      },
+      {
+        "name": "music/game/sweden",
+        "stream": true
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true
+      },
+      {
+        "name": "music/game/danny",
+        "stream": true
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true
+      },
+      {
+        "name": "music/game/clark_chris",
+        "stream": true
+      }
+    ]
+  },
+  "music.menu": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/menu/mutation",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/menu/moog_city_2",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/menu/beginning_2",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/menu/floating_trees",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/menu/jayson_glove",
+        "stream": true,
+        "volume": 0.6,
+        "weight": 2
+      },
+      {
+        "name": "music/menu/independent_accident",
+        "stream": true,
+        "volume": 0.6,
+        "weight": 2
+      },
+      {
+        "name": "music/game/infinite_amethyst",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 2
+      },
+      {
+        "name": "music/game/swamp/aerie",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/menu/certitudes",
+        "stream": true,
+        "volume": 0.2,
+        "weight": 2
+      },
+      {
+        "name": "music/menu/preliminary_art_form",
+        "stream": true,
+        "volume": 0.2,
+        "weight": 2
+      },
+      {
+        "name": "music/menu/halland",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/menu/click",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 2
+      },
+      {
+        "name": "music/menu/cliffside_hinson",
+        "stream": true,
+        "volume": 0.6,
+        "weight": 2
+      },
+      {
+        "name": "music/game/creative/aria_math",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/creative/biome_fest",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/creative/blind_spots",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/creative/dreiton",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/creative/haunt_muskie",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/creative/taswell",
+        "stream": true,
+        "weight": 2
+      }
+    ]
+  },
+  "music.nether.basalt_deltas": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/nether/concrete_halls",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/dead_voxel",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/warmth",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/ballad_of_the_cats",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/excuse",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/intro",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/ki",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/soulsand_valley/so_below",
+        "stream": true,
+        "volume": 0.6,
+        "weight": 3
+      }
+    ]
+  },
+  "music.nether.crimson_forest": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/nether/concrete_halls",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/dead_voxel",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/warmth",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/ballad_of_the_cats",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/excuse",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/intro",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/ki",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/crimson_forest/chrysopoeia",
+        "stream": true,
+        "volume": 0.6,
+        "weight": 3
+      }
+    ]
+  },
+  "music.nether.nether_wastes": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/nether/concrete_halls",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/dead_voxel",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/warmth",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/ballad_of_the_cats",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/excuse",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/intro",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/ki",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/nether_wastes/rubedo",
+        "stream": true,
+        "volume": 0.6,
+        "weight": 3
+      }
+    ]
+  },
+  "music.nether.soul_sand_valley": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/nether/concrete_halls",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/dead_voxel",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/warmth",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/ballad_of_the_cats",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/excuse",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/intro",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/ki",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/soulsand_valley/so_below",
+        "stream": true,
+        "volume": 0.6,
+        "weight": 3
+      }
+    ]
+  },
+  "music.nether.warped_forest": {
+    "sounds": [
+      {
+        "name": "music/game/nether/concrete_halls",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/dead_voxel",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/warmth",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/ballad_of_the_cats",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/excuse",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/intro",
+        "stream": true
+      },
+      {
+        "name": "music/game/nether/ki",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.deep_dark": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/ancestry",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.dripstone_caves": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/caves/dead_mice",
+        "stream": true
+      },
+      {
+        "name": "music/game/caves/norway",
+        "stream": true
+      },
+      {
+        "name": "music/game/clark_chris",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/sweden",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/danny",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/creative/aria_math",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/dreiton",
+        "stream": true
+      },
+      {
+        "name": "music/game/water/shuniji",
+        "stream": true,
+        "volume": 0.4
+      }
+    ]
+  },
+  "music.overworld.frozen_peaks": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/danny",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/minecraft",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/clark_chris",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/sweden",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/flake",
+        "stream": true,
+        "volume": 0.6,
+        "weight": 3
+      },
+      {
+        "name": "music/game/kyoto",
+        "stream": true,
+        "volume": 0.6,
+        "weight": 3
+      },
+      {
+        "name": "music/game/creative/biome_fest",
+        "stream": true
+      },
+      {
+        "name": "music/game/dalarna",
+        "stream": true,
+        "weight": 2
+      }
+    ]
+  },
+  "music.overworld.grove": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/minecraft",
+        "stream": true
+      },
+      {
+        "name": "music/game/clark_chris",
+        "stream": true
+      },
+      {
+        "name": "music/game/sweden",
+        "stream": true
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true
+      },
+      {
+        "name": "music/game/danny",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/biome_fest",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.jagged_peaks": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/danny",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/minecraft",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/clark_chris",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/sweden",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/creative/taswell",
+        "stream": true
+      },
+      {
+        "name": "music/game/flake",
+        "stream": true,
+        "volume": 0.6,
+        "weight": 3
+      },
+      {
+        "name": "music/game/kyoto",
+        "stream": true,
+        "volume": 0.6,
+        "weight": 3
+      },
+      {
+        "name": "music/game/dalarna",
+        "stream": true,
+        "weight": 2
+      }
+    ]
+  },
+  "music.overworld.jungle_and_forest": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/minecraft",
+        "stream": true
+      },
+      {
+        "name": "music/game/clark_chris",
+        "stream": true
+      },
+      {
+        "name": "music/game/sweden",
+        "stream": true
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true
+      },
+      {
+        "name": "music/game/danny",
+        "stream": true
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/haunt_muskie",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/taswell",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.lush_caves": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/minecraft",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/clark_chris",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/sweden",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/danny",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/creative/blind_spots",
+        "stream": true
+      },
+      {
+        "name": "music/game/dalarna",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/water/axolotl",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 3
+      },
+      {
+        "name": "music/game/water/dragon_fish",
+        "stream": true,
+        "volume": 0.4,
+        "weight": 2
+      }
+    ]
+  },
+  "music.overworld.meadow": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/minecraft",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/clark_chris",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/sweden",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/danny",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/creative/blind_spots",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/dreiton",
+        "stream": true
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true,
+        "weight": 2
+      }
+    ]
+  },
+  "music.overworld.old_growth_taiga": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/minecraft",
+        "stream": true,
+        "weight": 3
+      },
+      {
+        "name": "music/game/clark_chris",
+        "stream": true,
+        "weight": 3
+      },
+      {
+        "name": "music/game/sweden",
+        "stream": true,
+        "weight": 3
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true,
+        "weight": 3
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true,
+        "weight": 3
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true,
+        "weight": 3
+      },
+      {
+        "name": "music/game/danny",
+        "stream": true,
+        "weight": 3
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true,
+        "weight": 3
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true,
+        "weight": 3
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true,
+        "weight": 3
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true,
+        "weight": 3
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true,
+        "weight": 3
+      },
+      {
+        "name": "music/game/creative/dreiton",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/haunt_muskie",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/taswell",
+        "stream": true
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/dalarna",
+        "stream": true,
+        "weight": 3
+      }
+    ]
+  },
+  "music.overworld.snowy_slopes": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/creative/biome_fest",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/taswell",
+        "stream": true
+      },
+      {
+        "name": "music/game/flake",
+        "stream": true,
+        "volume": 0.6,
+        "weight": 3
+      },
+      {
+        "name": "music/game/kyoto",
+        "stream": true,
+        "volume": 0.6,
+        "weight": 3
+      }
+    ]
+  },
+  "music.overworld.stony_peaks": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/danny",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/creative/blind_spots",
+        "stream": true
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true,
+        "weight": 3
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true,
+        "weight": 3
+      }
+    ]
+  },
+  "music.overworld.swamp": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/minecraft",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/clark_chris",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/sweden",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/danny",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/creative/dreiton",
+        "stream": true
+      }
+    ]
+  },
+  "music.under_water": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/water/axolotl",
+        "stream": true,
+        "volume": 0.4
+      },
+      {
+        "name": "music/game/water/dragon_fish",
+        "stream": true,
+        "volume": 0.4
+      },
+      {
+        "name": "music/game/water/shuniji",
+        "stream": true,
+        "volume": 0.4
+      }
+    ]
+  },
+  "entity.pig.ambient": {
+    "replace": true,
+    "sounds": [
+      "mob/pig/idle1",
+      "mob/pig/idle2",
+      "mob/pig/idle3",
+      "mob/pig/idle4",
+      "mob/pig/idle5",
+      "mob/pig/idle6",
+      "mob/pig/idle7",
+      "mob/pig/idle8"
+    ],
+    "subtitle": "subtitles.entity.pig.ambient"
+  },
+  "entity.pig.hurt": {
+    "replace": true,
+    "sounds": [
+      "mob/pig/hurt1",
+      "mob/pig/hurt2",
+      "mob/pig/hurt3"
+    ],
+    "subtitle": "subtitles.entity.pig.hurt"
+  }
+}

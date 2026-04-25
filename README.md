@@ -82,6 +82,9 @@ its [Apache License 2.0](https://github.com/BigWingBeat/better_log4j_config/blob
 Map colors are from [Remapped](https://github.com/Apollounknowndev/remapped), used under
 its [MIT license](https://github.com/Apollounknowndev/remapped/blob/main/LICENSE).
 
+Randomized world names are from [Naming Unconvention](https://github.com/QinomeD/Naming-Unconvention/), used under
+its [LGPLv3 license](https://github.com/QinomeD/Naming-Unconvention/blob/master/LICENSE).
+
 ---
 
 [![discord-plural](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/social/discord-plural_vector.svg)](https://discord.com/invite/JcGRdT6Pbx) [![github-plural](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/social/github-plural_vector.svg)](https://github.com/evanbones/Sugar-And-Spice)

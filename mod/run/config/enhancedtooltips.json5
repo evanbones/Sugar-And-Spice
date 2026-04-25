@@ -111,19 +111,19 @@
 		/* Shows a preview of the horse armor on a horse.
 		   (default: true)
 		*/
-		"horseArmorTooltip": true,
+		"horseArmorTooltip": false,
 		/* Shows a preview of the wolf armor on a wolf.
 		   (default: true)
 		*/
-		"wolfArmorTooltip": true,
+		"wolfArmorTooltip": false,
 		/* Shows a preview of the bucket entity in a bucket.
 		   (default: true)
 		*/
-		"bucketTooltip": true,
+		"bucketTooltip": false,
 		/* Shows a preview of the spawn egg entity.
 		   (default: true)
 		*/
-		"spawnEggTooltip": true
+		"spawnEggTooltip": false
 	},
 	"mapTooltip": {
 		/* Shows a preview of the filled map in its tooltip.
@@ -147,13 +147,13 @@
 		/* Shows the armor attribute in the form of icons.
 		   (default: true)
 		*/
-		"enabled": true
+		"enabled": false
 	},
 	"durability": {
 		/* Shows the durability of an item in its tooltip.
 		   VALUE/PERCENTAGE/OFF (default: VALUE)
 		*/
-		"durabilityTooltip": "VALUE",
+		"durabilityTooltip": "OFF",
 		/* Shows the durability of an item, represented by a bar, in its tooltip.
 		   (default: false)
 		*/

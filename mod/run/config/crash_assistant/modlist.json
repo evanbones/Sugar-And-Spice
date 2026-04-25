@@ -21,14 +21,6 @@
     "curseForgeHash": 721102153,
     "modrinthHash": "829d33e71b30e9158d772f5963bb6020f6026d78"
   },
-  "advancements_arranged-1.21.1-1.2.jar": {
-    "jarName": "advancements_arranged-1.21.1-1.2.jar",
-    "modId": "advancements_arranged",
-    "name": "Advancements Arranged",
-    "version": "1.21.1-1.2",
-    "curseForgeHash": 2391103140,
-    "modrinthHash": "20fd070b6f35af867c07533a1139230a7911376d"
-  },
   "advancements_reloaded-0.6.1-neoforge-1.21.1.jar": {
     "jarName": "advancements_reloaded-0.6.1-neoforge-1.21.1.jar",
     "modId": "advancements_reloaded",
@@ -85,6 +77,14 @@
     "curseForgeHash": 1982355547,
     "modrinthHash": "b5c1babab242708002b804f6a606a173b2090481"
   },
+  "bedspreads-neoforge-7.0.0+1.21.1.jar": {
+    "jarName": "bedspreads-neoforge-7.0.0+1.21.1.jar",
+    "modId": "bedspreads",
+    "name": "Bedspreads",
+    "version": "7.0.0+1.21.1",
+    "curseForgeHash": 1274625462,
+    "modrinthHash": "ab8e9a08845272bda49c516826af51af09fd957f"
+  },
   "better-clouds-1.7.19+1.21.1-neoforge.jar": {
     "jarName": "better-clouds-1.7.19+1.21.1-neoforge.jar",
     "modId": "betterclouds",
@@ -132,6 +132,14 @@
     "version": "1.5.4+1.21",
     "curseForgeHash": 854205225,
     "modrinthHash": "11655909a800fd70e2e0ca940cddc2bdbcbe2003"
+  },
+  "chalk-1.6.11.jar": {
+    "jarName": "chalk-1.6.11.jar",
+    "modId": "chalk",
+    "name": "Chalk",
+    "version": "1.6.11",
+    "curseForgeHash": 2531720289,
+    "modrinthHash": "7b2c6dae89254ee722fc1e91aff943ce1c7ff1ba"
   },
   "chat_heads-0.15.1-neoforge-1.21.jar": {
     "jarName": "chat_heads-0.15.1-neoforge-1.21.jar",
@@ -218,6 +226,14 @@
     "curseForgeHash": 3956204204,
     "modrinthHash": "c5ed08da0623aed4a7d553610facef4cc0a37eb7"
   },
+  "deathknell-neoforge-1.21.1-21.1.2.jar": {
+    "jarName": "deathknell-neoforge-1.21.1-21.1.2.jar",
+    "modId": "deathknell",
+    "name": "DeathKnell",
+    "version": "21.1.2",
+    "curseForgeHash": 3122189777,
+    "modrinthHash": "959167605e4182f1da8ea7a66b5994e30ddab4d8"
+  },
   "drippyloadingscreen_neoforge_3.1.0_MC_1.21.1.jar": {
     "jarName": "drippyloadingscreen_neoforge_3.1.0_MC_1.21.1.jar",
     "modId": "drippyloadingscreen",
@@ -265,6 +281,14 @@
     "version": "7.1",
     "curseForgeHash": 1249730238,
     "modrinthHash": "56de40b237ff44dbf1bb68844e0f118607902684"
+  },
+  "etched-5.0.1.jar": {
+    "jarName": "etched-5.0.1.jar",
+    "modId": "etched",
+    "name": "Etched",
+    "version": "5.0.1",
+    "curseForgeHash": 4129460058,
+    "modrinthHash": "168c8299d8656abbbbcaefca71dff0bb2fe9a839"
   },
   "explosiveenhancement-neoforge-1.21.1-1.1.2.jar": {
     "jarName": "explosiveenhancement-neoforge-1.21.1-1.1.2.jar",
@@ -418,6 +442,14 @@
     "curseForgeHash": 1963309046,
     "modrinthHash": "d5bf134b3dbde9f5258666823900e21341dc0a50"
   },
+  "jeed-1.21-2.3.2.jar": {
+    "jarName": "jeed-1.21-2.3.2.jar",
+    "modId": "jeed",
+    "name": "Just Enough Effects Descriptions",
+    "version": "1.21-2.3.2",
+    "curseForgeHash": 903616080,
+    "modrinthHash": "144ffaf459b58db14614a7e1ef3425c2594e30b6"
+  },
   "Kiwi-1.21.1-NeoForge-15.8.3.jar": {
     "jarName": "Kiwi-1.21.1-NeoForge-15.8.3.jar",
     "modId": "kiwi",
@@ -567,6 +599,14 @@
     "curseForgeHash": 4110622925,
     "modrinthHash": "060721480f82daef97a3c9bba529087469d69828"
   },
+  "neo_language_reload-1.0.0.jar": {
+    "jarName": "neo_language_reload-1.0.0.jar",
+    "modId": "neo_language_reload",
+    "name": "Neo Language Reload",
+    "version": "1.0.0",
+    "curseForgeHash": 2339599122,
+    "modrinthHash": "6e98066515853318d1b760bed021045884d5c9ca"
+  },
   "nethermap-4.0.0-1.21.1.jar": {
     "jarName": "nethermap-4.0.0-1.21.1.jar",
     "modId": "nethermap",
@@ -614,14 +654,6 @@
     "version": "21.1.5",
     "curseForgeHash": 3106905905,
     "modrinthHash": "b4b49fa0bbefcecd41aaba60aca38c3658ac2c46"
-  },
-  "optiboxes-1.4+mc1.21.1-9eba186.jar": {
-    "jarName": "optiboxes-1.4+mc1.21.1-9eba186.jar",
-    "modId": "optiboxes",
-    "name": "Optiboxes",
-    "version": "1.4+mc1.21.1-9eba186",
-    "curseForgeHash": 2538752582,
-    "modrinthHash": "f45cd6c44b50f752c113348c12aa9e42405d6c63"
   },
   "particle_core-0.3.3+1.21+neoforge.jar": {
     "jarName": "particle_core-0.3.3+1.21+neoforge.jar",
