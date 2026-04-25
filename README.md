@@ -2,42 +2,64 @@
 
 <a href='https://neoforged.net/'><img alt="neoforge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/neoforge_vector.svg"></a>
 
-Sugar and Spice is a 1.21.1 NeoForge modpack currently in development. This repo incorporates both the Sugar and Spice
-modpack and its core mod, Snips and Snails.
+Sugar and Spice is a 1.21.1 NeoForge modpack currently in development. This repo incorporates both the Sugar
+and Spice modpack and its core mod, Snips and Snails, into a single unified workspace.
 
-## Building the Modpack
+## Setting Up the Workspace (Prism Launcher)
 
-To build the modpack and download resource packs, run the following command to build the modpack to build/libs.
+To seamlessly bridge the coremod and the modpack, we use Prism Launcher as our primary mod manager. We do this by
+creating a **symlink** that points Prism's instance folder directly to the Gradle run environment.
 
-```sh
-./gradlew mrpack # 
+1. Create a new 1.21.1 NeoForge instance in Prism Launcher named "Sugar and Spice".
+2. Right-click the instance and select **Folder** to open the instance directory.
+3. **Delete** the default `.minecraft` folder inside the instance directory.
+4. Create a symlink that replaces the `.minecraft` folder and points to the `mod/run` directory in this repository.
+
+**Windows (Command Prompt):**
+
+```cmd
+mklink /J "C:\Path\To\Prism\instances\Sugar and Spice\minecraft" "C:\Path\To\Repo\Sugar-And-Spice\mod\run"
 ```
 
-## Running the Modpack
+Now, when you download or update mods via Prism, they are saved directly into `mod/run/mods`. Your configurations are
+saved directly to `mod/run/config`.
+
+## Running the Game
+
+You can launch the game using Prism Launcher for casual testing, or run the following Gradle command to automatically
+compile your coremod changes and launch the game:
 
 ```sh
 ./gradlew mod:runClient 
 ```
 
-The following command publishes the modpack to Modrinth, assuming you have proper publishing permissions set up in
-`.env`.
+Gradle shares the `mod/run` folder with Prism, meaning all your downloaded mods and configs will be perfectly synced.
+
+## Building and Releasing the Modpack
+
+When you are ready to build a release `.mrpack` file:
+
+1. Open Prism Launcher, right-click the instance, and click **Export Instance**.
+2. Select Modrinth `.mrpack` format and export the zip file anywhere.
+3. Open the exported zip and copy **only** the `modrinth.index.json` file into the root of this repository.
+4. Run the following command:
 
 ```sh
-:publishModrinth
+./gradlew mrpack 
 ```
 
-## Adding Mods
+This task reads your `modrinth.index.json`, grabs your live configs from `mod/run/config`, compiles the
+`Snips and Snails` coremod, and packages it all into a ready-to-publish `.mrpack` in `build/libs`.
 
-Mods can be added to the `mods` folder by creating a JSON file with the following syntax. This format accepts both Curse
-and Modrinth maven links, but try to always use Modrinth versions so that Modrinth can approve the pack more easily.
+Publish to Modrinth using:
 
-```json
-{
-  "maven": "maven.modrinth:create-alloyed:3.0.4+1.21.1-neoforge"
-}
+```sh
+./gradlew publishMods
 ```
 
-If you need to modify the mod, add a compile-only dependency to `mod/build.gradle`
+## Modifying the Coremod (Snips and Snails)
+
+If you need to compile against a specific mod's API, add a compile-only dependency to `mod/build.gradle`:
 
 ```groovy
 compileOnly "maven.modrinth:create:$create_version"
@@ -54,11 +76,11 @@ authors.** The source code of the Snips and Snails mod for Minecraft 1.21.1 is a
 
 ## Credits
 
-Buildscript setup adapted from cassiancc's [Lemonade](https://github.com/cassiancc/Lemonade), which was itself inspired
-by modmuss50's Holiday Server Pack. Code used under its [MIT License](https://github.com/modmuss50/holiday-server-pack).
-
 Snips and Snails contains code from [Better Log4j Config](https://modrinth.com/mod/better-log4j-config), used under
 its [Apache License 2.0](https://github.com/BigWingBeat/better_log4j_config/blob/fabric/LICENSE).
+
+Map colors are from [Remapped](https://github.com/Apollounknowndev/remapped), used under
+its [MIT license](https://github.com/Apollounknowndev/remapped/blob/main/LICENSE).
 
 ---
 

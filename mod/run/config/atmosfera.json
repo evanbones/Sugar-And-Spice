@@ -1,0 +1,11 @@
+{
+  "general": {
+    "enable_custom_music": true,
+    "custom_music_weight_scale": 2.5
+  },
+  "volumes": {},
+  "subtitles": {},
+  "debug": {
+    "print_debug_messages": false
+  }
+}

@@ -4,8 +4,10 @@
   "package": "com.evandev.snipsandsnails.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "minecraft.MapColorAccessor"
   ],
   "client": [
+    "particlerain.ParticleRainConfigFixMixin",
     "vanillin.VanillinItemColorsMixin"
   ],
   "server": [

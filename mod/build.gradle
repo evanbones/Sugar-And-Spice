@@ -6,8 +6,6 @@ plugins {
     id "me.modmuss50.mod-publish-plugin" version "1.1.0"
 }
 
-import groovy.json.JsonSlurper
-
 version = mod_version
 group = mod_group_id
 
@@ -18,7 +16,6 @@ sourceSets.main.resources {
 }
 
 repositories {
-
     exclusiveContent {
         forRepository {
             maven {
@@ -30,7 +27,6 @@ repositories {
             includeGroup "org.parchmentmc.data"
         }
     }
-
     exclusiveContent {
         forRepository {
             maven {
@@ -204,6 +200,11 @@ neoForge {
     }
 
     runs {
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+
         client {
             client()
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
@@ -224,11 +225,6 @@ neoForge {
             data()
             programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
         }
-
-        configureEach {
-            systemProperty 'forge.logging.markers', 'REGISTRIES'
-            logLevel = org.slf4j.event.Level.DEBUG
-        }
     }
 
     mods {
@@ -240,20 +236,8 @@ neoForge {
 
 dependencies {
     compileOnly "maven.modrinth:flw-vanillin:1.1.3"
+    compileOnly "maven.modrinth:particle-rain:v4-beta.9+1.21.1-neoforge"
 
-    def modsDir = rootProject.file("mods")
-    if (modsDir.exists()) {
-        modsDir.eachFile { modFile ->
-            if (!modFile.name.endsWith(".json")) return
-
-            def json = new JsonSlurper().parseText(modFile.text)
-            if (json.maven) {
-                runtimeOnly json.maven
-            }
-        }
-    }
-
-    runtimeOnly fileTree(dir: 'libs', include: '*.jar')
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
@@ -283,11 +267,6 @@ publishing {
     publications {
         register('mavenJava', MavenPublication) {
             from components.java
-        }
-    }
-    repositories {
-        maven {
-            url "file://${project.projectDir}/repo"
         }
     }
 }
