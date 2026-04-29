@@ -10,7 +10,6 @@
     "minecraft.PackSelectionScreenMixin",
     "namingunconvention.ModernWorldCreationGameTabMixin",
     "namingunconvention.WorldCreationUiStateMixin",
-    "particlerain.ParticleRainConfigFixMixin",
     "vanillin.VanillinItemColorsMixin"
   ],
   "server": [
