@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cube_column",
   "textures": {
     "side": "minecraft:block/deepslate_coal_ore",
-    "end": "snipsandsnails:block/deepslate_coal_ore_top"
+    "end": "spicedcider:block/deepslate_coal_ore_top"
   }
 }

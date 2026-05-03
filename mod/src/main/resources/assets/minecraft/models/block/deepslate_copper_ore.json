@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cube_column",
   "textures": {
     "side": "minecraft:block/deepslate_copper_ore",
-    "end": "snipsandsnails:block/deepslate_copper_ore_top"
+    "end": "spicedcider:block/deepslate_copper_ore_top"
   }
 }

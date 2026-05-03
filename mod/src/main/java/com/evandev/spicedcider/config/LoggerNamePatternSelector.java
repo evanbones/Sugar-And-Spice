@@ -1,4 +1,4 @@
-package com.evandev.snipsandsnails.config;
+package com.evandev.spicedcider.config;
 
 // Source: https://github.com/Minecrell/TerminalConsoleAppender/blob/3f67b918ec1187d2dffc700729000f47f79b0116/src/main/java/net/minecrell/terminalconsole/util/LoggerNamePatternSelector.java
 // Simply copy-pasting the singular file is far easier than pulling in the whole dependency

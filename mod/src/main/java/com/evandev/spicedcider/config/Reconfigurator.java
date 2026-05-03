@@ -1,6 +1,6 @@
-package com.evandev.snipsandsnails.config;
+package com.evandev.spicedcider.config;
 
-import com.evandev.snipsandsnails.SnipsAndSnails;
+import com.evandev.spicedcider.SpicedCider;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.LoggerContext;
 import org.apache.logging.log4j.core.config.Configuration;
@@ -65,7 +65,7 @@ public class Reconfigurator {
         // Get the LoggerContexts to be reconfigured
         List<LoggerContext> contexts = factory.getSelector().getLoggerContexts();
 
-        SnipsAndSnails.LOGGER.debug("Reconfiguring {} LoggerContexts:", contexts.size());
+        SpicedCider.LOGGER.debug("Reconfiguring {} LoggerContexts:", contexts.size());
 
         boolean anySucceeded = false;
 
@@ -73,9 +73,9 @@ public class Reconfigurator {
         for (LoggerContext context : contexts) {
             if (reconfigureLoggerContextWithUri(context, newConfigUri)) {
                 anySucceeded = true;
-                SnipsAndSnails.LOGGER.debug("Reconfigured LoggerContext[{}] ({})", context.getName(), context);
+                SpicedCider.LOGGER.debug("Reconfigured LoggerContext[{}] ({})", context.getName(), context);
             } else {
-                SnipsAndSnails.LOGGER.warn(
+                SpicedCider.LOGGER.warn(
                         "Could not reconfigure LoggerContext[{}] ({})! Some log messages may use the incorrect config.",
                         context.getName(), context);
             }

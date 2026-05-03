@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cube_column",
   "textures": {
     "side": "minecraft:block/deepslate_diamond_ore",
-    "end": "snipsandsnails:block/deepslate_diamond_ore_top"
+    "end": "spicedcider:block/deepslate_diamond_ore_top"
   }
 }

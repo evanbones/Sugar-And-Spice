@@ -17,6 +17,6 @@
     "#sensible_stackables:minecarts": 16
   },
   "splashPotionCooldown": 1,
-  "uncapStackSize": false,
-  "commonStackSize": 64
+  "uncapStackSize": true,
+  "commonStackSize": 512
 }

@@ -238,6 +238,7 @@ dependencies {
     compileOnly "maven.modrinth:flw-vanillin:1.1.3"
     compileOnly "maven.modrinth:particle-rain:v4-beta.9+1.21.1-neoforge"
     compileOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
+    compileOnly "maven.modrinth:emi:1.1.22+1.21.1+neoforge"
 
 }
 
@@ -288,7 +289,7 @@ publishMods {
     changelog = rootProject.file("CHANGELOG-LATEST.md").exists() ? rootProject.file("CHANGELOG-LATEST.md").text : ""
     type = BETA
     version = "${project.version} - ${project.minecraft_version}"
-    displayName = "Snips and Snails ${project.version}"
+    displayName = "Spiced Cider ${project.version}"
     modLoaders.add("neoforge")
 
     curseforge {

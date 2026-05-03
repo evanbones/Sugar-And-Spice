@@ -1,4 +1,4 @@
-package com.evandev.snipsandsnails.mixin.vanillin;
+package com.evandev.spicedcider.mixin.vanillin;
 
 import dev.engine_room.vanillin.neoforge.mixin.item.ItemColorsAccessor;
 import net.minecraft.client.color.item.ItemColor;

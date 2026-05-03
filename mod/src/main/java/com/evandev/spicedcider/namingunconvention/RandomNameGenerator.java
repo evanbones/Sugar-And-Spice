@@ -1,6 +1,6 @@
-package com.evandev.snipsandsnails.namingunconvention;
+package com.evandev.spicedcider.namingunconvention;
 
-import com.evandev.snipsandsnails.SnipsAndSnails;
+import com.evandev.spicedcider.SpicedCider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
@@ -16,7 +16,7 @@ public class RandomNameGenerator implements ResourceManagerReloadListener {
     private String[] compositions = new String[]{"The # @ of &"};
 
     private static String[] readFileLines(String filename, ResourceManager resourceManager) throws IOException {
-        ResourceLocation loc = ResourceLocation.fromNamespaceAndPath("snipsandsnails", "naming_unconvention/" + filename);
+        ResourceLocation loc = ResourceLocation.fromNamespaceAndPath(SpicedCider.MODID, "naming_unconvention/" + filename);
         return resourceManager.getResourceOrThrow(loc).openAsReader().lines().toArray(String[]::new);
     }
 
@@ -36,7 +36,7 @@ public class RandomNameGenerator implements ResourceManagerReloadListener {
             locations = readFileLines("locations.txt", resourceManager);
             compositions = readFileLines("compositions.txt", resourceManager);
         } catch (Exception e) {
-            SnipsAndSnails.LOGGER.error("Failed to load Naming Unconvention dictionaries, falling back to defaults.", e);
+            SpicedCider.LOGGER.error("Failed to load Naming Unconvention dictionaries, falling back to defaults.", e);
         }
     }
 }

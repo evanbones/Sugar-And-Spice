@@ -27,7 +27,7 @@ tasks.register("mrpack", Zip) {
         into "overrides/mods"
     }
 
-    archiveBaseName = "sugar-and-spice"
+    archiveBaseName = "spiced-cider"
     archiveVersion = version
     archiveExtension = "mrpack"
     destinationDirectory = layout.buildDirectory.dir("libs")
@@ -35,13 +35,13 @@ tasks.register("mrpack", Zip) {
 
 publishMods {
     file = mrpack.archiveFile
-    displayName = "Sugar and Spice " + project.version
+    displayName = "Spiced Cider " + project.version
     type = BETA
     modLoaders.add("neoforge")
     changelog = file('CHANGELOG-LATEST.md').exists() ? file('CHANGELOG-LATEST.md').text.trim() : "No changelog provided."
 
     modrinth {
-        projectId = "" // TODO
+        projectId = "QEDE8kRs"
         accessToken = providers.environmentVariable("MODRINTH_TOKEN")
         minecraftVersions.add(project.minecraft_version)
     }

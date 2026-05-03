@@ -1,15 +1,17 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.evandev.snipsandsnails.mixin",
+  "package": "com.evandev.spicedcider.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "minecraft.MapColorAccessor"
+    "minecraft.accessor.MapColorAccessor",
+    "perf.ReloadableServerResourcesMixin"
   ],
   "client": [
     "minecraft.PackSelectionScreenMixin",
     "namingunconvention.ModernWorldCreationGameTabMixin",
     "namingunconvention.WorldCreationUiStateMixin",
+    "perf.TagCollectorMixin",
     "vanillin.VanillinItemColorsMixin"
   ],
   "server": [

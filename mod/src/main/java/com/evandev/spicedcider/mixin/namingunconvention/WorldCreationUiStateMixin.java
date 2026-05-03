@@ -1,6 +1,6 @@
-package com.evandev.snipsandsnails.mixin.namingunconvention;
+package com.evandev.spicedcider.mixin.namingunconvention;
 
-import com.evandev.snipsandsnails.SnipsAndSnails;
+import com.evandev.spicedcider.SpicedCider;
 import net.minecraft.client.gui.screens.worldselection.WorldCreationContext;
 import net.minecraft.client.gui.screens.worldselection.WorldCreationUiState;
 import net.minecraft.network.chat.Component;
@@ -23,10 +23,10 @@ public abstract class WorldCreationUiStateMixin {
     @Shadow public abstract void setName(String name);
 
     @Inject(method = "<init>", at = @At("TAIL"))
-    private void snipsandsnails$applyRandomName(Path savesFolder, WorldCreationContext settings, Optional<ResourceKey<WorldPreset>> preset, OptionalLong seed, CallbackInfo ci) {
+    private void spicedcider$applyRandomName(Path savesFolder, WorldCreationContext settings, Optional<ResourceKey<WorldPreset>> preset, OptionalLong seed, CallbackInfo ci) {
         String defaultName = Component.translatable("selectWorld.newWorld").getString();
         if (this.name == null || this.name.equals(defaultName) || this.name.trim().isEmpty()) {
-            this.setName(SnipsAndSnails.RANDOM_NAME_GENERATOR.generateRandomName());
+            this.setName(SpicedCider.RANDOM_NAME_GENERATOR.generateRandomName());
         }
     }
 }
