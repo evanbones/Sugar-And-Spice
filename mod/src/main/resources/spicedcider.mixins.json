@@ -5,12 +5,17 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "minecraft.accessor.MapColorAccessor",
-    "perf.ReloadableServerResourcesMixin"
+    "perf.RecipeBookMixin",
+    "perf.ReloadableServerResourcesMixin",
+    "perf.ServerPlayerMixin",
+    "perf.ServerRecipeBookMixin"
   ],
   "client": [
     "minecraft.PackSelectionScreenMixin",
+    "minecraft.RecipeBookComponentMixin",
     "namingunconvention.ModernWorldCreationGameTabMixin",
     "namingunconvention.WorldCreationUiStateMixin",
+    "perf.ClientRecipeBookMixin",
     "perf.TagCollectorMixin",
     "vanillin.VanillinItemColorsMixin"
   ],

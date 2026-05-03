@@ -18,5 +18,5 @@
   },
   "splashPotionCooldown": 1,
   "uncapStackSize": true,
-  "commonStackSize": 512
+  "commonStackSize": 256
 }

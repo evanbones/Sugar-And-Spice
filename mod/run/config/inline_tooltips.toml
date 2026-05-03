@@ -2,25 +2,25 @@
 	# Never show full tooltip details, even when holding Shift.
 	# default: false
 	neverExpanded = false
-	# Always show full tooltip details without holding Shift.
-	# default: false
-	alwaysExpanded = false
-	# Amount of space characters between icons.
-	# default: 1
-	spacing = 1
-	# Amount of space characters between icons when the tooltip is expanded.
-	# default: 1
-	expandedSpacing = 1
-	# Change attribute tooltips in the 'inline_tooltips:shows_percentage' attribute tag to percentages.
-	# default: true
-	checkPercentageTag = true
+# Always show full tooltip details without holding Shift.
+# default: false
+alwaysExpanded = false
+# Amount of space characters between icons.
+# default: 1
+spacing = 1
+# Amount of space characters between icons when the tooltip is expanded.
+# default: 1
+expandedSpacing = 1
+# Change attribute tooltips in the 'inline_tooltips:shows_percentage' attribute tag to percentages.
+# default: true
+checkPercentageTag = true
 
 [iconTooltips]
-	# Add tooltips based on item attributes.
-	# default: true
-	attributeTooltips = true
-	# default: Dark Green
-	attributeTooltipColor = "Dark Green"
+# Add tooltips based on item attributes.
+# default: true
+attributeTooltips = true
+# default: Dark Green
+attributeTooltipColor = "Dark Green"
 # Add tooltips based on fuel levels.
 # default: true
 fuelTooltip = true

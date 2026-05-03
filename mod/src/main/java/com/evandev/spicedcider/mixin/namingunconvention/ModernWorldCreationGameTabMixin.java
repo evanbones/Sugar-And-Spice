@@ -5,6 +5,7 @@ import de.keksuccino.modernworldcreation.ModernWorldCreationGameTab;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.ImageButton;
+import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.layouts.CommonLayouts;
 import net.minecraft.client.gui.layouts.Layout;
@@ -26,6 +27,7 @@ public class ModernWorldCreationGameTabMixin {
             ResourceLocation.fromNamespaceAndPath(SpicedCider.MODID, "naming_unconvention/reroll"),
             ResourceLocation.fromNamespaceAndPath(SpicedCider.MODID, "naming_unconvention/reroll_highlighted")
     );
+
     @Shadow
     protected EditBox nameEdit;
 
@@ -40,7 +42,6 @@ public class ModernWorldCreationGameTabMixin {
         Layout originalLayout = CommonLayouts.labeledElement(font, element, label);
 
         if (element == this.nameEdit) {
-
             ImageButton rerollBtn = new ImageButton(
                     0, 0, 20, 20, REROLL_SPRITES,
                     btn -> {
@@ -48,9 +49,10 @@ public class ModernWorldCreationGameTabMixin {
                     }
             );
 
+            rerollBtn.setTooltip(Tooltip.create(Component.literal("Reroll World Name")));
+
             LinearLayout horizontalWrapper = LinearLayout.horizontal().spacing(5);
             horizontalWrapper.addChild(originalLayout);
-
             horizontalWrapper.addChild(rerollBtn, horizontalWrapper.newCellSettings().alignVerticallyBottom());
 
             return horizontalWrapper;

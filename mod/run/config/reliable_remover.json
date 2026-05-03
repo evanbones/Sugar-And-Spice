@@ -18,6 +18,9 @@
   "reloadAfterRemoval": false,
   "blacklistedItems": [
     "minecraft:music_disc_lava_chicken",
-    "minecraft:painting"
+    "minecraft:painting",
+    "modulation:cast_post",
+    "modulation:chain_staff",
+    "modulation:zipline_staff"
   ]
 }
