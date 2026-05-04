@@ -10,6 +10,7 @@ RESOURCE_PACKS_DIR = Path(r"C:\Users\evan\Documents\GitHub\Spiced-Cider\mod\run\
 CIDER_PACKS_DIR = Path(r"C:\Users\evan\Documents\GitHub\Spiced-Cider\ciderpacks")
 OVERRIDES_DIR = Path(r"C:\Users\evan\Documents\GitHub\Spiced-Cider\mod\run\config\openloader\packs\spicedcider_overrides")
 MANIFEST_FILE = Path(r"C:\Users\evan\Documents\GitHub\Spiced-Cider\mod\run\config\spicedcider\spicedcider_manifest.json")
+CACHE_DIR = Path(r"C:\Users\evan\Documents\GitHub\Spiced-Cider\mod\run\.spicedcider_cache")
 
 def get_file_hash(filepath):
     hasher = hashlib.sha256()
@@ -38,7 +39,11 @@ def extract_packs():
 
 def build_manifest_and_overrides():
     print("Building manifest and pushing overrides to OpenLoader...")
-    
+
+    if CACHE_DIR.exists():
+        print("  Clearing old Java JIT cache...")
+        shutil.rmtree(CACHE_DIR)
+
     if OVERRIDES_DIR.exists():
         shutil.rmtree(OVERRIDES_DIR)
     OVERRIDES_DIR.mkdir(parents=True, exist_ok=True)

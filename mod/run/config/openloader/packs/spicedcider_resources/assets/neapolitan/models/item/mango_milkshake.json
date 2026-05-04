@@ -1,0 +1,6 @@
+{
+    "parent": "neapolitan:item/milkshake",
+    "textures": {
+        "layer0": "neapolitan:item/mango_milkshake"
+    }
+}

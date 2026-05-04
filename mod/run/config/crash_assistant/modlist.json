@@ -871,6 +871,14 @@
     "curseForgeHash": 3157301488,
     "modrinthHash": "18c1002f727dde63c51ee419d80b883e93c8f455"
   },
+  "stormiespiders-neoforge-1.21.1-3.2.0.jar": {
+    "jarName": "stormiespiders-neoforge-1.21.1-3.2.0.jar",
+    "modId": "stormiespiders",
+    "name": "Stormie\u0027s Spiders",
+    "version": "3.2.0",
+    "curseForgeHash": 2655392879,
+    "modrinthHash": "80a1417d4d30f355b147da61556f8ff0399c9ba8"
+  },
   "structure_layout_optimizer-neoforge-1.0.12.jar": {
     "jarName": "structure_layout_optimizer-neoforge-1.0.12.jar",
     "modId": "structure_layout_optimizer",
