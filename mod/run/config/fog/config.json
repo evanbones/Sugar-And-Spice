@@ -1,5 +1,5 @@
 {
-	"enableMod": true,
+	"enableMod": false,
 	"disabledBiomes": [
 		"minecraft:nether_wastes",
 		"minecraft:crimson_forest",

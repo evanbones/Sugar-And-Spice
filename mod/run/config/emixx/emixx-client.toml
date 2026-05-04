@@ -2,6 +2,7 @@
 	enableCreativeModeTabs = true
 	syncSelectedCreativeModeTab = true
 	disabledCreativeModeTabs = ["minecraft:op_blocks"]
+	showCreativeTabNameInSearchbar = false
 
 [stackGroups]
 	enableStackGroups = true

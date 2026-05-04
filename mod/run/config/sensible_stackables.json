@@ -5,7 +5,6 @@
     "#sensible_stackables:banner_patterns": 64,
     "#c:eggs": 64,
     "#c:music_discs": 64,
-    "minecraft:enchanted_book": 64,
     "#sensible_stackables:horse_armor": 64,
     "#minecraft:beds": 16,
     "#minecraft:boats": 16,
@@ -18,5 +17,5 @@
   },
   "splashPotionCooldown": 1,
   "uncapStackSize": true,
-  "commonStackSize": 256
+  "commonStackSize": 64
 }
