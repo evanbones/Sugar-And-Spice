@@ -93,14 +93,6 @@
     "curseForgeHash": 2467665923,
     "modrinthHash": "9efb20a491a2e3b801ce8dbe5488356e08d2b1fc"
   },
-  "biomespy-neoforge-1.21.1-1.3.3.jar": {
-    "jarName": "biomespy-neoforge-1.21.1-1.3.3.jar",
-    "modId": "biomespy",
-    "name": "BiomeSpy",
-    "version": "1.3.3",
-    "curseForgeHash": 3102830659,
-    "modrinthHash": "079f612d2b3eed5502896c7cd691969f33b7ab1c"
-  },
   "blueprint-1.21.1-8.0.8.jar": {
     "jarName": "blueprint-1.21.1-8.0.8.jar",
     "modId": "blueprint",
@@ -218,6 +210,14 @@
     "curseForgeHash": 3604913290,
     "modrinthHash": "558bc3dfee4d6e5fd7a3d7c794bb01df1aff40e9"
   },
+  "cupboard-1.21-3.5.jar": {
+    "jarName": "cupboard-1.21-3.5.jar",
+    "modId": "cupboard",
+    "name": "Cupboard mod",
+    "version": "3.5",
+    "curseForgeHash": 3036562125,
+    "modrinthHash": "e5f55c8f9d172048fe6f8b919cda1dbe3cbfbc70"
+  },
   "deathknell-neoforge-1.21.1-21.1.2.jar": {
     "jarName": "deathknell-neoforge-1.21.1-21.1.2.jar",
     "modId": "deathknell",
@@ -305,14 +305,6 @@
     "version": "1.13.11+kotlin.2.3.21",
     "curseForgeHash": 3596689969,
     "modrinthHash": "b6190b247c557c493dc4204121744f289a1d1837"
-  },
-  "fallingleaves-1.21.1-2.5.1.jar": {
-    "jarName": "fallingleaves-1.21.1-2.5.1.jar",
-    "modId": "fallingleaves",
-    "name": "Fallingleaves",
-    "version": "2.5.1",
-    "curseForgeHash": 2110013428,
-    "modrinthHash": "93f479691d5a88775d90e9fa19e814b7301a363b"
   },
   "fancymenu_neoforge_3.9.0_MC_1.21.1.jar": {
     "jarName": "fancymenu_neoforge_3.9.0_MC_1.21.1.jar",
@@ -558,14 +550,6 @@
     "version": "2.26.1",
     "curseForgeHash": 845432825,
     "modrinthHash": "6dae57f4f50f7808d2ed9a18f6cd1c0d4640c6bc"
-  },
-  "mru-1.0.19+LTS+1.21.1+neoforge.jar": {
-    "jarName": "mru-1.0.19+LTS+1.21.1+neoforge.jar",
-    "modId": "mru",
-    "name": "M.R.U",
-    "version": "1.0.19+LTS+1.21.1+neoforge",
-    "curseForgeHash": 2616885110,
-    "modrinthHash": "903f41bce1ff0b4bd13b66d46bfbd21423663bbc"
   },
   "music_tweaks-neoforge-1.21.1-1.4.1.jar": {
     "jarName": "music_tweaks-neoforge-1.21.1-1.4.1.jar",
@@ -894,6 +878,14 @@
     "version": "1.0.12",
     "curseForgeHash": 2515988845,
     "modrinthHash": "052c31cb9881c04c17d949345539aa8684f474bf"
+  },
+  "structureessentials-1.21.1-5.0.jar": {
+    "jarName": "structureessentials-1.21.1-5.0.jar",
+    "modId": "structureessentials",
+    "name": "Structure Essentials mod",
+    "version": "5.0",
+    "curseForgeHash": 608980435,
+    "modrinthHash": "5c059c2cb2ad8c43e1384b0939bf258801aadfea"
   },
   "StylishEffects-v21.1.2-1.21.1-NeoForge.jar": {
     "jarName": "StylishEffects-v21.1.2-1.21.1-NeoForge.jar",

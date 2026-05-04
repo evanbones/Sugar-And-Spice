@@ -12,6 +12,9 @@
       "vanillabackport:freshly_animated_legacy",
       "moonlight:merged_pack",
       "atmosfera:dungeons",
+      "continuity:default", 
+      "continuity:glass_pane_culling_fix",
+      "mod/minecraft_cursor:resourcepacks/cursors_extended",
       "high_contrast",
       "programmer_art",
       "sodium_programmer_art",
@@ -33,6 +36,16 @@
       "file/Snowy Rework V1.1.zip",
       "file/Supplementaries Touch-Ups v0.2.zip",
       "file/Texture_Tweaks_v2.0.zip",
+      "file/Rabbit Remodel By Blond 26.1 - 1.18.2 - 1.0.2.zip",
+      "file/§c1.21.2 Redstone Torch§r.zip",
+      "file/Authentic Shadows_1.21+.zip",
+      "file/Ginkgo Font.zip",
+      "file/JavaUI.zip",
+      "file/Angel's_Weather_v1.9.1.3hf.zip",
+      "file/Rugburn.zip",
+      "file/TextRecoloured-v1.0.1.zip",
+      "file/§d§lGlowy Nether Portals.zip",
+      "file/BedrockStyleCursors_v1.0.0.zip",
       "black_icons",
       "classic_icons",
       "white_icons"
@@ -48,15 +61,10 @@
       "forgified_fabric_api",
       "file/mod-descriptions-v11.1.zip",
       "mod/wilderflowers:resourcepacks/wildflowers",
-      "file/Authentic Shadows_1.21+.zip",
-      "file/Ginkgo Font.zip",
-      "file/JavaUI.zip",
-      "file/Rabbit Remodel By Blond 26.1 - 1.18.2 - 1.0.2.zip",
-      "file/§c1.21.2 Redstone Torch§r.zip",
-      "resources/99_SugarResources"
+      "spicedcider_jit"
     ],
     "$$1": {
-      "hidden": true,
+      "hidden": false,
       "required": false
     },
     "$$2": {

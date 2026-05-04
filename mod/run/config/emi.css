@@ -172,7 +172,7 @@
 	/**
 	 * The subpanels in the left sidebar
 	 */
-	left-sidebar-subpanels: empty 1;
+	left-sidebar-subpanels: none;
 
 	/**
 	 * How many columns and rows of ingredients to limit the left sidebar to

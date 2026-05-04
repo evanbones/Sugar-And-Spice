@@ -60,3 +60,4 @@ mod/run/screenshots
 *.toml.bak
 spark/tmp
 spark/tmp-client
+ciderpacks/

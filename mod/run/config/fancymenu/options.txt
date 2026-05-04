@@ -64,7 +64,7 @@ B:enable_element_tilting_controls = 'true';
 
 ##[ui]
 
-B:enable_ui_animations = 'true';
+B:enable_ui_animations = 'false';
 S:ui_scale_v2 = 'auto';
 I:context_menu_hover_open_speed = '1';
 S:ui_theme = 'dark';
