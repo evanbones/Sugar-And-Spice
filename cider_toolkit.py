@@ -96,24 +96,20 @@ def run_gui():
     root = tk.Tk()
     root.title("Cider Toolkit")
 
-    # Set window size and position it slightly better
     window_width = 300
     window_height = 150
     root.geometry(f"{window_width}x{window_height}")
-    root.eval('tk::PlaceWindow . center') # Centers the window on screen
+    root.eval('tk::PlaceWindow . center')
 
-    # Add a label
     label = tk.Label(root, text="Select an action to perform:", pady=10)
     label.pack()
 
-    # Add buttons for the two actions
     btn_extract = tk.Button(root, text="Extract Packs", command=extract_packs, width=20, pady=5)
     btn_extract.pack(pady=5)
 
     btn_build = tk.Button(root, text="Build Manifest", command=build_manifest, width=20, pady=5)
     btn_build.pack(pady=5)
 
-    # Start the GUI event loop
     root.mainloop()
 
 if __name__ == "__main__":
