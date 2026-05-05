@@ -7,3 +7,6 @@
 [stackGroups]
 	enableStackGroups = true
 	enableCreateStackGroupButton = true
+
+[miscellaneous]
+	emiOnlyInRecipeBook = true

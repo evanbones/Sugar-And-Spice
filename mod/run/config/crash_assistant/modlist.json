@@ -258,13 +258,13 @@
     "curseForgeHash": 1652373382,
     "modrinthHash": "cbbd038194cd63249db185c53b1d50a1767f80a3"
   },
-  "emixx-neoforge-2.0.3.jar": {
-    "jarName": "emixx-neoforge-2.0.3.jar",
+  "emixx-neoforge-2.1.0.jar": {
+    "jarName": "emixx-neoforge-2.1.0.jar",
     "modId": "emixx",
     "name": "EMI++",
-    "version": "2.0.3",
-    "curseForgeHash": 3381894584,
-    "modrinthHash": "b1bc9674ee712f42b5f9fe6e7a71ef2d8989c631"
+    "version": "2.1.0",
+    "curseForgeHash": 2791747264,
+    "modrinthHash": "836bac7d9690ed0f92cdb87b3ee7c4ce4eb4461d"
   },
   "EnhancedTooltips-1.9.1+neoforge.1.21.1.jar": {
     "jarName": "EnhancedTooltips-1.9.1+neoforge.1.21.1.jar",
@@ -551,13 +551,13 @@
     "curseForgeHash": 4133401353,
     "modrinthHash": "ab82451bf1b2348001cf4d43f865399257cbfe3b"
   },
-  "moonlight-neoforge-1.21.1-3.0.4.jar": {
-    "jarName": "moonlight-neoforge-1.21.1-3.0.4.jar",
+  "moonlight-neoforge-1.21.1-3.0.5.jar": {
+    "jarName": "moonlight-neoforge-1.21.1-3.0.5.jar",
     "modId": "moonlight",
     "name": "Moonlight Lib",
-    "version": "1.21.1-3.0.4",
-    "curseForgeHash": 4110573912,
-    "modrinthHash": "4a2e028c231d4662072f40c23bfac7b8438677f5"
+    "version": "1.21.1-3.0.5",
+    "curseForgeHash": 816371809,
+    "modrinthHash": "c37ec1c8f2798354ff37851a5c620ca5d2564c2b"
   },
   "MouseTweaks-neoforge-mc1.21-2.26.1.jar": {
     "jarName": "MouseTweaks-neoforge-mc1.21-2.26.1.jar",
@@ -799,13 +799,13 @@
     "curseForgeHash": 1832598742,
     "modrinthHash": "55eb706279d561d33c7709cfc2517a8388fb73e7"
   },
-  "sensible_stackables-2.1.3+1.21.1-neoforge.jar": {
-    "jarName": "sensible_stackables-2.1.3+1.21.1-neoforge.jar",
+  "sensible_stackables-2.1.3-hotfix.1+1.21.1-neoforge.jar": {
+    "jarName": "sensible_stackables-2.1.3-hotfix.1+1.21.1-neoforge.jar",
     "modId": "sensible_stackables",
     "name": "Sensible Stackables",
-    "version": "2.1.3",
-    "curseForgeHash": 2579472545,
-    "modrinthHash": "6c19d4878cc067980b7be2c139237ca34d0ca7b4"
+    "version": "2.1.3-hotfix.1",
+    "curseForgeHash": 3981274483,
+    "modrinthHash": "9beee02b8ae5a3fb032e6be9af5e91c605085abd"
   },
   "shadowdrop-1.1.1-1.21.1-neoforge.jar": {
     "jarName": "shadowdrop-1.1.1-1.21.1-neoforge.jar",
@@ -951,13 +951,13 @@
     "curseForgeHash": 3750613472,
     "modrinthHash": "fae8bb9f13cd9d086949b9aca85956bb6fa47f56"
   },
-  "voicechat-neoforge-1.21.1-2.6.16.jar": {
-    "jarName": "voicechat-neoforge-1.21.1-2.6.16.jar",
+  "voicechat-neoforge-1.21.1-2.6.17.jar": {
+    "jarName": "voicechat-neoforge-1.21.1-2.6.17.jar",
     "modId": "voicechat",
     "name": "Simple Voice Chat",
-    "version": "1.21.1-2.6.16",
-    "curseForgeHash": 3466078567,
-    "modrinthHash": "d813f78eeeb6a27e2529df098128a12e4c043dd8"
+    "version": "1.21.1-2.6.17",
+    "curseForgeHash": 36683050,
+    "modrinthHash": "55fc0d529318620bd2ce7a635657014c5c98e189"
   },
   "waveycapes-neoforge-1.9.2-mc1.21.1.jar": {
     "jarName": "waveycapes-neoforge-1.9.2-mc1.21.1.jar",
@@ -999,12 +999,12 @@
     "curseForgeHash": 2091397344,
     "modrinthHash": "c9a53b7a883af87b4306388c389a9b90791348b5"
   },
-  "zipline-neoforge-1.21.1-1.2.0.jar": {
-    "jarName": "zipline-neoforge-1.21.1-1.2.0.jar",
+  "zipline-neoforge-1.21.1-1.2.1.jar": {
+    "jarName": "zipline-neoforge-1.21.1-1.2.1.jar",
     "modId": "zipline",
     "name": "Zipline",
-    "version": "1.2.0",
-    "curseForgeHash": 4201249590,
-    "modrinthHash": "4892294a2840b3e6d18c43b0dced34741de0856b"
+    "version": "1.2.1",
+    "curseForgeHash": 1672053844,
+    "modrinthHash": "409e346986929da172975194d00a83877670ec3d"
   }
 }
