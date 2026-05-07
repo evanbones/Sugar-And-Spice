@@ -16,56 +16,58 @@ import java.util.zip.ZipOutputStream;
 public class ResourceBaker {
 
     public static void bakeFromManifest(Path cacheDir, Path manifestPath, Path resourcePacksDir) {
-        SpicedCider.LOGGER.info("Baking resource packs using Spiced Cider Manifest...");
+        if (!Files.exists(manifestPath)) return;
 
-        try (Reader reader = Files.newBufferedReader(manifestPath)) {
-            Gson gson = new Gson();
-            PackManifest manifestObj = gson.fromJson(reader, PackManifest.class);
+        try {
+            Files.createDirectories(cacheDir);
 
-            if (manifestObj == null || manifestObj.packs == null) return;
+            try (Reader reader = Files.newBufferedReader(manifestPath)) {
+                Gson gson = new Gson();
+                PackManifest manifestObj = gson.fromJson(reader, PackManifest.class);
 
-            for (Map.Entry<String, List<String>> entry : manifestObj.packs.entrySet()) {
-                String sourceZipName = entry.getKey();
-                List<String> filesToExtract = entry.getValue();
+                if (manifestObj == null || manifestObj.packs == null) return;
 
-                Path packFile = resourcePacksDir.resolve(sourceZipName);
-                if (!Files.exists(packFile)) {
-                    SpicedCider.LOGGER.warn("Missing required pack for JIT compile: {}", sourceZipName);
-                    continue;
-                }
+                for (Map.Entry<String, List<String>> entry : manifestObj.packs.entrySet()) {
+                    String sourceZipName = entry.getKey();
+                    List<String> filesToExtract = entry.getValue();
 
-                String cacheZipName = sourceZipName.replace(".zip", "_jit.zip");
-                Path cacheZip = cacheDir.resolve(cacheZipName);
+                    Path packFile = resourcePacksDir.resolve(sourceZipName);
+                    if (!Files.exists(packFile)) continue;
 
-                try (ZipFile zip = new ZipFile(packFile.toFile());
-                     ZipOutputStream zos = new ZipOutputStream(Files.newOutputStream(cacheZip))) {
+                    String cacheZipName = sourceZipName.replace(".zip", "_jit.zip");
+                    Path cacheZip = cacheDir.resolve(cacheZipName);
 
-                    ZipEntry metaEntry = zip.getEntry("pack.mcmeta");
-                    if (metaEntry != null) {
-                        zos.putNextEntry(new ZipEntry("pack.mcmeta"));
-                        try (InputStream is = zip.getInputStream(metaEntry)) {
-                            is.transferTo(zos);
-                        }
-                        zos.closeEntry();
-                    }
+                    if (Files.exists(cacheZip)) continue;
 
-                    for (String targetPath : filesToExtract) {
-                        if (targetPath.equals("pack.mcmeta")) continue;
+                    try (ZipFile zip = new ZipFile(packFile.toFile());
+                         ZipOutputStream zos = new ZipOutputStream(Files.newOutputStream(cacheZip))) {
 
-                        ZipEntry zipEntry = zip.getEntry(targetPath);
-                        if (zipEntry != null) {
-                            zos.putNextEntry(new ZipEntry(targetPath));
-                            try (InputStream is = zip.getInputStream(zipEntry)) {
+                        ZipEntry metaEntry = zip.getEntry("pack.mcmeta");
+                        if (metaEntry != null) {
+                            zos.putNextEntry(new ZipEntry("pack.mcmeta"));
+                            try (InputStream is = zip.getInputStream(metaEntry)) {
                                 is.transferTo(zos);
                             }
                             zos.closeEntry();
                         }
+
+                        for (String targetPath : filesToExtract) {
+                            if (targetPath.equals("pack.mcmeta")) continue;
+
+                            ZipEntry zipEntry = zip.getEntry(targetPath);
+                            if (zipEntry != null) {
+                                zos.putNextEntry(new ZipEntry(targetPath));
+                                try (InputStream is = zip.getInputStream(zipEntry)) {
+                                    is.transferTo(zos);
+                                }
+                                zos.closeEntry();
+                            }
+                        }
                     }
-                    SpicedCider.LOGGER.info("Successfully compiled JIT cache for: {}", sourceZipName);
                 }
             }
         } catch (Exception e) {
-            SpicedCider.LOGGER.error("Failed to bake resources from manifest!", e);
+            SpicedCider.LOGGER.error("Failed to bake resources", e);
         }
     }
 }

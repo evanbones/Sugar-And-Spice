@@ -1,7 +1,6 @@
 package com.evandev.spicedcider.events;
 
 import com.evandev.spicedcider.SpicedCider;
-import com.evandev.spicedcider.resource.ResourceBaker;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.packs.FilePackResources;
 import net.minecraft.server.packs.PackLocationInfo;
@@ -25,54 +24,37 @@ public class PackInjectionEvent {
 
     @SubscribeEvent
     public static void onAddPackFinders(AddPackFindersEvent event) {
-        if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+        if (event.getPackType() != PackType.CLIENT_RESOURCES) return;
 
-            Path gameDir = FMLPaths.GAMEDIR.get();
-            Path cacheDir = gameDir.resolve(".spicedcider_cache");
-            Path manifestPath = FMLPaths.CONFIGDIR.get().resolve("spicedcider/spicedcider_manifest.json");
-            Path resourcePacksDir = gameDir.resolve("resourcepacks");
+        Path cacheDir = FMLPaths.GAMEDIR.get().resolve(".spicedcider_cache");
+        if (!Files.exists(cacheDir)) return;
 
-            try {
-                Files.createDirectories(cacheDir);
+        try (Stream<Path> paths = Files.list(cacheDir)) {
+            paths.filter(p -> p.toString().endsWith("_jit.zip")).forEach(cacheZip -> {
+                String packId = "spicedcider_" + cacheZip.getFileName().toString().replace(".zip", "");
 
-                boolean cacheIsEmpty;
-                try (Stream<Path> s = Files.list(cacheDir)) {
-                    cacheIsEmpty = s.findAny().isEmpty();
+                PackLocationInfo info = new PackLocationInfo(
+                        packId,
+                        Component.literal("Spiced Cider JIT: " + cacheZip.getFileName()),
+                        PackSource.BUILT_IN,
+                        Optional.empty()
+                );
+
+                PackSelectionConfig selectionConfig = new PackSelectionConfig(true, Pack.Position.TOP, false);
+
+                Pack pack = Pack.readMetaAndCreate(
+                        info,
+                        new FilePackResources.FileResourcesSupplier(cacheZip),
+                        PackType.CLIENT_RESOURCES,
+                        selectionConfig
+                );
+
+                if (pack != null) {
+                    event.addRepositorySource(consumer -> consumer.accept(pack));
                 }
-
-                if (Files.exists(manifestPath) && cacheIsEmpty) {
-                    ResourceBaker.bakeFromManifest(cacheDir, manifestPath, resourcePacksDir);
-                }
-
-                try (Stream<Path> paths = Files.list(cacheDir)) {
-                    paths.filter(p -> p.toString().endsWith("_jit.zip")).forEach(cacheZip -> {
-                        String packId = "spicedcider_" + cacheZip.getFileName().toString().replace(".zip", "");
-
-                        PackLocationInfo info = new PackLocationInfo(
-                                packId,
-                                Component.literal("Spiced Cider JIT: " + cacheZip.getFileName()),
-                                PackSource.BUILT_IN,
-                                Optional.empty()
-                        );
-
-                        PackSelectionConfig selectionConfig = new PackSelectionConfig(true, Pack.Position.TOP, false);
-
-                        Pack pack = Pack.readMetaAndCreate(
-                                info,
-                                new FilePackResources.FileResourcesSupplier(cacheZip),
-                                PackType.CLIENT_RESOURCES,
-                                selectionConfig
-                        );
-
-                        if (pack != null) {
-                            event.addRepositorySource(consumer -> consumer.accept(pack));
-                            SpicedCider.LOGGER.info("Injected cache pack: {}", packId);
-                        }
-                    });
-                }
-            } catch (Exception e) {
-                SpicedCider.LOGGER.error("Fatal error setting up Spiced Cider JIT resource compiler", e);
-            }
+            });
+        } catch (Exception e) {
+            SpicedCider.LOGGER.error("Failed to inject Spiced Cider JIT packs", e);
         }
     }
 }

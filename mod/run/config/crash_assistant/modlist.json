@@ -418,6 +418,14 @@
     "curseForgeHash": 3178451079,
     "modrinthHash": "c0910f9b975aaab8545ce950539748fb33d704d1"
   },
+  "gallery-1.21.1-2.0.0.jar": {
+    "jarName": "gallery-1.21.1-2.0.0.jar",
+    "modId": "gallery",
+    "name": "Gallery",
+    "version": "2.0.0",
+    "curseForgeHash": 627315251,
+    "modrinthHash": "4b70093c91dd290b7defc81905054aa445ecd752"
+  },
   "Iceberg-1.21.1-neoforge-1.3.2.jar": {
     "jarName": "Iceberg-1.21.1-neoforge-1.3.2.jar",
     "modId": "iceberg",

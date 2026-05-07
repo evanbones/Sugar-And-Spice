@@ -6,6 +6,7 @@ import com.evandev.spicedcider.config.Reconfigurator;
 import com.evandev.spicedcider.mixin.minecraft.accessor.MapColorAccessor;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.registry.*;
+import com.evandev.spicedcider.resource.ResourceBaker;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
@@ -13,6 +14,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -22,6 +24,7 @@ import org.apache.logging.log4j.core.config.plugins.util.PluginRegistry;
 
 import java.io.IOException;
 import java.net.URI;
+import java.nio.file.Path;
 
 @Mod(SpicedCider.MOD_ID)
 public class SpicedCider {
@@ -34,11 +37,17 @@ public class SpicedCider {
      * {@link LoggerNamePatternSelector} plugin
      */
     public static final long BUNDLE_ID = 54321;
-
     public static ClassLoader CLASSLOADER;
 
     public SpicedCider(IEventBus modEventBus, ModContainer modContainer) {
         CLASSLOADER = SpicedCider.class.getClassLoader();
+
+        Path gameDir = FMLPaths.GAMEDIR.get();
+        Path cacheDir = gameDir.resolve(".spicedcider_cache");
+        Path manifestPath = FMLPaths.CONFIGDIR.get().resolve("spicedcider/spicedcider_manifest.json");
+        Path resourcePacksDir = gameDir.resolve("resourcepacks");
+
+        ResourceBaker.bakeFromManifest(cacheDir, manifestPath, resourcePacksDir);
 
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::buildContents);
@@ -58,7 +67,6 @@ public class SpicedCider {
             Reconfigurator.reconfigureWithUri(newConfigUri);
         } catch (UnsupportedOperationException | IOException e) {
             LOGGER.error("Failed to reconfigure Log4j:", e);
-            return;
         }
         LOGGER.info("Finished Log4j reconfiguration.");
     }
