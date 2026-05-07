@@ -139,6 +139,22 @@
       {
         "name": "music/game/key_door",
         "stream": true
+      },
+      {
+        "name": "music/game/divine",
+        "stream": true
+      },
+      {
+        "name": "music/game/fields",
+        "stream": true
+      },
+      {
+        "name": "music/game/forests",
+        "stream": true
+      },
+      {
+        "name": "music/game/residential",
+        "stream": true
       }
     ]
   },
