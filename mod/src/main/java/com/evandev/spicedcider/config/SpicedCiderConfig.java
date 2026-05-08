@@ -16,7 +16,6 @@ public class SpicedCiderConfig {
     public static class Common {
         public final ModConfigSpec.IntValue structureSearchTimeout;
         public final ModConfigSpec.BooleanValue useFastStructureLookup;
-        public final ModConfigSpec.BooleanValue warnMissingRegistryEntry;
         public final ModConfigSpec.IntValue mapSearchRadius;
         public final ModConfigSpec.IntValue globalSearchRadius;
         public final ModConfigSpec.IntValue locateSearchRadius;
@@ -35,9 +34,6 @@ public class SpicedCiderConfig {
 
             useFastStructureLookup = builder.comment("Enables faster structure search.")
                     .define("useFastStructureLookup", true);
-
-            warnMissingRegistryEntry = builder.comment("Prevents crashes due to missing registry entries.")
-                    .define("warnMissingRegistryEntry", true);
 
             mapSearchRadius = builder.comment("Maximum radius map items can search for structures.")
                     .defineInRange("mapSearchRadius", 40, 1, 200);
@@ -60,8 +56,6 @@ public class SpicedCiderConfig {
 
             logDuplicatedSalt = builder.comment("Log duplicated salt values to prevent overlapping structures.")
                     .define("logDuplicatedSalt", true);
-
-            builder.pop();
 
             builder.pop();
         }

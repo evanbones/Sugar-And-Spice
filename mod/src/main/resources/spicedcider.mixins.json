@@ -16,7 +16,6 @@
     "structures.LegacyRandomSourceMixin",
     "structures.LevelCreatedCallback",
     "structures.LocateCommandMixin",
-    "structures.MappedRegistryMixin",
     "structures.ModifyStructureSettingsMixin",
     "structures.PlacedFeatureErrorMixin",
     "structures.RandomSpreadStructurePlacementMixin",
