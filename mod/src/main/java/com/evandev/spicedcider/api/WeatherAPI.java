@@ -163,23 +163,8 @@ public class WeatherAPI {
 
     public static int getRainHeight(Level level, int x, int z) {
         int max = (int) getCloudHeight(level) + 4;
-
         int height = level.getHeight(Heightmap.Types.MOTION_BLOCKING, x, z);
-        if (height >= max) return max;
-
-        BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos();
-
-        for (int y = max; y > height; y--) {
-            pos.set(x, y, z);
-            net.minecraft.world.level.block.state.BlockState state = level.getBlockState(pos);
-
-            if (state.isAir()) continue;
-
-            if (state.canOcclude() || state.blocksMotion() || !state.getFluidState().isEmpty()) {
-                return y + 1;
-            }
-        }
-        return height;
+        return Math.min(height, max);
     }
 
     public static float getRainDensity(Level level, double x, double y, double z, boolean includeSnow) {

@@ -2,7 +2,6 @@ package com.evandev.spicedcider.client;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.api.WeatherAPI;
-import com.evandev.spicedcider.client.renderer.SpicedCiderLightningRenderer;
 import com.evandev.spicedcider.client.renderer.SpicedCiderRainRenderer;
 import com.evandev.spicedcider.client.renderer.SpicedCiderWeatherEffects;
 import com.evandev.spicedcider.client.renderer.WorkstoneRenderer;
@@ -11,9 +10,9 @@ import com.evandev.spicedcider.registry.ModBlockEntities;
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -26,7 +25,6 @@ public class SpicedCiderClient {
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.WORKSTONE.get(), WorkstoneRenderer::new);
-        event.registerEntityRenderer(EntityType.LIGHTNING_BOLT, SpicedCiderLightningRenderer::new);
     }
 
     @SubscribeEvent
@@ -42,26 +40,6 @@ public class SpicedCiderClient {
         );
 
         SpicedCider.LOGGER.info("Successfully registered localized weather & cloud renderer!");
-    }
-
-    @SubscribeEvent
-    public static void onRenderLevelStage(RenderLevelStageEvent event) {
-        if (event.getStage() == RenderLevelStageEvent.Stage.AFTER_WEATHER) {
-            Minecraft mc = Minecraft.getInstance();
-            if (mc.level != null) {
-                Vec3 camPos = event.getCamera().getPosition();
-
-                float partialTick = event.getPartialTick().getGameTimeDeltaPartialTick(true);
-
-                SpicedCiderRainRenderer.render(
-                        mc.level,
-                        event.getRenderTick(),
-                        partialTick,
-                        event.getPoseStack(),
-                        camPos.x, camPos.y, camPos.z
-                );
-            }
-        }
     }
 
     @SubscribeEvent

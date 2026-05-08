@@ -7,6 +7,8 @@ import com.mojang.blaze3d.vertex.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.GameRenderer;
+import net.minecraft.client.renderer.LevelRenderer;
+import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.FluidTags;
@@ -16,11 +18,9 @@ import org.joml.Matrix4f;
 import java.util.Random;
 
 public class SpicedCiderRainRenderer {
-
     private static final ResourceLocation RAIN_LOCATION = ResourceLocation.withDefaultNamespace("textures/environment/rain.png");
     private static final ResourceLocation SNOW_LOCATION = ResourceLocation.withDefaultNamespace("textures/environment/snow.png");
     private static final ResourceLocation WATER_CIRCLES_LOCATION = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "textures/environment/water_circles.png");
-
     private static final float[] randomOffset = new float[256];
     private static final byte[] randomIndex = new byte[256];
 
@@ -32,10 +32,9 @@ public class SpicedCiderRainRenderer {
         }
     }
 
-    public static void render(ClientLevel level, int ticks, float partialTick, PoseStack poseStack, double camX, double camY, double camZ) {
+    public static void render(ClientLevel level, int ticks, float partialTick, LightTexture lightTexture, PoseStack poseStack, double camX, double camY, double camZ) {
         Minecraft mc = Minecraft.getInstance();
-        int radius = mc.options.graphicsMode().get().getId() > 0 ? 10 : 5;
-        int skipRadius = (radius / 2) - 1;
+        int radius = mc.options.graphicsMode().get().getId() > 0 ? 32 : 16;
 
         int ix = Mth.floor(camX);
         int iy = Mth.floor(camY);
@@ -51,56 +50,71 @@ public class SpicedCiderRainRenderer {
         RenderSystem.defaultBlendFunc();
         RenderSystem.enableDepthTest();
         RenderSystem.depthMask(false);
-        RenderSystem.setShader(GameRenderer::getPositionTexColorShader);
+
+        RenderSystem.setShader(GameRenderer::getParticleShader);
+        lightTexture.turnOnLightLayer();
 
         Tesselator tesselator = Tesselator.getInstance();
         Matrix4f matrix = poseStack.last().pose();
 
         RenderSystem.setShaderTexture(0, RAIN_LOCATION);
-        BufferBuilder rainBuilder = tesselator.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR);
-        float rainVOffset = (timeDelta * 0.05f) % 1.0f;
+        BufferBuilder rainBuilder = tesselator.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.PARTICLE);
+        float rainVOffset = -(timeDelta * 0.05f) % 1.0f;
 
-        buildWeather(level, rainBuilder, matrix, ix, iy, iz, radius, skipRadius, 4, rainTop, camX, camY, camZ, rainVOffset, false);
-        buildWeather(level, rainBuilder, matrix, ix, iy, iz, radius, 0, 1, rainTop, camX, camY, camZ, rainVOffset, false);
+        buildWeather(level, rainBuilder, matrix, ix, iy, iz, radius, rainTop, camX, camY, camZ, rainVOffset, false);
 
         MeshData rainData = rainBuilder.build();
         if (rainData != null) BufferUploader.drawWithShader(rainData);
 
+        int circleRadius = 16;
         RenderSystem.setShaderTexture(0, WATER_CIRCLES_LOCATION);
-        BufferBuilder waterBuilder = tesselator.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR);
+        BufferBuilder waterBuilder = tesselator.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.PARTICLE);
         float circleVOffset = (timeDelta * 0.07f) % 1.0f;
-        buildWaterCircles(level, waterBuilder, matrix, ix, iy, iz, radius, camX, camY, camZ, circleVOffset);
+
+        buildWaterCircles(level, waterBuilder, matrix, ix, iy, iz, circleRadius, camX, camY, camZ, circleVOffset);
+
         MeshData waterData = waterBuilder.build();
         if (waterData != null) BufferUploader.drawWithShader(waterData);
 
         RenderSystem.setShaderTexture(0, SNOW_LOCATION);
-        BufferBuilder snowBuilder = tesselator.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR);
-        float snowVOffset = (timeDelta * 0.002f) % 1.0f;
+        BufferBuilder snowBuilder = tesselator.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.PARTICLE);
+        float snowVOffset = -(timeDelta * 0.002f) % 1.0f;
 
-        buildWeather(level, snowBuilder, matrix, ix, iy, iz, radius, skipRadius, 4, rainTop, camX, camY, camZ, snowVOffset, true);
-        buildWeather(level, snowBuilder, matrix, ix, iy, iz, radius, 0, 1, rainTop, camX, camY, camZ, snowVOffset, true);
+        buildWeather(level, snowBuilder, matrix, ix, iy, iz, radius, rainTop, camX, camY, camZ, snowVOffset, true);
 
         MeshData snowData = snowBuilder.build();
         if (snowData != null) BufferUploader.drawWithShader(snowData);
 
+        lightTexture.turnOffLightLayer();
         RenderSystem.depthMask(true);
         RenderSystem.disableBlend();
         RenderSystem.enableCull();
     }
 
-    private static void buildWeather(ClientLevel level, VertexConsumer builder, Matrix4f matrix, int ix, int iy, int iz, int radius, int skipRadius, int step, int rainTop, double camX, double camY, double camZ, float vOffset, boolean drawingSnow) {
+    private static void buildWeather(ClientLevel level, VertexConsumer builder, Matrix4f matrix, int ix, int iy, int iz, int radius, int rainTop, double camX, double camY, double camZ, float vOffset, boolean drawingSnow) {
         BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos();
 
         for (int dx = -radius; dx <= radius; dx++) {
-            int wx = step > 1 ? (ix & -step) + (dx * step) : ix + dx;
-
             for (int dz = -radius; dz <= radius; dz++) {
-                if (skipRadius > 0 && Math.abs(dx) < skipRadius && Math.abs(dz) < skipRadius) continue;
+                int wx = ix + dx;
+                int wz = iz + dz;
 
-                int wz = step > 1 ? (iz & -step) + (dz * step) : iz + dz;
+                int absX = Math.abs(dx);
+                int absZ = Math.abs(dz);
+                int maxDist = Math.max(absX, absZ);
+
+                int lodLevel = 1;
+                if (maxDist > 64) lodLevel = 8;
+                else if (maxDist > 32) lodLevel = 4;
+                else if (maxDist > 16) lodLevel = 2;
+
+                if (lodLevel > 1 && ((wx & (lodLevel - 1)) != 0 || (wz & (lodLevel - 1)) != 0)) continue;
 
                 int terrain = WeatherAPI.getRainHeight(level, wx, wz);
-                if (terrain - iy > 40) continue;
+
+                int renderBottom = Math.max(terrain, iy - 32);
+                int renderTop = Math.min(rainTop, iy + 32);
+                if (renderBottom >= renderTop) continue;
 
                 pos.set(wx, terrain, wz);
 
@@ -110,41 +124,57 @@ public class SpicedCiderRainRenderer {
                 boolean isSnowy = level.getBiome(pos).value().coldEnoughToSnow(pos);
                 if (isSnowy != drawingSnow) continue;
 
-                float v1 = randomOffset[(wx & 15) << 4 | (wz & 15)] + vOffset;
-                float v2 = ((rainTop - terrain) * 0.0625F + v1);
-
                 float alpha = WeatherAPI.sampleFront(level, wx, wz, 0.1F);
                 alpha = Mth.clamp((alpha - 0.2F) * 2, 0.5F, 1.0F);
+
+                if (lodLevel > 1) {
+                    alpha *= (1.0f - (maxDist / (float) radius) * 0.5f);
+                }
                 int aI = (int) (alpha * 255);
 
-                int light = level.getMaxLocalRawBrightness(pos);
-                int color = (int) ((light / 15.0f) * 255);
-
-                float u1 = ((wx + wz) & 3) * 0.25F;
-                float u2 = u1 + 0.25F;
+                pos.set(wx, Math.max(terrain, iy), wz);
+                int packedLight = LevelRenderer.getLightColor(level, pos);
 
                 float cX = (float) (camX - (wx + 0.5));
                 float cZ = (float) (camZ - (wz + 0.5));
                 float length = Mth.sqrt(cX * cX + cZ * cZ);
+
                 if (length > 0) {
-                    cX /= (length * 2.0f);
-                    cZ /= (length * 2.0f);
+                    length /= 0.5f;
+                    cX /= length;
+                    cZ /= length;
+
+                    float temp = cX;
+                    cX = -cZ;
+                    cZ = temp;
                 } else {
                     cX = 0.5f;
                     cZ = 0.0f;
                 }
 
-                float rx1 = (float) (wx + 0.5f - cZ - camX);
-                float rx2 = (float) (wx + 0.5f + cZ - camX);
-                float rz1 = (float) (wz + 0.5f + cX - camZ);
-                float rz2 = (float) (wz + 0.5f - cX - camZ);
-                float ryTerrain = (float) (terrain - camY);
-                float ryTop = (float) (rainTop - camY);
+                float quadSize = (float) lodLevel;
+                cX *= quadSize;
+                cZ *= quadSize;
 
-                builder.addVertex(matrix, rx1, ryTerrain, rz1).setColor(color, color, color, aI).setUv(u1, v1);
-                builder.addVertex(matrix, rx1, ryTop, rz1).setColor(color, color, color, aI).setUv(u1, v2);
-                builder.addVertex(matrix, rx2, ryTop, rz2).setColor(color, color, color, aI).setUv(u2, v2);
-                builder.addVertex(matrix, rx2, ryTerrain, rz2).setColor(color, color, color, aI).setUv(u2, v1);
+                float rx1 = (float) (wx + 0.5f - cX - camX);
+                float rx2 = (float) (wx + 0.5f + cX - camX);
+                float rz1 = (float) (wz + 0.5f + cZ - camZ);
+                float rz2 = (float) (wz + 0.5f - cZ - camZ);
+
+                float ryTerrain = (float) (renderBottom - camY);
+                float ryTop = (float) (renderTop - camY);
+
+                float u1 = ((wx + wz) & 3) * 0.25F;
+                float u2 = u1 + (0.25F * quadSize);
+
+                float baseV = randomOffset[(wx & 15) << 4 | (wz & 15)] + vOffset;
+                float vBottom = ((rainTop - renderBottom) * 0.0625F + baseV);
+                float vTop = ((rainTop - renderTop) * 0.0625F + baseV);
+
+                builder.addVertex(matrix, rx1, ryTerrain, rz1).setColor(255, 255, 255, aI).setUv(u1, vBottom).setLight(packedLight);
+                builder.addVertex(matrix, rx1, ryTop, rz1).setColor(255, 255, 255, aI).setUv(u1, vTop).setLight(packedLight);
+                builder.addVertex(matrix, rx2, ryTop, rz2).setColor(255, 255, 255, aI).setUv(u2, vTop).setLight(packedLight);
+                builder.addVertex(matrix, rx2, ryTerrain, rz2).setColor(255, 255, 255, aI).setUv(u2, vBottom).setLight(packedLight);
             }
         }
     }
@@ -174,8 +204,8 @@ public class SpicedCiderRainRenderer {
                 if (alpha > 1.0F) alpha = 1.0F;
 
                 int aI = (int) (alpha * 255);
-                int light = level.getMaxLocalRawBrightness(pos.above());
-                int color = (int) ((light / 15.0f) * 255);
+
+                int packedLight = LevelRenderer.getLightColor(level, pos.above());
 
                 float u1 = 0.0F;
                 float u2 = 1.0F;
@@ -200,10 +230,10 @@ public class SpicedCiderRainRenderer {
                 float rz = (float) (wz - camZ);
                 float ry = (float) (terrain + 0.02f - camY);
 
-                builder.addVertex(matrix, rx, ry, rz).setColor(color, color, color, aI).setUv(u1, v1);
-                builder.addVertex(matrix, rx, ry, rz + 1).setColor(color, color, color, aI).setUv(u1, v2);
-                builder.addVertex(matrix, rx + 1, ry, rz + 1).setColor(color, color, color, aI).setUv(u2, v2);
-                builder.addVertex(matrix, rx + 1, ry, rz).setColor(color, color, color, aI).setUv(u2, v1);
+                builder.addVertex(matrix, rx, ry, rz).setColor(255, 255, 255, aI).setUv(u1, v1).setLight(packedLight);
+                builder.addVertex(matrix, rx, ry, rz + 1).setColor(255, 255, 255, aI).setUv(u1, v2).setLight(packedLight);
+                builder.addVertex(matrix, rx + 1, ry, rz + 1).setColor(255, 255, 255, aI).setUv(u2, v2).setLight(packedLight);
+                builder.addVertex(matrix, rx + 1, ry, rz).setColor(255, 255, 255, aI).setUv(u2, v1).setLight(packedLight);
             }
         }
     }

@@ -14,6 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
 import org.joml.Matrix4f;
 
 import java.util.*;
@@ -71,14 +72,16 @@ public class SpicedCiderCloudRenderer {
         frustum.prepare(camX, camY, camZ);
 
         RenderSystem.disableCull();
-        RenderSystem.enableBlend();
+        RenderSystem.disableBlend();
         RenderSystem.defaultBlendFunc();
         RenderSystem.enableDepthTest();
         RenderSystem.depthMask(true);
 
         RenderSystem.setShader(GameRenderer::getRendertypeCloudsShader);
         RenderSystem.setShaderTexture(0, CLOUD_TEXTURE);
-        RenderSystem.setShaderColor(1.0f, 1.0f, 1.0f, 0.9f);
+
+        Vec3 cloudColor = level.getCloudColor(partialTick);
+        RenderSystem.setShaderColor((float) cloudColor.x, (float) cloudColor.y, (float) cloudColor.z, 1.0f);
 
         poseStack.pushPose();
         poseStack.last().pose().mul(modelViewMatrix);

@@ -1,7 +1,6 @@
 package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
-import com.evandev.spicedcider.content.block.LightningLightBlock;
 import com.evandev.spicedcider.content.block.WorkstoneBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -14,6 +13,4 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> WORKSTONE = BLOCKS.register("workstone",
             () -> new WorkstoneBlock(BlockBehaviour.Properties.of().strength(2.0f).sound(SoundType.STONE)));
-
-    public static final DeferredBlock<Block> LIGHTNING_LIGHT = BLOCKS.register("lightning_light", LightningLightBlock::new);
 }

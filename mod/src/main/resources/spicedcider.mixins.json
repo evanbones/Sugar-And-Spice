@@ -6,7 +6,6 @@
   "mixins": [
     "minecraft.FireBlockMixin",
     "minecraft.LevelMixin",
-    "minecraft.LightningBoltMixin",
     "minecraft.PrimaryLevelDataMixin",
     "minecraft.ServerLevelMixin",
     "minecraft.accessor.MapColorAccessor",
