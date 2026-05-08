@@ -2,7 +2,6 @@ package com.evandev.spicedcider.client;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.api.WeatherAPI;
-import com.evandev.spicedcider.client.renderer.SpicedCiderRainRenderer;
 import com.evandev.spicedcider.client.renderer.SpicedCiderWeatherEffects;
 import com.evandev.spicedcider.client.renderer.WorkstoneRenderer;
 import com.evandev.spicedcider.client.sound.WeatherSoundManager;
@@ -10,7 +9,6 @@ import com.evandev.spicedcider.registry.ModBlockEntities;
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.phys.Vec3;

@@ -34,7 +34,10 @@ public class SpicedCiderRainRenderer {
 
     public static void render(ClientLevel level, int ticks, float partialTick, LightTexture lightTexture, PoseStack poseStack, double camX, double camY, double camZ) {
         Minecraft mc = Minecraft.getInstance();
-        int radius = mc.options.graphicsMode().get().getId() > 0 ? 32 : 16;
+        int renderDist = mc.options.renderDistance().get() * 16;
+
+        int maxRadius = mc.options.graphicsMode().get().getId() > 0 ? 48 : 24;
+        int radius = Math.min(renderDist, maxRadius);
 
         int ix = Mth.floor(camX);
         int iy = Mth.floor(camY);
@@ -104,8 +107,7 @@ public class SpicedCiderRainRenderer {
                 int maxDist = Math.max(absX, absZ);
 
                 int lodLevel = 1;
-                if (maxDist > 64) lodLevel = 8;
-                else if (maxDist > 32) lodLevel = 4;
+                if (maxDist > 32) lodLevel = 4;
                 else if (maxDist > 16) lodLevel = 2;
 
                 if (lodLevel > 1 && ((wx & (lodLevel - 1)) != 0 || (wz & (lodLevel - 1)) != 0)) continue;
@@ -113,8 +115,7 @@ public class SpicedCiderRainRenderer {
                 int terrain = WeatherAPI.getRainHeight(level, wx, wz);
 
                 int renderBottom = Math.max(terrain, iy - 32);
-                int renderTop = Math.min(rainTop, iy + 32);
-                if (renderBottom >= renderTop) continue;
+                if (renderBottom >= rainTop) continue;
 
                 pos.set(wx, terrain, wz);
 
@@ -162,18 +163,21 @@ public class SpicedCiderRainRenderer {
                 float rz2 = (float) (wz + 0.5f - cZ - camZ);
 
                 float ryTerrain = (float) (renderBottom - camY);
-                float ryTop = (float) (renderTop - camY);
+                float ryTop = (float) (rainTop - camY);
 
                 float u1 = ((wx + wz) & 3) * 0.25F;
                 float u2 = u1 + (0.25F * quadSize);
 
-                float baseV = randomOffset[(wx & 15) << 4 | (wz & 15)] + vOffset;
-                float vBottom = ((rainTop - renderBottom) * 0.0625F + baseV);
-                float vTop = ((rainTop - renderTop) * 0.0625F + baseV);
+                boolean isStaticLOD = lodLevel == 4;
+                float activeVOffset = isStaticLOD ? 0.0F : vOffset;
+                float uvScale = (isStaticLOD && !drawingSnow) ? 0.005F : 0.0625F;
+
+                float baseV = randomOffset[(wx & 15) << 4 | (wz & 15)] + activeVOffset;
+                float vBottom = ((rainTop - renderBottom) * uvScale + baseV);
 
                 builder.addVertex(matrix, rx1, ryTerrain, rz1).setColor(255, 255, 255, aI).setUv(u1, vBottom).setLight(packedLight);
-                builder.addVertex(matrix, rx1, ryTop, rz1).setColor(255, 255, 255, aI).setUv(u1, vTop).setLight(packedLight);
-                builder.addVertex(matrix, rx2, ryTop, rz2).setColor(255, 255, 255, aI).setUv(u2, vTop).setLight(packedLight);
+                builder.addVertex(matrix, rx1, ryTop, rz1).setColor(255, 255, 255, aI).setUv(u1, baseV).setLight(packedLight);
+                builder.addVertex(matrix, rx2, ryTop, rz2).setColor(255, 255, 255, aI).setUv(u2, baseV).setLight(packedLight);
                 builder.addVertex(matrix, rx2, ryTerrain, rz2).setColor(255, 255, 255, aI).setUv(u2, vBottom).setLight(packedLight);
             }
         }

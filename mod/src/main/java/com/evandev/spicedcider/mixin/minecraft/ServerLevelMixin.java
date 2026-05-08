@@ -17,6 +17,7 @@ public abstract class ServerLevelMixin {
     @Inject(method = "tickChunk", at = @At("TAIL"))
     private void spicedcider$tickWeatherChunk(LevelChunk chunk, int randomTickSpeed, CallbackInfo ci) {
         ServerLevel level = (ServerLevel) (Object) this;
+        if (level.getGameTime() % 32 != 0) return;
 
         int chance = SpicedCiderConfig.COMMON.lightningChance.get();
         if (chance > 1 && level.random.nextInt(chance) > 0) return;

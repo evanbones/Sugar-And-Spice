@@ -26,5 +26,7 @@ public class ModLanguageProvider extends LanguageProvider {
         add("key.naming_unconvention.reroll", "Reroll World Name");
         add("subtitles.spicedcider.block.workstone.hammer", "Workstone hammered");
         add("emi.category.spicedcider.workstone", "Workstone");
+        add("title.spicedcider.config", "Spiced Cider Config");
+        add("category.spicedcider.general", "General");
     }
 }

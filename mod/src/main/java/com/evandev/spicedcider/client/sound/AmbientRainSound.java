@@ -1,8 +1,8 @@
 package com.evandev.spicedcider.client.sound;
 
-import com.evandev.spicedcider.registry.ModSounds;
 import net.minecraft.client.resources.sounds.AbstractTickableSoundInstance;
 import net.minecraft.client.resources.sounds.SoundInstance;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 
@@ -10,7 +10,7 @@ public class AmbientRainSound extends AbstractTickableSoundInstance {
     private final Player player;
 
     public AmbientRainSound(Player player, float initialVolume) {
-        super(ModSounds.WEATHER_RAIN.get(), SoundSource.WEATHER, SoundInstance.createUnseededRandom());
+        super(SoundEvents.WEATHER_RAIN, SoundSource.WEATHER, SoundInstance.createUnseededRandom());
         this.player = player;
         this.looping = true;
         this.delay = 0;

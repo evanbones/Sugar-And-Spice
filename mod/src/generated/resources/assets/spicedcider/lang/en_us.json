@@ -8,5 +8,7 @@
   "item.spicedcider.netherite_hammer": "Netherite Hammer",
   "key.category.naming_unconvention.naming_unconvention": "Naming Unconvention",
   "key.naming_unconvention.reroll": "Reroll World Name",
-  "subtitles.spicedcider.block.workstone.hammer": "Workstone hammered"
+  "subtitles.spicedcider.block.workstone.hammer": "Workstone hammered",
+  "title.spicedcider.config": "Spiced Cider Config",
+  "category.spicedcider.general": "General"
 }
