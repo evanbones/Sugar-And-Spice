@@ -1,19 +1,19 @@
-	[general]
-		# Never show full tooltip details, even when holding Shift.
-		# default: false
-		neverExpanded = false
-		# Always show full tooltip details without holding Shift.
-		# default: false
-		alwaysExpanded = false
-		# Amount of space characters between icons.
-		# default: 1
-		spacing = 1
-		# Amount of space characters between icons when the tooltip is expanded.
-		# default: 1
-		expandedSpacing = 1
-		# Change attribute tooltips in the 'inline_tooltips:shows_percentage' attribute tag to percentages.
-		# default: true
-		checkPercentageTag = true
+[general]
+	# Never show full tooltip details, even when holding Shift.
+	# default: false
+	neverExpanded = false
+	# Always show full tooltip details without holding Shift.
+	# default: false
+	alwaysExpanded = false
+	# Amount of space characters between icons.
+	# default: 1
+	spacing = 1
+	# Amount of space characters between icons when the tooltip is expanded.
+	# default: 1
+	expandedSpacing = 1
+	# Change attribute tooltips in the 'inline_tooltips:shows_percentage' attribute tag to percentages.
+	# default: true
+	checkPercentageTag = true
 
 	[iconTooltips]
 		# Add tooltips based on item attributes.
@@ -38,25 +38,25 @@
 		honeyTooltipColor = "Gold"
 		# Add tooltips based on light level.
 		# default: true
-	lightLevelTooltip = true
-	# default: Gold
-	lightLevelTooltipColor = "Gold"
-	# default: true
-	foodTooltip = true
-	# default: Gold
-	foodTooltipColor = "Gold"
-	# default: true
-	saturationTooltip = true
-	# default: Gold
-	saturationTooltipColor = "Gold"
+		lightLevelTooltip = true
+		# default: Gold
+		lightLevelTooltipColor = "Gold"
+		# default: true
+		foodTooltip = true
+		# default: Gold
+		foodTooltipColor = "Gold"
+		# default: true
+		saturationTooltip = true
+		# default: Gold
+		saturationTooltipColor = "Gold"
 
-[durabilityTooltip]
-	# Add tooltips based on durability.
-	# default: true
-	enable = true
-	# Color of the durability tooltip.
-	# default: Gray
-	text_color = "Gray"
+	[durabilityTooltip]
+		# Add tooltips based on durability.
+		# default: true
+		enable = true
+		# Color of the durability tooltip.
+		# default: Gray
+		text_color = "Gray"
 	# Always show durability tooltip.
 	# default: false
 	always_show = false

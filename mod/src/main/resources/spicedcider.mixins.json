@@ -2,6 +2,7 @@
   "required": true,
   "minVersion": "0.8",
   "package": "com.evandev.spicedcider.mixin",
+  "plugin": "com.evandev.spicedcider.mixin.SpicedCiderMixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "minecraft.accessor.MapColorAccessor",

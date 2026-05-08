@@ -182,6 +182,12 @@ repositories {
         dirs("libs")
     }
 
+    repositories {
+        maven { url = "https://maven.bawnorton.com/releases" }
+
+        maven { url = "https://maven.enjarai.dev/mirrors" }
+    }
+
     mavenCentral()
 }
 
@@ -243,7 +249,13 @@ dependencies {
     compileOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
     compileOnly "maven.modrinth:emi:1.1.22+1.21.1+neoforge"
     compileOnly "maven.modrinth:cloth-config:15.0.140+neoforge"
-
+    compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.7-beta.2"))
+    jarJar(implementation("com.github.bawnorton.mixinsquared:mixinsquared-neoforge")) {
+        version {
+            strictly "[0.3.7-beta.2,)"
+            prefer "0.3.7-beta.2"
+        }
+    }
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
