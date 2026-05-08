@@ -1,6 +1,6 @@
 package com.evandev.spicedcider;
 
-import com.evandev.spicedcider.client.gui.SpicedCiderConfigScreen;
+import com.evandev.spicedcider.integration.cloth_config.SpicedCiderConfigScreen;
 import com.evandev.spicedcider.config.ConfigFileHandler;
 import com.evandev.spicedcider.config.LoggerNamePatternSelector;
 import com.evandev.spicedcider.config.Reconfigurator;

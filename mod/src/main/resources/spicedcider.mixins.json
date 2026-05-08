@@ -4,10 +4,6 @@
   "package": "com.evandev.spicedcider.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "minecraft.FireBlockMixin",
-    "minecraft.LevelMixin",
-    "minecraft.PrimaryLevelDataMixin",
-    "minecraft.ServerLevelMixin",
     "minecraft.accessor.MapColorAccessor",
     "perf.RecipeBookMixin",
     "perf.ReloadableServerResourcesMixin",
