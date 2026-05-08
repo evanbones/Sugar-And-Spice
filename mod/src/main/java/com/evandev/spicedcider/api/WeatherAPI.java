@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.api;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.util.ImageSampler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
@@ -21,13 +22,6 @@ public class WeatherAPI {
 
     private static final float[] CLOUD_SHAPE = new float[64];
     private static final Vector2i[] OFFSETS;
-
-    // TODO: Link these to actual NeoForge config setup
-    private static final float CLOUDS_SPEED = 0.001f;
-    private static final boolean USE_VANILLA_CLOUDS = false;
-    private static final boolean ETERNAL_RAIN = false;
-    private static final boolean FREQUENT_RAIN = false;
-    private static final boolean ETERNAL_THUNDER = false;
 
     static {
         for (byte i = 0; i < 16; i++) {
@@ -62,20 +56,24 @@ public class WeatherAPI {
     public static boolean isRaining(Level level, int x, int y, int z) {
         if (level.dimensionType().ultraWarm()) return false;
 
+        BlockPos pos = new BlockPos(x, y, z);
+        if (!level.getBiome(pos).value().hasPrecipitation()) return false;
+
         if (y > getCloudHeight(level) + 8) return false;
         if (y < getRainHeight(level, x, z)) return false;
 
-        z = (int) (z - level.getGameTime() * CLOUDS_SPEED * 32);
+        double cloudsSpeed = SpicedCiderConfig.COMMON.cloudsSpeed.get();
+        z = (int) (z - level.getGameTime() * cloudsSpeed * 32);
 
-        if (ETERNAL_RAIN) {
-            return !USE_VANILLA_CLOUDS || getCloudDensity(x, 2, z, 1F) > 0.5F;
+        if (SpicedCiderConfig.COMMON.eternalRain.get()) {
+            return !SpicedCiderConfig.COMMON.useVanillaClouds.get() || getCloudDensity(x, 2, z, 1F) > 0.5F;
         }
 
         float rainFront = sampleFront(level, x, z, 0.1);
         if (rainFront < 0.2F) return false;
 
         float coverage = getCoverage(rainFront);
-        int sampleHeight = USE_VANILLA_CLOUDS ? 2 : 7;
+        int sampleHeight = SpicedCiderConfig.COMMON.useVanillaClouds.get() ? 2 : 7;
         return getCloudDensity(x, sampleHeight, z, rainFront) > coverage;
     }
 
@@ -84,7 +82,9 @@ public class WeatherAPI {
     }
 
     public static float inCloud(Level level, double x, double y, double z) {
-        z -= level.getGameTime() * CLOUDS_SPEED * 32;
+        double cloudsSpeed = SpicedCiderConfig.COMMON.cloudsSpeed.get();
+        z -= level.getGameTime() * cloudsSpeed * 32;
+
         int x1 = Mth.floor(x / 2.0) << 1;
         int y1 = Mth.floor(y / 2.0) << 1;
         int z1 = Mth.floor(z / 2.0) << 1;
@@ -119,7 +119,7 @@ public class WeatherAPI {
     }
 
     public static float getCloudDensity(int x, int y, int z, float rainFront) {
-        if (USE_VANILLA_CLOUDS) {
+        if (SpicedCiderConfig.COMMON.useVanillaClouds.get()) {
             if (y > 6) return 0;
             float shape = y == 0 || y == 5 ? 1 : 0;
             return VANILLA_CLOUDS.sample(x / 16.0, z / 16.0) * 3 - shape;
@@ -142,10 +142,10 @@ public class WeatherAPI {
     }
 
     public static float sampleFront(Level level, int x, int z, double scale) {
-        if (ETERNAL_RAIN) return 1F;
+        if (SpicedCiderConfig.COMMON.eternalRain.get()) return 1F;
 
         float front = FRONTS_SAMPLER.sample(x * scale, z * scale);
-        if (!FREQUENT_RAIN) {
+        if (!SpicedCiderConfig.COMMON.frequentRain.get()) {
             scale *= 0.7;
             front *= RAIN_DENSITY.sample(x * scale, z * scale);
         }
@@ -153,7 +153,7 @@ public class WeatherAPI {
     }
 
     public static float sampleThunderstorm(Level level, int x, int z, double scale) {
-        if (ETERNAL_THUNDER) return 1F;
+        if (SpicedCiderConfig.COMMON.eternalThunder.get()) return 1F;
         return THUNDERSTORMS.sample(x * scale, z * scale);
     }
 
@@ -174,7 +174,9 @@ public class WeatherAPI {
 
         float dx = (float) (x - x1);
         float dz = (float) (z - z1);
-        dz -= (float) ((level.getGameTime() * CLOUDS_SPEED * 32) % 1.0);
+
+        double cloudsSpeed = SpicedCiderConfig.COMMON.cloudsSpeed.get();
+        dz -= (float) ((level.getGameTime() * cloudsSpeed * 32) % 1.0);
 
         float a = getRainDensity(level, x1, y1, z1, includeSnow);
         float b = getRainDensity(level, x2, y1, z1, includeSnow);

@@ -6,6 +6,8 @@
   "mixins": [
     "minecraft.FireBlockMixin",
     "minecraft.LevelMixin",
+    "minecraft.PrimaryLevelDataMixin",
+    "minecraft.ServerLevelMixin",
     "minecraft.accessor.MapColorAccessor",
     "perf.RecipeBookMixin",
     "perf.ReloadableServerResourcesMixin",

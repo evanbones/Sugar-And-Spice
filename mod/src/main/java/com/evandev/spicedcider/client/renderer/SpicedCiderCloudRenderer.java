@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.client.renderer;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexBuffer;
@@ -47,11 +48,11 @@ public class SpicedCiderCloudRenderer {
         Minecraft mc = Minecraft.getInstance();
         if (mc.level == null) return;
 
-        double cloudSpeed = 0.001D;
+        double cloudSpeed = SpicedCiderConfig.COMMON.cloudsSpeed.get();
         double timeOffset = ((double) ticks + partialTick) * cloudSpeed * 32.0D;
 
-        int centerCX = Mth.floor(camX / 16.0);
-        int centerCZ = Mth.floor((camZ - timeOffset) / 16.0);
+        int centerCX = Mth.floor(camX / 32.0);
+        int centerCZ = Mth.floor((camZ - timeOffset) / 32.0);
 
         if (centerCX != lastCenterCX || centerCZ != lastCenterCZ) {
             lastCenterCX = centerCX;
@@ -90,10 +91,10 @@ public class SpicedCiderCloudRenderer {
             int cz = centerCZ + offset.z;
             long key = ChunkPos.asLong(cx, cz);
 
-            double chunkMinX = cx * 16;
-            double chunkMinZ = cz * 16 + timeOffset;
+            double chunkMinX = cx * 32.0;
+            double chunkMinZ = cz * 32.0 + timeOffset;
 
-            AABB chunkBox = new AABB(chunkMinX, cloudHeight, chunkMinZ, chunkMinX + 16, cloudHeight + 32, chunkMinZ + 16);
+            AABB chunkBox = new AABB(chunkMinX, cloudHeight, chunkMinZ, chunkMinX + 32.0, cloudHeight + 64.0, chunkMinZ + 32.0);
 
             if (!frustum.isVisible(chunkBox)) {
                 continue;
@@ -111,6 +112,7 @@ public class SpicedCiderCloudRenderer {
                 double shiftX = chunkMinX - camX;
                 double shiftZ = chunkMinZ - camZ;
                 poseStack.translate(shiftX, cloudHeight - camY, shiftZ);
+                poseStack.scale(2.0f, 2.0f, 2.0f);
 
                 chunk.buffer.bind();
                 chunk.buffer.drawWithShader(poseStack.last().pose(), projectionMatrix, GameRenderer.getRendertypeCloudsShader());

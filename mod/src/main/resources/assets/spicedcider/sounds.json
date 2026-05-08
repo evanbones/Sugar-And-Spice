@@ -12,5 +12,14 @@
     "sounds": [
       "spicedcider:block/workstone/hammer2"
     ]
+  },
+  "ambient.weather.rain": {
+    "category": "weather",
+    "sounds": [
+      {
+        "name": "spicedcider:ambient/rain",
+        "stream": true
+      }
+    ]
   }
 }

@@ -3,6 +3,7 @@ package com.evandev.spicedcider;
 import com.evandev.spicedcider.config.ConfigFileHandler;
 import com.evandev.spicedcider.config.LoggerNamePatternSelector;
 import com.evandev.spicedcider.config.Reconfigurator;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.mixin.minecraft.accessor.MapColorAccessor;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.registry.*;
@@ -13,6 +14,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.capabilities.Capabilities;
@@ -51,6 +53,7 @@ public class SpicedCider {
 
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::buildContents);
+        modContainer.registerConfig(ModConfig.Type.COMMON, SpicedCiderConfig.COMMON_SPEC);
 
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);

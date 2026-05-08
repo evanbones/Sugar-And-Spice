@@ -33,10 +33,4 @@ public class SpicedCiderWeatherEffects extends DimensionSpecialEffects {
         SpicedCiderCloudRenderer.render(level, ticks, partialTick, poseStack, camX, camY, camZ, modelViewMatrix, projectionMatrix);
         return true;
     }
-
-    @Override
-    public boolean renderSnowAndRain(@NotNull ClientLevel level, int ticks, float partialTick, @NotNull LightTexture lightTexture, double camX, double camY, double camZ) {
-        SpicedCiderRainRenderer.render(level, ticks, partialTick, lightTexture, camX, camY, camZ);
-        return true;
-    }
 }

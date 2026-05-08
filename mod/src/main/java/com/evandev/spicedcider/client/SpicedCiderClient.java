@@ -3,8 +3,10 @@ package com.evandev.spicedcider.client;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.api.WeatherAPI;
 import com.evandev.spicedcider.client.renderer.SpicedCiderLightningRenderer;
+import com.evandev.spicedcider.client.renderer.SpicedCiderRainRenderer;
 import com.evandev.spicedcider.client.renderer.SpicedCiderWeatherEffects;
 import com.evandev.spicedcider.client.renderer.WorkstoneRenderer;
+import com.evandev.spicedcider.client.sound.WeatherSoundManager;
 import com.evandev.spicedcider.registry.ModBlockEntities;
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
@@ -16,10 +18,7 @@ import net.minecraft.world.phys.Vec3;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
-import net.neoforged.neoforge.client.event.RegisterDimensionSpecialEffectsEvent;
-import net.neoforged.neoforge.client.event.ViewportEvent;
+import net.neoforged.neoforge.client.event.*;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class SpicedCiderClient {
@@ -43,6 +42,31 @@ public class SpicedCiderClient {
         );
 
         SpicedCider.LOGGER.info("Successfully registered localized weather & cloud renderer!");
+    }
+
+    @SubscribeEvent
+    public static void onRenderLevelStage(RenderLevelStageEvent event) {
+        if (event.getStage() == RenderLevelStageEvent.Stage.AFTER_WEATHER) {
+            Minecraft mc = Minecraft.getInstance();
+            if (mc.level != null) {
+                Vec3 camPos = event.getCamera().getPosition();
+
+                float partialTick = event.getPartialTick().getGameTimeDeltaPartialTick(true);
+
+                SpicedCiderRainRenderer.render(
+                        mc.level,
+                        event.getRenderTick(),
+                        partialTick,
+                        event.getPoseStack(),
+                        camPos.x, camPos.y, camPos.z
+                );
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onClientTick(ClientTickEvent.Post event) {
+        WeatherSoundManager.clientTick(Minecraft.getInstance());
     }
 
     @SubscribeEvent
