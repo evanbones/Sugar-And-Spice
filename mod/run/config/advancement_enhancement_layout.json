@@ -555,6 +555,10 @@
     "minecraft:adventure/spyglass_at_dragon": [
       96,
       216
+    ],
+    "minecraft:husbandry/uh_oh": [
+      32,
+      54
     ]
   },
   "tab_properties": {

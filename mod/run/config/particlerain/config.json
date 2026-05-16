@@ -8,7 +8,7 @@
     "surfaceRange": 100
   },
   "sound": {
-    "rainVolume": 0.2,
+    "rainVolume": 0.19999999,
     "snowVolume": 0.1,
     "windVolume": 0.1
   },
@@ -28,6 +28,14 @@
     "syncRegistries": true,
     "crossBiomeBorder": false,
     "useHeightmapTemp": true,
+    "weatherIgnoreBlocks": {
+      "entries": [
+        "#minecraft:fences",
+        "#minecraft:all_signs",
+        "minecraft:barrier"
+      ],
+      "isWhitelist": true
+    },
     "doSpawnHeightLimit": false,
     "spawnHeightLimit": 0
   },

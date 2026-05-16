@@ -1,0 +1,38 @@
+[cleaner]
+	#Enable biome cleaning during world generation
+	#When disabled, the mod does nothing and chunks generate normally
+	enabled = true
+	#Minimum region size in quarts (4x4 block areas) for a biome to be stable
+	#Regions smaller than this will be replaced by neighboring biomes
+	#Higher values = more aggressive cleaning, lower values = preserve more small biomes
+	# Default: 512
+	# Range: 1 ~ 1024
+	sizeThreshold = 512
+	#Biomes that should never be replaced, even if they form small regions
+	#Accepts biome IDs (e.g., "minecraft:river") or group names from advanced.json
+	neverReplace = ["rare"]
+	#Biomes that should never be used as replacements
+	#Accepts biome IDs (e.g., "minecraft:ocean") or group names from advanced.json
+	neverUseAsReplacement = ["oceans", "rivers"]
+	#Groups whose biomes are allowed to replace each other (legality only).
+	#For richer behaviour — preserve mid-sized regions of the group, with an
+	#optional small-region fallback — use intraGroupPreference in advanced.json.
+	#Accepts group names ONLY (must be defined in advanced.json).
+	allowIntraGroupReplacement = []
+
+[preprocessing]
+	#Enable async chunk preprocessing to warm caches ahead of chunk generation
+	#This reduces the mod's performance impact by pre-computing results
+	enabled = true
+	#Number of worker threads for preprocessing
+	#Set to 0 for auto-detection (availableProcessors / 4)
+	# Default: 0
+	# Range: 0 ~ 16
+	threadCount = 0
+	#Total memory budget in MB for algorithm caches
+	#Set to 0 for auto-sizing from JVM max heap
+	#The system distributes this across NoiseCache, WidthCache, and StabilityCache
+	#Higher values allow more cache entries, reducing computation but using more RAM
+	# Default: 0
+	# Range: 0 ~ 512
+	cacheMemoryMB = 0

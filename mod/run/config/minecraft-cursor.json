@@ -1,5 +1,5 @@
 {
-  "_hash": "95f7e92f4157aaa4",
+  "_hash": "bd17407e93d9415e",
   "itemSlotEnabled": true,
   "itemGrabbingEnabled": true,
   "creativeTabsEnabled": true,
@@ -26,74 +26,74 @@
   },
   "settings": {
     "not_allowed": {
-      "enabled": true,
-      "scale": 2.5,
+      "enabled": false,
+      "scale": 2.0,
       "xhot": 5,
       "yhot": 5
     },
     "resize_ns": {
-      "enabled": true,
-      "scale": 2.5,
+      "enabled": false,
+      "scale": 2.0,
       "xhot": 2,
       "yhot": 6
     },
     "crosshair": {
-      "enabled": true,
-      "scale": 2.5,
+      "enabled": false,
+      "scale": 2.0,
       "xhot": 5,
       "yhot": 5
     },
     "pointer": {
       "enabled": true,
-      "scale": 2.5,
-      "xhot": 3,
+      "scale": 2.0,
+      "xhot": 2,
       "yhot": 0
     },
     "default": {
       "enabled": true,
-      "scale": 2.5,
+      "scale": 2.0,
       "xhot": 0,
       "yhot": 0
     },
     "grabbing": {
       "enabled": true,
-      "scale": 2.5,
-      "xhot": 5,
-      "yhot": 2
+      "scale": 2.0,
+      "xhot": 2,
+      "yhot": 1
     },
     "shift": {
       "enabled": true,
-      "scale": 2.5,
-      "xhot": 3,
+      "scale": 2.0,
+      "xhot": 2,
       "yhot": 0
     },
     "busy": {
-      "enabled": true,
-      "scale": 2.5,
+      "enabled": false,
+      "scale": 2.0,
       "xhot": 0,
       "yhot": 4
     },
     "text": {
       "enabled": true,
-      "scale": 2.5,
+      "scale": 2.0,
       "xhot": 3,
-      "yhot": 5
+      "yhot": 4
     },
     "resize_nesw": {
-      "enabled": true,
-      "scale": 2.5,
+      "enabled": false,
+      "scale": 2.0,
       "xhot": 5,
       "yhot": 5
     },
     "resize_nwse": {
-      "enabled": true,
-      "scale": 2.5,
+      "enabled": false,
+      "scale": 2.0,
       "xhot": 5,
       "yhot": 5
     },
     "resize_ew": {
-      "enabled": true,
-      "scale": 2.5,
+      "enabled": false,
+      "scale": 2.0,
       "xhot": 6,
       "yhot": 2
     }

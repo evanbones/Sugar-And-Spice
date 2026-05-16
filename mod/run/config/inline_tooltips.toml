@@ -42,11 +42,11 @@
 	# default: Gold
 	lightLevelTooltipColor = "Gold"
 	# default: true
-	foodTooltip = true
+	foodTooltip = false
 	# default: Gold
 	foodTooltipColor = "Gold"
 	# default: true
-	saturationTooltip = true
+	saturationTooltip = false
 	# default: Gold
 	saturationTooltipColor = "Gold"
 
