@@ -13,7 +13,7 @@ tasks.register("mrpack", Zip) {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     group = "modrinth"
 
-    from("modrinth.index.json")
+    from(file("modrinth.index.json"))
 
     from("mod/run/config") {
         into "overrides/config"
