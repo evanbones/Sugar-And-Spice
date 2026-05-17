@@ -1,0 +1,13 @@
+name = "Seedy Saplings"
+filename = "Seedy Saplings.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/P6GgGa44/versions/D6SXlfmd/Seedy%20Saplings.zip"
+hash-format = "sha512"
+hash = "8f3cef567037ce5173606977e827ce925058d47293a720e71b1b222a7d5e0336ea17604b40315c0537bf3e5eb2554d21816b1764adba41635b3a4e9074c2fbfb"
+
+[update]
+[update.modrinth]
+mod-id = "P6GgGa44"
+version = "D6SXlfmd"

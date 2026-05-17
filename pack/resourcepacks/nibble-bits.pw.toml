@@ -1,0 +1,13 @@
+name = "Nibble Bits"
+filename = "Nibble Bits 1.2.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/YE0mTT26/versions/cBw2c84V/Nibble%20Bits%201.2.zip"
+hash-format = "sha512"
+hash = "2dfbf7f9edeade9d80858a37ceeb54e8b595f6b81223e114a6fa412f79295a2ac0282b1d34a32adc2e09440d092a68f3b85509c8eda1be0fead542a8cf48a06d"
+
+[update]
+[update.modrinth]
+mod-id = "YE0mTT26"
+version = "cBw2c84V"

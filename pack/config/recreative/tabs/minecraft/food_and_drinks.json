@@ -1,0 +1,1301 @@
+[
+  {
+    "action": "modify_tab",
+    "tab": [
+      "minecraft:food_and_drinks"
+    ],
+    "icon": "minecraft:golden_apple",
+    "remove_items": [],
+    "add_items": [
+      "minecraft:apple",
+      "minecraft:golden_apple",
+      "minecraft:enchanted_golden_apple",
+      "minecraft:melon_slice",
+      "minecraft:sweet_berries",
+      "minecraft:glow_berries",
+      "minecraft:chorus_fruit",
+      "minecraft:carrot",
+      "minecraft:golden_carrot",
+      "minecraft:potato",
+      "minecraft:baked_potato",
+      "minecraft:poisonous_potato",
+      "minecraft:beetroot",
+      "minecraft:dried_kelp",
+      "minecraft:beef",
+      "minecraft:cooked_beef",
+      "minecraft:porkchop",
+      "minecraft:cooked_porkchop",
+      "minecraft:mutton",
+      "minecraft:cooked_mutton",
+      "minecraft:chicken",
+      "minecraft:cooked_chicken",
+      "minecraft:rabbit",
+      "minecraft:cooked_rabbit",
+      "minecraft:cod",
+      "minecraft:cooked_cod",
+      "minecraft:salmon",
+      "minecraft:cooked_salmon",
+      "minecraft:tropical_fish",
+      "minecraft:pufferfish",
+      "minecraft:bread",
+      "minecraft:cookie",
+      "minecraft:cake",
+      "minecraft:pumpkin_pie",
+      "minecraft:rotten_flesh",
+      "minecraft:spider_eye",
+      "minecraft:mushroom_stew",
+      "minecraft:beetroot_soup",
+      "minecraft:rabbit_stew",
+      {
+        "item": "minecraft:suspicious_stew",
+        "components": {
+          "minecraft:suspicious_stew_effects": [
+            {
+              "id": "minecraft:saturation",
+              "duration": 7
+            }
+          ]
+        }
+      },
+      {
+        "item": "minecraft:suspicious_stew",
+        "components": {
+          "minecraft:suspicious_stew_effects": [
+            {
+              "id": "minecraft:night_vision",
+              "duration": 100
+            }
+          ]
+        }
+      },
+      {
+        "item": "minecraft:suspicious_stew",
+        "components": {
+          "minecraft:suspicious_stew_effects": [
+            {
+              "id": "minecraft:fire_resistance",
+              "duration": 80
+            }
+          ]
+        }
+      },
+      {
+        "item": "minecraft:suspicious_stew",
+        "components": {
+          "minecraft:suspicious_stew_effects": [
+            {
+              "id": "minecraft:blindness"
+            }
+          ]
+        }
+      },
+      {
+        "item": "minecraft:suspicious_stew",
+        "components": {
+          "minecraft:suspicious_stew_effects": [
+            {
+              "id": "minecraft:weakness",
+              "duration": 180
+            }
+          ]
+        }
+      },
+      {
+        "item": "minecraft:suspicious_stew",
+        "components": {
+          "minecraft:suspicious_stew_effects": [
+            {
+              "id": "minecraft:regeneration"
+            }
+          ]
+        }
+      },
+      {
+        "item": "minecraft:suspicious_stew",
+        "components": {
+          "minecraft:suspicious_stew_effects": [
+            {
+              "id": "minecraft:jump_boost",
+              "duration": 120
+            }
+          ]
+        }
+      },
+      {
+        "item": "minecraft:suspicious_stew",
+        "components": {
+          "minecraft:suspicious_stew_effects": [
+            {
+              "id": "minecraft:poison",
+              "duration": 240
+            }
+          ]
+        }
+      },
+      {
+        "item": "minecraft:suspicious_stew",
+        "components": {
+          "minecraft:suspicious_stew_effects": [
+            {
+              "id": "minecraft:wither"
+            }
+          ]
+        }
+      },
+      {
+        "item": "minecraft:suspicious_stew",
+        "components": {
+          "minecraft:suspicious_stew_effects": [
+            {
+              "id": "minecraft:blindness",
+              "duration": 220
+            }
+          ]
+        }
+      },
+      {
+        "item": "minecraft:suspicious_stew",
+        "components": {
+          "minecraft:suspicious_stew_effects": [
+            {
+              "id": "minecraft:nausea",
+              "duration": 140
+            }
+          ]
+        }
+      },
+      "minecraft:milk_bucket",
+      "minecraft:honey_bottle",
+      "minecraft:ominous_bottle",
+      {
+        "item": "minecraft:ominous_bottle",
+        "components": {
+          "minecraft:ominous_bottle_amplifier": 1
+        }
+      },
+      {
+        "item": "minecraft:ominous_bottle",
+        "components": {
+          "minecraft:ominous_bottle_amplifier": 2
+        }
+      },
+      {
+        "item": "minecraft:ominous_bottle",
+        "components": {
+          "minecraft:ominous_bottle_amplifier": 3
+        }
+      },
+      {
+        "item": "minecraft:ominous_bottle",
+        "components": {
+          "minecraft:ominous_bottle_amplifier": 4
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:water"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:mundane"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:thick"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:awkward"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:night_vision"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_night_vision"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:invisibility"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_invisibility"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:leaping"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_leaping"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_leaping"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:fire_resistance"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_fire_resistance"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:swiftness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_swiftness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_swiftness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:slowness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_slowness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_slowness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:turtle_master"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_turtle_master"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_turtle_master"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:water_breathing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_water_breathing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:healing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_healing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:harming"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_harming"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:poison"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_poison"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_poison"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:regeneration"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_regeneration"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_regeneration"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strength"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_strength"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_strength"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:weakness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_weakness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:luck"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:slow_falling"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_slow_falling"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:wind_charged"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:weaving"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:oozing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:infested"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:water"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:mundane"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:thick"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:awkward"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:night_vision"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_night_vision"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:invisibility"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_invisibility"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:leaping"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_leaping"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_leaping"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:fire_resistance"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_fire_resistance"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:swiftness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_swiftness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_swiftness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:slowness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_slowness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_slowness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:turtle_master"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_turtle_master"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_turtle_master"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:water_breathing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_water_breathing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:healing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_healing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:harming"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_harming"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:poison"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_poison"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_poison"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:regeneration"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_regeneration"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_regeneration"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strength"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_strength"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_strength"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:weakness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_weakness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:luck"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:slow_falling"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_slow_falling"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:wind_charged"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:weaving"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:oozing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:infested"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:water"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:mundane"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:thick"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:awkward"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:night_vision"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_night_vision"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:invisibility"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_invisibility"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:leaping"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_leaping"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_leaping"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:fire_resistance"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_fire_resistance"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:swiftness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_swiftness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_swiftness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:slowness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_slowness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_slowness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:turtle_master"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_turtle_master"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_turtle_master"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:water_breathing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_water_breathing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:healing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_healing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:harming"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_harming"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:poison"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_poison"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_poison"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:regeneration"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_regeneration"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_regeneration"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strength"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_strength"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_strength"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:weakness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_weakness"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:luck"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:slow_falling"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_slow_falling"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:wind_charged"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:weaving"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:oozing"
+          }
+        }
+      },
+      {
+        "item": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:infested"
+          }
+        }
+      }
+    ],
+    "order": []
+  }
+]

@@ -1,0 +1,13 @@
+name = "Bygone Fortress Plus"
+filename = "bygonefortress-1.0.0+1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/i4EsNEju/versions/FV3CYkhr/bygonefortress-1.0.0%2B1.21.1-neoforge.jar"
+hash-format = "sha512"
+hash = "908cf345cb197cb98647a8c8cd184e809e391313f52c9f02b3c45db842a5166efc6d864ed2b8aa0aa46bde5923a76a3040df1b3a3e896c09009c0285aa0e1275"
+
+[update]
+[update.modrinth]
+mod-id = "i4EsNEju"
+version = "FV3CYkhr"

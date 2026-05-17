@@ -1,0 +1,13 @@
+name = "Snowy Rework"
+filename = "Snowy Rework V1.1.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/Lj3J5yRp/versions/9itvXdLa/Snowy%20Rework%20V1.1.zip"
+hash-format = "sha512"
+hash = "d8b55837c818acb73802ab78c357ae11bfef8a00659bf2ed043571a6379bc04175ad76d89664d27878f23ede221f2ff7361b7afe9882645a2bee0629f6c4a119"
+
+[update]
+[update.modrinth]
+mod-id = "Lj3J5yRp"
+version = "9itvXdLa"

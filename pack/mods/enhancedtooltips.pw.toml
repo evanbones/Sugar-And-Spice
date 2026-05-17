@@ -1,0 +1,13 @@
+name = "EnhancedTooltips"
+filename = "EnhancedTooltips-1.9.1+neoforge.1.21.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/8H6RXl2q/versions/UfzWtspi/EnhancedTooltips-1.9.1%2Bneoforge.1.21.1.jar"
+hash-format = "sha512"
+hash = "ef1330bd3b48c135618df72a77f972634b58fa04ab5e296ff50ebb3ab8c1591b38e3bbe11ae57acf687144fe6d9a4eb6b7072d3ccd641b54f0ba32d2b6732425"
+
+[update]
+[update.modrinth]
+mod-id = "8H6RXl2q"
+version = "UfzWtspi"

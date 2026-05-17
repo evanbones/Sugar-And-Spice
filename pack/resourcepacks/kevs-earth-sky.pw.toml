@@ -1,0 +1,13 @@
+name = "Kev's Earth & Sky"
+filename = "kev's Earth and Sky v1.2.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/yBfAohkG/versions/TvDGi3R3/kev%27s%20Earth%20and%20Sky%20v1.2.zip"
+hash-format = "sha512"
+hash = "206e45d09a75d161717f2b5a88c639967280d6d3d02b678dd5d011d454dfc0d7691321c3ad4ebcc4ef58b3ca796ae8fec1ad2c6d56966b76f546879e644ab168"
+
+[update]
+[update.modrinth]
+mod-id = "yBfAohkG"
+version = "TvDGi3R3"

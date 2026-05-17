@@ -1,0 +1,13 @@
+name = "Fluff Clouds"
+filename = "Fluff Clouds.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/99tQ4j0s/versions/FWFz3j9x/Fluff%20Clouds.zip"
+hash-format = "sha512"
+hash = "89c9ff30f28e333df4f031ddcec8c9f7228786bb3c6d1ae1c87d3ba9f775b0d2273d1e32ab08207d7cc32bb5ade696e33aa092b35217e95b86815edf84462fbe"
+
+[update]
+[update.modrinth]
+mod-id = "99tQ4j0s"
+version = "FWFz3j9x"

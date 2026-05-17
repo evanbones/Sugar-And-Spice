@@ -1,0 +1,13 @@
+name = "Glowy Nether Portals"
+filename = "§d§lGlowy Nether Portals.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/k7um3II4/versions/bbL23zQU/%C2%A7d%C2%A7lGlowy%20Nether%20Portals.zip"
+hash-format = "sha512"
+hash = "a6cbeb6a9e1c525a73ed18e2e86bb8a3a2ad88fde6ca0bca9501d9a1ce5618deb36083418890bfd6b9751676203439b2189dfabf1ecbbb94e9c418219aac4ffa"
+
+[update]
+[update.modrinth]
+mod-id = "k7um3II4"
+version = "bbL23zQU"

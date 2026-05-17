@@ -1,0 +1,13 @@
+name = "Rugburn"
+filename = "Rugburn.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/Uu7Ls7bZ/versions/UO8Kb1ZB/Rugburn.zip"
+hash-format = "sha512"
+hash = "78b37ffe128663fbbb5571958931b1615ec60377e64d95ea1ff347e8b464696c0438ab00d8779ac3d4de39a92ae85a2c60c105cbe40f5bd5794efb7a3745b347"
+
+[update]
+[update.modrinth]
+mod-id = "Uu7Ls7bZ"
+version = "UO8Kb1ZB"

@@ -1,0 +1,13 @@
+name = "Modern Fast Item Frames"
+filename = "Modern Fast Item Frames 1.1.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/7I2r5V5k/versions/KPQRvzVe/Modern%20Fast%20Item%20Frames%201.1.zip"
+hash-format = "sha512"
+hash = "1f601fe82a728bbff589c180121e0c3c627f3caaff7b3deb086f8906b202066e77f22b60d880fb03ed336f1b98e09722ed4ce15c1186c3199a2f6a707d4a8bd3"
+
+[update]
+[update.modrinth]
+mod-id = "7I2r5V5k"
+version = "KPQRvzVe"

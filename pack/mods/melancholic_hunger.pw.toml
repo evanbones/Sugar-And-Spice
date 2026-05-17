@@ -1,0 +1,13 @@
+name = "Melancholic Hunger & HUD"
+filename = "melancholic_hunger-1.8.2-1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/iEhfOVYR/versions/vKSreUAW/melancholic_hunger-1.8.2-1.21.1-neoforge.jar"
+hash-format = "sha512"
+hash = "cb4643637592df87808fceba69fd3a3f8cd975bbef35a685593d1dc49db3d825474ac95f7e64212c4099e512d48323c11107c4b850933621f2e2ac25e7f1a312"
+
+[update]
+[update.modrinth]
+mod-id = "iEhfOVYR"
+version = "vKSreUAW"

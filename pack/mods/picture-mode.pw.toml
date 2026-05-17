@@ -1,0 +1,13 @@
+name = "Picture Mode"
+filename = "picturemode-neoforge-1.1.3+1.21.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/kFU5UCQz/versions/DDrs65Hj/picturemode-neoforge-1.1.3%2B1.21.1.jar"
+hash-format = "sha512"
+hash = "6161b9e98565f938d5ae132a94855d58d619da06a71a8e971fe7445ddaa9382a97f1496c0506f938940d0975bdd5df1145348448693d9fc8297713ec35e8876e"
+
+[update]
+[update.modrinth]
+mod-id = "kFU5UCQz"
+version = "DDrs65Hj"

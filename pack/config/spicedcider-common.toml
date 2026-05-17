@@ -1,0 +1,33 @@
+[structures]
+	#Maximum time (in seconds) a structure search is allowed to take.
+	# Default: 50
+	# Range: 1 ~ 300
+	structureSearchTimeout = 50
+	#Enables faster structure search.
+	useFastStructureLookup = true
+	#Maximum radius map items can search for structures.
+	# Default: 40
+	# Range: 1 ~ 200
+	mapSearchRadius = 40
+	#Global maximum structure search radius.
+	# Default: 70
+	# Range: 1 ~ 200
+	globalSearchRadius = 70
+	#Search radius for the locate structure command.
+	# Default: 110
+	# Range: 1 ~ 500
+	locateSearchRadius = 110
+	#Adjusts structure spacing and separation.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	spacingSeparationModifier = 1.0
+	#Log duplicated salt values to prevent overlapping structures.
+	logDuplicatedSalt = true
+
+	[structures.minimum_structure_distance]
+		#Set a minimum distance in blocks between structures generated.
+		# Default: 32
+		# Range: 16 ~ 512
+		distance = 32
+		#Enable minimum structure distance.
+		enabled = false

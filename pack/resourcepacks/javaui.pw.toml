@@ -1,0 +1,13 @@
+name = "JavaUI"
+filename = "JavaUI.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/NR2rahl9/versions/OE1OYINr/JavaUI.zip"
+hash-format = "sha512"
+hash = "79e41772c7875e41e11d8d4347f42e89d8297a9731101ef5d528336049de1c29e9c8394173b2007ef7b511b15ed321731eb0893ca0d45c4f8cc9eeb3cd221fc6"
+
+[update]
+[update.modrinth]
+mod-id = "NR2rahl9"
+version = "OE1OYINr"

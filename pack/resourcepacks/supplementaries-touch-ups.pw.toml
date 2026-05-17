@@ -1,0 +1,13 @@
+name = "Supplementaries Touch-Ups"
+filename = "Supplementaries Touch-Ups v0.2.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/RmW2nLUP/versions/NcHFuN48/Supplementaries%20Touch-Ups%20v0.2.zip"
+hash-format = "sha512"
+hash = "27bdef0f6069d7a3fe2aad93e5bf9d4d7e259a78e7a440c76d95f712d4b8aa7d821f6898df373e22f77735b37012e6ec7e5c9c54f9f21ff99845ac4fcd4eecfd"
+
+[update]
+[update.modrinth]
+mod-id = "RmW2nLUP"
+version = "NcHFuN48"

@@ -1,0 +1,13 @@
+name = "Authentic Shadows"
+filename = "Authentic Shadows_1.21+.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/kWgq7eAt/versions/2g7fYcvg/Authentic%20Shadows_1.21%2B.zip"
+hash-format = "sha512"
+hash = "73272db0fade4e5cb1c63a7f813c4b2ec754432de88e1930c556732e0668314ed722be9e162e9284741f1b862743a3f64cc68bb972f2e64625741595dbfdd5e9"
+
+[update]
+[update.modrinth]
+mod-id = "kWgq7eAt"
+version = "2g7fYcvg"

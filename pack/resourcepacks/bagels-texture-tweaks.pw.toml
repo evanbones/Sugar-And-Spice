@@ -1,0 +1,13 @@
+name = "Bagels' Texture Tweaks"
+filename = "Texture_Tweaks_v2.0.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/60J6Gy6w/versions/lqXdhW7s/Texture_Tweaks_v2.0.zip"
+hash-format = "sha512"
+hash = "451fa3d2f6e898c2626ca68eb4149328b129c0a31f1ea389b3245a2e3a65ede44b2327970f6aac373a2b700b154381c5faa445984d55930d34f0ba274df2106e"
+
+[update]
+[update.modrinth]
+mod-id = "60J6Gy6w"
+version = "lqXdhW7s"

@@ -1,0 +1,13 @@
+name = "You Take the Moon and You Take the Sun"
+filename = "You-Take-the-Moon-and-You-Take-the-Sun.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/YFnqxwD2/versions/sCRz2Ka7/You-Take-the-Moon-and-You-Take-the-Sun.zip"
+hash-format = "sha512"
+hash = "2c683368f9eb9b3dc16fc450fbafba20f54fb1041b44bce71d6bc1ad02767fd746d1434cbf57586044148588965eb4af4c8aa88e20f6bc2862541a9a0cbeb8d9"
+
+[update]
+[update.modrinth]
+mod-id = "YFnqxwD2"
+version = "sCRz2Ka7"

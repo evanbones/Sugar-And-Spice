@@ -1,0 +1,43 @@
+{
+  "favorites": [],
+  "lookup_history": [
+    {
+      "type": "item",
+      "id": "minecraft:crafting_table",
+      "amount": 64
+    },
+    "item:spicedcider:netherite_hammer{\"minecraft:damage\":44}",
+    "item:spicedcider:workstone",
+    {
+      "type": "item",
+      "id": "minecraft:gravel",
+      "amount": 33
+    },
+    "item:spicedcider:diamond_hammer",
+    "item:minecraft:copper_block",
+    "item:minecraft:copper_grate",
+    "item:minecraft:emerald_block",
+    "item:minecraft:diamond",
+    "item:minecraft:sandstone",
+    "item:minecraft:iron_ingot",
+    "item:modulation:chain_staff",
+    "item:minecraft:bamboo_mosaic",
+    "item:minecraft:diamond_sword",
+    "item:minecraft:netherite_sword",
+    {
+      "type": "fluid",
+      "id": "minecraft:water",
+      "amount": 0
+    }
+  ],
+  "craft_history": [
+    "minecraft:chest"
+  ],
+  "recipe_defaults": {
+    "added": [],
+    "tags": {},
+    "resolutions": {},
+    "disabled": []
+  },
+  "hidden_stacks": []
+}

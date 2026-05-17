@@ -1,0 +1,17 @@
+name = "Spiced Cider"
+author = "Evan"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "b1921affcc880c425dfdfc5b5f56740761d0d6cc655dedd51893096d5a2ec6ee"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.230"
+unsup = "1.1.6"
+
+[options]
+acceptable-game-versions = []

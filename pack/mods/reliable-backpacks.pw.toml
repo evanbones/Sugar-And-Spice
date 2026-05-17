@@ -1,0 +1,13 @@
+name = "Reliable Backpacks"
+filename = "reliable_backpacks-neoforge-1.21.1-1.6.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/GVh7zzwG/versions/UxGA4X1m/reliable_backpacks-neoforge-1.21.1-1.6.0.jar"
+hash-format = "sha512"
+hash = "39a9b07a108b13118d024224cc2d314a69499f65f2e78d5369349ff0238202f3edfbc2f92eaff4eed5a14bb2e3a93f83ee090bfb85957951144071535ac0681a"
+
+[update]
+[update.modrinth]
+mod-id = "GVh7zzwG"
+version = "UxGA4X1m"

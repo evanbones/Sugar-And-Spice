@@ -1,0 +1,13 @@
+name = "Text Customiser"
+filename = "eg_text_customiser-v1.0.0-neoforge-mc1.21.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/4LTb6RoZ/versions/70fUD6UT/eg_text_customiser-v1.0.0-neoforge-mc1.21.1.jar"
+hash-format = "sha512"
+hash = "f2de65c24c55468e109e41f0ebee9a6b2f2e0d8adf329c94554d63b2d3bc402ec9da7ed11f605eaf8d94cdd4bf8dd865a1de23dea3416693025df79aa6bfc246"
+
+[update]
+[update.modrinth]
+mod-id = "4LTb6RoZ"
+version = "70fUD6UT"

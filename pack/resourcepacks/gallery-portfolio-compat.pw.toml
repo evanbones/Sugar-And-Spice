@@ -1,0 +1,13 @@
+name = "Modded Gallery Compat"
+filename = "ModdedGalleryCompat1.21.1-1.6.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/cowTKSG6/versions/SNcnpqJJ/ModdedGalleryCompat1.21.1-1.6.zip"
+hash-format = "sha512"
+hash = "59f5499c2adf3813bf7979bbecb5776f65c76053600d4f13a8668d711719b761313dccd849fb517545d4cfd90dab009d43a9ba0b6e06101c7637efa840fdf18c"
+
+[update]
+[update.modrinth]
+mod-id = "cowTKSG6"
+version = "SNcnpqJJ"

@@ -1,0 +1,13 @@
+name = "Groovier Discs"
+filename = "Groovier Discs.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/EQPjrRDI/versions/MLrUaatp/Groovier%20Discs.zip"
+hash-format = "sha512"
+hash = "90a03eb19f845f7761a670ce70f44826f7ca8684c9df3431dfba163fc41d61a111fe68c3da228a8d74dba4e271ce0f5b82d101abcda2f6a261bcb99e6f98b654"
+
+[update]
+[update.modrinth]
+mod-id = "EQPjrRDI"
+version = "MLrUaatp"

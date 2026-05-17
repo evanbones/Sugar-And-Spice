@@ -1,0 +1,13 @@
+name = "Lily Padding"
+filename = "Lily Padding v1.0.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/P1mqLCS5/versions/IDULo5aF/Lily%20Padding%20v1.0.zip"
+hash-format = "sha512"
+hash = "d945056d6f052c9bb23c0044e922cac5db390d8afe0a0044848d89b16e484de49073199147da15b81ca0f7975dab34c8b6771a3c2b1c3be18a914a081e90b20c"
+
+[update]
+[update.modrinth]
+mod-id = "P1mqLCS5"
+version = "IDULo5aF"

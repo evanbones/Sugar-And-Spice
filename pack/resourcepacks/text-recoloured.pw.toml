@@ -1,0 +1,13 @@
+name = "Text Recoloured"
+filename = "TextRecoloured-v1.0.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/WGd9TgWz/versions/WkWdAtNn/TextRecoloured-v1.0.zip"
+hash-format = "sha512"
+hash = "c342844df7414729a9af3141cf487845bbb95582f812144ff333616f80c301875a1a1cf37fd8304926b72c2731df8c13d0291842ae0082032492f4e8a73a2e49"
+
+[update]
+[update.modrinth]
+mod-id = "WGd9TgWz"
+version = "WkWdAtNn"

@@ -1,0 +1,13 @@
+name = "Better Mob Models"
+filename = "Better Mob Models [V1.2].zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/fa06JGLx/versions/EMsW9nQI/Better%20Mob%20Models%20%5BV1.2%5D.zip"
+hash-format = "sha512"
+hash = "aa26cf08963f348676d1737fd401c135325c307a52dc866073e1d46e30110f0a0a79c50e16d27ffb5ba1ce0e7ba6de8821943c65e200e94858edfe5226596e96"
+
+[update]
+[update.modrinth]
+mod-id = "fa06JGLx"
+version = "EMsW9nQI"

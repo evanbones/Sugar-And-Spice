@@ -1,6 +1,0 @@
-#The default scale for fluid textures if resource packs don't provide any.
-# Default: 1
-# Range: > 1
-fallbackTextureScale = 1
-#Whether to override pack-provided scales with fallbackTextureScale.
-forceFallbackTextureScale = false

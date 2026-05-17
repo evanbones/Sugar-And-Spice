@@ -1,0 +1,8 @@
+[flavor_groups.rendering]
+name = "Rendering & Shaders"
+description = "Optional performance and shader support."
+side = "client"
+
+[[flavor_groups.rendering.choices]]
+id = "iris"
+name = "Iris"

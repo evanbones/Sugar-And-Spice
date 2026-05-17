@@ -1,0 +1,13 @@
+name = "Shadow Drop"
+filename = "shadowdrop-1.1.1-1.21.1-neoforge.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/COZRUliI/versions/wWIVncN4/shadowdrop-1.1.1-1.21.1-neoforge.jar"
+hash-format = "sha512"
+hash = "bced08b27f1d29742ddcf597d0c59f13ad64694f38a80cc10762d5b4516c780db5cc9384515e2a2064ff5855839041710444ecedab470bed1a4eaddcfe7ef0b1"
+
+[update]
+[update.modrinth]
+mod-id = "COZRUliI"
+version = "wWIVncN4"

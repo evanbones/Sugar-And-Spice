@@ -1,0 +1,13 @@
+name = "Fish No Stuck"
+filename = "fishnostuck-mc1.21.1-v1.0.4-neoforge.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/IjXg2Day/versions/Pz5c4rAl/fishnostuck-mc1.21.1-v1.0.4-neoforge.jar"
+hash-format = "sha512"
+hash = "f6a7c4a40d7f7e347e2373b3262935aae4bc79995bddddaec2fd0654a9d59def82a8efcab70ddb46ee6f97ac94bb7ac0ff9dc509f47961d5749bfb63f46bcc35"
+
+[update]
+[update.modrinth]
+mod-id = "IjXg2Day"
+version = "Pz5c4rAl"

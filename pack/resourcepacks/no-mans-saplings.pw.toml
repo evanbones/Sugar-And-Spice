@@ -1,0 +1,13 @@
+name = "No Man's Saplings"
+filename = "Seedy_Saplings_NML.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/Wvh69uCe/versions/4RZnEYiA/Seedy_Saplings_NML.zip"
+hash-format = "sha512"
+hash = "083636fa804d199a616d59f07c019566125666c55b90153bb34c06ee865fd2ca8a586f28bbfb3bd9867c04f2e99db07f61a43d1edcca63f3948fd3a484a4cb3b"
+
+[update]
+[update.modrinth]
+mod-id = "Wvh69uCe"
+version = "4RZnEYiA"

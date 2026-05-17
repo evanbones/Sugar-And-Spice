@@ -1,0 +1,13 @@
+name = "Item Sprites"
+filename = "Item Sprites.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/foKZwAsx/versions/w7zkylQU/Item%20Sprites.zip"
+hash-format = "sha512"
+hash = "65ae4e9b2b27ee6a5c84923d75bd4943d0ea3f1b89c29bc6f1e661b8b4cb7abee358ffa0ba93753e54a4db19c070ba0cf8cbc88a9183740139c3a6549325397e"
+
+[update]
+[update.modrinth]
+mod-id = "foKZwAsx"
+version = "w7zkylQU"

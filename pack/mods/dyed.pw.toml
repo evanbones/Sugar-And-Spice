@@ -1,0 +1,13 @@
+name = "Dyed"
+filename = "dyed-neoforge-1.21.1-1.2.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/5mFDTffy/versions/WSW7EpcQ/dyed-neoforge-1.21.1-1.2.1.jar"
+hash-format = "sha512"
+hash = "8eabed77b82e7eade80f5d77c6b967e072ebd369c0dd163beed570c076519f5a50b27d857f70afe29f914d9f5b50ee13eaac0fb17f5bf442d6205a66f6fa0978"
+
+[update]
+[update.modrinth]
+mod-id = "5mFDTffy"
+version = "WSW7EpcQ"

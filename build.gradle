@@ -1,48 +1,8 @@
 plugins {
     id 'net.neoforged.moddev' version '2.0.141' apply false
     id 'maven-publish'
-    id "me.modmuss50.mod-publish-plugin" version "1.1.0"
+    id "me.modmuss50.mod-publish-plugin" version "1.1.0" apply false
     id("co.uzzu.dotenv.gradle") version "4.0.0"
 }
 
-evaluationDependsOn(':mod')
-
 version = project.mod_version + "+" + project.minecraft_version
-
-tasks.register("mrpack", Zip) {
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-    group = "modrinth"
-
-    from(file("modrinth.index.json"))
-
-    from("mod/run/config") {
-        into "overrides/config"
-    }
-
-    from("mod/run/defaultconfigs") {
-        into "overrides/defaultconfigs"
-    }
-
-    from(project(":mod").tasks.named("jar")) {
-        into "overrides/mods"
-    }
-
-    archiveBaseName = "spiced-cider"
-    archiveVersion = version
-    archiveExtension = "mrpack"
-    destinationDirectory = layout.buildDirectory.dir("libs")
-}
-
-publishMods {
-    file = mrpack.archiveFile
-    displayName = "Spiced Cider " + project.version
-    type = BETA
-    modLoaders.add("neoforge")
-    changelog = file('CHANGELOG-LATEST.md').exists() ? file('CHANGELOG-LATEST.md').text.trim() : "No changelog provided."
-
-    modrinth {
-        projectId = "QEDE8kRs"
-        accessToken = providers.environmentVariable("MODRINTH_TOKEN")
-        minecraftVersions.add(project.minecraft_version)
-    }
-}

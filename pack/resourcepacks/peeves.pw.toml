@@ -1,0 +1,13 @@
+name = "Peeves"
+filename = "Peeves - 1.16x.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/lRDhSTOq/versions/DqiJEtvQ/Peeves%20-%201.16x.zip"
+hash-format = "sha512"
+hash = "cfa2ad8f16c88be519843b83d9fe5fe184cd338d4ffef0c581277555e958a02d08f69bccdd42b87ff68621ab92ee1eab5d93a2b13c1d3b7c01cfc5e8b24d98e6"
+
+[update]
+[update.modrinth]
+mod-id = "lRDhSTOq"
+version = "DqiJEtvQ"

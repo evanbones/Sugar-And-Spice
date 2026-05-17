@@ -1,0 +1,13 @@
+name = "Ginkgo Font"
+filename = "Ginkgo Font.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/Fbu2X1Dl/versions/KRxgVuYg/Ginkgo%20Font.zip"
+hash-format = "sha512"
+hash = "e070431b260fd1e2f9f52806662f900f9720314c10d92666dea6fc303bec3c59743a03f4ae1e3ec9d2517db330783b21092c4313e4e020fe3575fde1855df810"
+
+[update]
+[update.modrinth]
+mod-id = "Fbu2X1Dl"
+version = "KRxgVuYg"

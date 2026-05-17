@@ -1,0 +1,13 @@
+name = "Reliable Requiem"
+filename = "reliable_requiem-neoforge-1.21.1-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/a744zhJU/versions/hMBYBFZM/reliable_requiem-neoforge-1.21.1-1.0.0.jar"
+hash-format = "sha512"
+hash = "c4265048fb896c72c25ff6abc37dd1e64bd7920c8a652014d2f2c62e794442908a1f0c7bfbae21cc0b5af8e1bfdfc057278f4a1d8846822331d01a09aa7413a3"
+
+[update]
+[update.modrinth]
+mod-id = "a744zhJU"
+version = "hMBYBFZM"

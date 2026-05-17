@@ -1,0 +1,13 @@
+name = "Wilder Flowers"
+filename = "wilderflowers-1.1.0+1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/8lUQapTY/versions/yWhjRH1D/wilderflowers-1.1.0%2B1.21.1-neoforge.jar"
+hash-format = "sha512"
+hash = "3314036eef66769d5dc842abf8a1e5478755f91f6a49839b9a77ee5eecbb7721859c1ac739feeebce6f942d26de06575583d6f2618ba1908651255c3101b9d71"
+
+[update]
+[update.modrinth]
+mod-id = "8lUQapTY"
+version = "yWhjRH1D"

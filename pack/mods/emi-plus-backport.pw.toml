@@ -1,0 +1,13 @@
+name = "EMI++ Forked"
+filename = "emixx-neoforge-2.1.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/N9WucjHL/versions/J4BLE8ce/emixx-neoforge-2.1.0.jar"
+hash-format = "sha512"
+hash = "bf1a9e90f8ebeea3f0280ec12b9760af61bef988e941ad390cee5aef85f42187a53651a32195206c6f134c6073a729aec2fe641d73cf1adfdd0d356b7cf16d0a"
+
+[update]
+[update.modrinth]
+mod-id = "N9WucjHL"
+version = "J4BLE8ce"

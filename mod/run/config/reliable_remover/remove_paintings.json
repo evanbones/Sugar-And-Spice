@@ -1,7 +1,0 @@
-[
-  {
-    "action": "remove",
-    "items": ["minecraft:painting"],
-    "nbt": [".*minecraft:dennis.*"]
-  }
-]

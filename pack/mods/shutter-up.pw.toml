@@ -1,0 +1,13 @@
+name = "Shutter Up!"
+filename = "shutterup-neoforge-1.21.1-1.1.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/xaH4PQRj/versions/UisS50Mp/shutterup-neoforge-1.21.1-1.1.1.jar"
+hash-format = "sha512"
+hash = "d31d1f91a2cd08dfb3e08ad6996a8d233d3459eecf9b46ebf6891a874656558598fd624bd18387919f9bc0cb0e93ec16a45f25e661c5fe1d06e026aee71fef07"
+
+[update]
+[update.modrinth]
+mod-id = "xaH4PQRj"
+version = "UisS50Mp"

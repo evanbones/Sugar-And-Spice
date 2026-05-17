@@ -1,0 +1,13 @@
+name = "Recreative"
+filename = "recreative-neoforge-1.21.1-1.5.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/EBWdtRFr/versions/Y7C4kKJ3/recreative-neoforge-1.21.1-1.5.0.jar"
+hash-format = "sha512"
+hash = "ab69d859fe822ecae179132caf6eaefd6d2040805891d5b79b3a2ead886d2173b89552506528836dff54c374edd406a117b336d5f0fca87dfc8e5efa0daaa90d"
+
+[update]
+[update.modrinth]
+mod-id = "EBWdtRFr"
+version = "Y7C4kKJ3"

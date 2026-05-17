@@ -1,0 +1,13 @@
+name = "Treeliable"
+filename = "treeliable-neoforge-1.21.1-1.0.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/FllppLY0/versions/9CSywwQc/treeliable-neoforge-1.21.1-1.0.1.jar"
+hash-format = "sha512"
+hash = "2a5a7a6bb0a728329c21e5d71aa8e151b4410ab09e5df7be9e8944a42321b64d4c41950011cc1abcea15da13c1a0ffc70386a9325f644110b066df383fbaf93f"
+
+[update]
+[update.modrinth]
+mod-id = "FllppLY0"
+version = "9CSywwQc"
