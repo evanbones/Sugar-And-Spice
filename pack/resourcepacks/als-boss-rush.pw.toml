@@ -1,13 +1,13 @@
 name = "AL's Boss Rush"
-filename = "AL's Boss Rush 2.0.zip"
+filename = "AL's Boss Rush 1.1.zip"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/vUbGnkNv/versions/kHDvzAk6/AL%27s%20Boss%20Rush%202.0.zip"
+url = "https://cdn.modrinth.com/data/vUbGnkNv/versions/X5XWcasT/AL%27s%20Boss%20Rush%201.1.zip"
 hash-format = "sha512"
-hash = "970cb15b708e0225022d7450c2c2a3bedf45957a92edd5f6ee7dda1641e6c5625e10b4e670b3ac6fff550ffc970ccd34017e77283881f6aba9e5174c44647b44"
+hash = "e8138a297e7142a8f83be67e929ca2b440a2ada7d4d32bb52f89b3ff7b969718b8ba69d7ed7031d8891348805e76ae06859aa1976d2af0cb65a203cdafd4293e"
 
 [update]
 [update.modrinth]
 mod-id = "vUbGnkNv"
-version = "kHDvzAk6"
+version = "X5XWcasT"

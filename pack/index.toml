@@ -82,7 +82,7 @@ hash = "251f732f07620eab2bb5e56eb068e39e6d651d26aaa7094f59d090d9ce82ede7"
 
 [[files]]
 file = "config/c2me.toml"
-hash = "6e4f501b2e0b0f7f07e76422a2c526ae57eb9ecf25bc707edafb4339a49526d0"
+hash = "dde3d4f5e21aeb3513fe10865b2183eb50ac321f9bf93fa7d4b94e8b7f6ea9f0"
 
 [[files]]
 file = "config/capes.json5"
@@ -121,12 +121,16 @@ file = "config/cloud-layers.json"
 hash = "be76d642cea4a038424e8b4669e0c62cf2c03d62a91a8d9608697715e17a91b1"
 
 [[files]]
+file = "config/colorwheel-client.toml"
+hash = "a7d87ab03d61fecad6d297bcad9976c9e48765ca67f90b3c388419c2a70b452e"
+
+[[files]]
 file = "config/configured-client.properties"
 hash = "a9f1058d68eb630eb4783d12da4a5dea5c2f5481fdf38280e33944b9593d2d9c"
 
 [[files]]
 file = "config/connectiblechains.toml"
-hash = "58241df0d94d99854617d0cafc046c721b32c6352d072e850bbae9d4cc7aef52"
+hash = "782a42a6c2aa837d6086a3456999aabff251a6e4452a651dcd83b6a935d00779"
 
 [[files]]
 file = "config/connector.json"
@@ -154,7 +158,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "cf5c3638c07eb52f98198c9f274ea2850055dabae9204b62ac508a78d888e2d2"
+hash = "000a03b4fc70f101f6540af0a62da0e1861eb099f81641479020e33640d25ad2"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -254,7 +258,7 @@ hash = "2fede1a2083a3b775691cd6f6cbc4252436b8b331f7d78704d2ee6c3e7ca9a16"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "c86b2ce52475858b133412aaf78f33b7316f3a688f22042ac328e77b52cc80a1"
+hash = "0b24a427c11bba59ac0fbca92fc07b3d15a2e80568dd300115332add1cde59c8"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -493,8 +497,16 @@ file = "config/gallery-common.toml"
 hash = "edb48061400dd675918d7e5d1b5f0846f056ceb09f5f4eada9fa36500c9bff36"
 
 [[files]]
+file = "config/hoofprint.toml"
+hash = "1db56c8f8638cb5b63ed4ccac30b1e8506b40ba89b44642d9d838f94af5bc011"
+
+[[files]]
 file = "config/immediatelyfast.json"
 hash = "030d7c2c4b33a367d6e0ac009e0c47523c61d38ccb9fb68ea920f773645d6f19"
+
+[[files]]
+file = "config/immersiveminimaps.toml"
+hash = "c6890baf256afeeef623af9b0b10ba63c02cd27461763aa27bfc39a6799460c5"
 
 [[files]]
 file = "config/immersiveoverlays.json"
@@ -561,6 +573,18 @@ file = "config/inline_tooltips.toml"
 hash = "b7b248d72bcd28ecf32166717739cc45d4f54c8dccc5912055287877192bfb8c"
 
 [[files]]
+file = "config/iris-excluded.json"
+hash = "4d3264b58c502afaeca3f44e8d2db0843c54b8ba957afd21a2d450fe10dafefb"
+
+[[files]]
+file = "config/iris.properties"
+hash = "77b9a3c35cd76b16fee17b76305d815442a49ebcb350892a665e106e9805f008"
+
+[[files]]
+file = "config/item_descriptions.json"
+hash = "12e683fc5b7ac530122061d2e01d6b86e5e7f5ea8a0423f64e2a5edc6aab943b"
+
+[[files]]
 file = "config/item_descriptions.toml"
 hash = "5ee6a85d09d9cf06d59ff710cb0aef4803668d5afeb859b32ad5b52f16ae86ff"
 
@@ -590,11 +614,11 @@ hash = "698838e5bcf3456f9ba3f2894424538f4884de66485cb1a0ea5f7e7d2b99b025"
 
 [[files]]
 file = "config/jade/plugins.json"
-hash = "b6cc5ec329be37fba5c6a76ad87cc1ffffa08ab1891a3568d1879bbf3baedff0"
+hash = "8d93906b9e2edc196046d18d8e25d68bb24edd094bae1f7875849831eb37f713"
 
 [[files]]
 file = "config/jade/sort-order.json"
-hash = "ea6941b23a5054cd3cf42bcfe04da22b024261e1c20d85102c0c1df567193f08"
+hash = "607f31bc980670fd87eee0d2de3c6c3353a4af0e783c59233d286e1f9c324c82"
 
 [[files]]
 file = "config/jeed-client.toml"
@@ -666,7 +690,7 @@ hash = "1039b34428102ba92ef0937b905e2095a6405da760d846d7bce523716356d57d"
 
 [[files]]
 file = "config/minecraft-cursor.json"
-hash = "e087f37046df7108502078e98af71d4520a0de89ee8d4fc09e22ec81043baa86"
+hash = "d14d99ef352720eca8e5b653f063721b686f8d964ded668da56855c36e7f0d9b"
 
 [[files]]
 file = "config/misctweaks/client_config.toml"
@@ -734,7 +758,7 @@ hash = "b07e929a45bed93594b8134b856c3b791f8ba678a8c698fb52a54df17ea488b9"
 
 [[files]]
 file = "config/nostalgic_tweaks/backup/nostalgic_tweaks-client-startup_backup.json"
-hash = "bb439f20663764afcad462a41f175aab96866bf102a8f962c8f65cabff7c1bbc"
+hash = "8ebcd6aa6904cc3a298432fccb0670a9e3ea0d7812c30ae668f3f51f255e0aa4"
 
 [[files]]
 file = "config/nostalgic_tweaks/nostalgic_tweaks.json"
@@ -766,7 +790,7 @@ hash = "05022be17b8d67f7f6e766884518e40b20efc01dbfd531ad10ec009af6724342"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "30f08e6155e6b884a516fb3dacaffee35684ab90de06d3575ac9093290aee19b"
+hash = "99114c363008291fd1c6604f8f225e1b1d5f36694d95a1f615b231360b546f34"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -869,6 +893,10 @@ file = "config/reliable_backpacks.json"
 hash = "d9c5ef56d2a26f1ffd0b7d1f66c8d0b51ba4c40cec35f7dd715ceb89afe3719e"
 
 [[files]]
+file = "config/reliable_gliders.json"
+hash = "8f03e1ec1be20bac84080dd27f699c03121a12a65538b333a3a9e5e06de03b0c"
+
+[[files]]
 file = "config/reliable_recipes.json"
 hash = "51eb041341bd5c3cfa9828b20e167a4bdfe50e24593b6df8755f999d2f2c9004"
 
@@ -925,8 +953,16 @@ file = "config/scholar-common.toml"
 hash = "62e10948b3244c03963ea88598770268cd3d89e6d4e23706885b3542633e820b"
 
 [[files]]
-file = "config/screenshot_viewer-client.toml"
+file = "config/screenshot_viewer-client-1.toml.bak"
+hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
+
+[[files]]
+file = "config/screenshot_viewer-client-2.toml.bak"
 hash = "6d673586cca80f4013b43fa24738437d27ee4187e8822fd65fc496cb01391f0c"
+
+[[files]]
+file = "config/screenshot_viewer-client.toml"
+hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
 
 [[files]]
 file = "config/sensible_stackables.json"
@@ -1025,6 +1061,10 @@ file = "config/stylisheffects-client.toml"
 hash = "3d74a10c1cc93109dedd1bf71bc7a9fd3562b04a1ae93d6f58c5160695729061"
 
 [[files]]
+file = "config/surveyor.toml"
+hash = "d220d1f1d61e59ab8d55324ade670a0589e41865dc628e8937887825b7348103"
+
+[[files]]
 file = "config/tia-client.toml"
 hash = "0ca0046fd58e22689a2a94509bd273f019f401f253e872a50d7af6903b6dfb4e"
 
@@ -1094,7 +1134,7 @@ hash = "8ba8caf036bac59033157842f7812cf3eca3434a02d2e7e59648214fe42c48fc"
 
 [[files]]
 file = "config/wilderflowers.toml"
-hash = "9bad558d0f4276085eb954a63d74d5eed6b56d61f5f3a86fae310b04babba39b"
+hash = "d94260a1fd2d43101b40623f6a72ee4d5aaf07db5af31eedde419397eefb5070"
 
 [[files]]
 file = "config/worldplaytime/config.json"
@@ -1230,7 +1270,7 @@ metafile = true
 
 [[files]]
 file = "mods/clickthrough+.pw.toml"
-hash = "ffb0861ae37abc292e61208c8b7826b7b8287b24c07419083d4bb4ac109da4ee"
+hash = "5c353324f94f6b3dcf6e360290007106f8cb98d7efd623240053730a492a488e"
 metafile = true
 
 [[files]]
@@ -1454,7 +1494,7 @@ metafile = true
 
 [[files]]
 file = "mods/immersive-minimaps.pw.toml"
-hash = "5a0057be247549ede691ab68cba08858b4f8f99c28541d9cf865611b7bfe9e61"
+hash = "2e7079ec1e5f3bcc6cd322e2c2ebd8bd385e1f742d9f5b467d81b9bde0debc4c"
 metafile = true
 
 [[files]]
@@ -1484,7 +1524,7 @@ metafile = true
 
 [[files]]
 file = "mods/item-descriptions.pw.toml"
-hash = "b902e2a8d9a070dec6136632ea901f2bcb7185c41554d08128f377a1825ed495"
+hash = "96c5246d24014adb6a19ca92f26ddf4f96e388db35b88e63206598aad98745b9"
 metafile = true
 
 [[files]]
@@ -1862,7 +1902,7 @@ metafile = true
 
 [[files]]
 file = "mods/underground-rivers.pw.toml"
-hash = "191fa5df4cffa6749701f65dde920113ada74812953be01ff1750ac43ffa10a4"
+hash = "2a61b03538034ea674b73da547c77d52194dda96f8bcbd7c511b215f12fc4dc6"
 metafile = true
 
 [[files]]
@@ -1931,7 +1971,7 @@ hash = "0c97f6219949b5ef70012518bef94cd7835d936daa8be2d8ea36845bea004d20"
 
 [[files]]
 file = "resourcepacks/als-boss-rush.pw.toml"
-hash = "403c7ce0037ac7e4cba41d8771965a63c21b595c15f1fc6f09703bf2a240471d"
+hash = "c789f89ece8d4dfc5706d78e7907e07e037b195a7ada4436c2c520267a480189"
 metafile = true
 
 [[files]]
