@@ -1,0 +1,13 @@
+name = "Cloud Layers"
+filename = "cloud-layers-1.1+1.21.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/QcR2Ww1K/versions/dmdA836c/cloud-layers-1.1%2B1.21.jar"
+hash-format = "sha512"
+hash = "5daabfd4efad6e80d510015edeb5724dd82b7e43638415b9fa40b178058a566a93118ba283637f68046d5d14370c3264eb118d3c9b1c6aa21b005cf5c3a3f466"
+
+[update]
+[update.modrinth]
+mod-id = "QcR2Ww1K"
+version = "dmdA836c"

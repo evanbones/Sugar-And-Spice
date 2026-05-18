@@ -1,0 +1,13 @@
+name = "Panorama Screenshot"
+filename = "PanoramaScreenshot-1.0.0-1.21.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/K3RHGadZ/versions/ED7SK0fO/PanoramaScreenshot-1.0.0-1.21.1.jar"
+hash-format = "sha512"
+hash = "8114217abd350ec0aabea41118a1530a425f2c19c19827304328f8828f74736413abedd89b38bc8fdcce28eb81668809c4c2aca692c6fab954b04d87ab52f2ac"
+
+[update]
+[update.modrinth]
+mod-id = "K3RHGadZ"
+version = "ED7SK0fO"
