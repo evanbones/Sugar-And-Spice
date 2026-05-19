@@ -10,12 +10,15 @@ hide_from_debug = true
 # Default scale to open the minimap to.
 # default: -1
 default_scale = -1
+# Whether to apply Immersive Minimaps and Immersive Overlays requirements to Hoofprint's screen.
+# default: true
+apply_requirements_to_hoofprint = true
+# When present, Immersive Overlays can be used to gain a large amount of mod compatibility with third-party backpacks and accessory mods, and its requirements will be used rather than the configs set in Immersive Minimaps.
+# default: true
+immersive_overlays_bridge = true
 
 # Options to change the visuals of the map to be more or less vanilla-style.
 [requirements]
-	# When present, Immersive Overlays can be used to gain a large amount of mod compatibility with third-party backpacks and accessory mods, and its requirements will be used rather than the configs set in Immersive Minimaps.
-	# default: true
-	immersive_overlays_bridge = true
 	# Require an item to activate the minimap. This is the intended way to use the mod.
 	# default: true
 	require_item = true
@@ -54,3 +57,12 @@ default_scale = -1
 	# Whether to render landmarks on the map.
 	# default: true
 	draw_landmarks = true
+	# Whether to render nearby players on the map.
+	# default: true
+	draw_players = true
+	# Whether to render far-off players on the map.
+	# default: false
+	draw_offscreen_players = false
+	# Whether to render all players with their locator bar colours, or to just default to green.
+	# default: true
+	draw_players_with_locator_bar_colours = true

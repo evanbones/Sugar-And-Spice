@@ -655,6 +655,22 @@
     "farmersdelight:main/get_rich_soil": [
       128,
       162
+    ],
+    "nomansland:main/dream_friend_moon": [
+      32,
+      364
+    ],
+    "nomansland:main/meet_friend_moon": [
+      64,
+      364
+    ],
+    "nomansland:main/buddy_ascension": [
+      96,
+      364
+    ],
+    "horseman:husbandry/summon_horse": [
+      32,
+      0
     ]
   },
   "tab_properties": {

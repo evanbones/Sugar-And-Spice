@@ -7,3 +7,7 @@
 	deepDarkFogModifier = true
 	#If the foggy biome fog modifier is enabled
 	foggyBiomeFogModifier = true
+
+[inverted_bell_client]
+	#Whether to apply a blur effect while teleporting via Inverted Bell
+	invertedBellBlur = true

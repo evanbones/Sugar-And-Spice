@@ -4636,7 +4636,6 @@
             "assets/minecraft/textures/block/stripped_jungle_log.png",
             "assets/minecraft/textures/block/stripped_oak_log.png",
             "assets/minecraft/textures/block/stripped_spruce_log.png",
-            "assets/minecraft/textures/entity/bat.png",
             "assets/minecraft/textures/entity/creeper/creeper.png",
             "assets/minecraft/textures/entity/horse/horse_markings_blackdots.png",
             "assets/minecraft/textures/entity/horse/horse_markings_white.png",
@@ -4669,8 +4668,7 @@
             "assets/minecraft/textures/item/spawn_egg.png",
             "assets/minecraft/textures/item/spawn_egg_overlay.png",
             "assets/minecraft/textures/item/weathered_copper_chain.png",
-            "assets/savage_and_ravage/textures/entity/creepie_sprout.png",
-            "format_20/assets/minecraft/textures/entity/bat.png"
+            "assets/savage_and_ravage/textures/entity/creepie_sprout.png"
         ],
         "RST Backport Supporter \u00a7cv1.4\u00a7r.zip": [
             "pack.mcmeta",
