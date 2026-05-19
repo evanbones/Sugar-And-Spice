@@ -16,7 +16,6 @@ PRISM_RP_DIR = Path(r"C:\Users\evan\AppData\Roaming\PrismLauncher\instances\Spic
 
 CIDER_PACKS_DIR = REPO_ROOT / "ciderpacks"
 MANIFEST_FILE = REPO_ROOT / "pack" / "config" / "spicedcider" / "spicedcider_manifest.json"
-OVERRIDES_FILE = REPO_ROOT / "pack" / "config" / "resourcepackoverrides.json"
 CACHE_DIR = Path(r"C:\Users\evan\AppData\Roaming\PrismLauncher\instances\Spiced Cider Dev\minecraft\.spicedcider_cache")
 
 
@@ -79,54 +78,6 @@ def extract_packs():
         messagebox.showerror("Error", f"An error occurred during extraction:\n{e}")
 
 
-def update_overrides(valid_names):
-    """Updates resourcepackoverrides.json to sync with currently available packs."""
-    if not OVERRIDES_FILE.exists():
-        print("  WARNING: resourcepackoverrides.json not found. Skipping overrides update.")
-        return
-
-    print("  Syncing resourcepackoverrides.json...")
-
-    with open(OVERRIDES_FILE, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-    valid_file_entries = [f"file/{name}.zip" for name in valid_names]
-    valid_jit_entries = [f"spicedcider_{name}_jit" for name in valid_names]
-
-    all_assigned_packs = set()
-    for key, value in data.get("pack_overrides", {}).items():
-        if isinstance(value, list):
-            all_assigned_packs.update(value)
-
-    list_1 = data.get("pack_overrides", {}).get("1", [])
-    new_list_1 = [x for x in list_1 if not x.startswith("file/") or x in valid_file_entries]
-
-    for entry in valid_file_entries:
-        if entry not in all_assigned_packs and entry not in new_list_1:
-            new_list_1.append(entry)
-            all_assigned_packs.add(entry)
-            print(f"    Added to 1: {entry}")
-
-    data["pack_overrides"]["1"] = new_list_1
-
-    list_2 = data.get("pack_overrides", {}).get("2", [])
-    new_list_2 = [x for x in list_2 if
-                  not (x.startswith("spicedcider_") and x.endswith("_jit")) or x in valid_jit_entries]
-
-    for entry in valid_jit_entries:
-        if entry not in all_assigned_packs and entry not in new_list_2:
-            new_list_2.append(entry)
-            all_assigned_packs.add(entry)
-            print(f"    Added to 2: {entry}")
-
-    data["pack_overrides"]["2"] = new_list_2
-
-    with open(OVERRIDES_FILE, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2)
-
-    print("  resourcepackoverrides.json successfully synced!")
-
-
 def build_manifest():
     try:
         print("Building manifest...")
@@ -136,7 +87,6 @@ def build_manifest():
             shutil.rmtree(CACHE_DIR)
 
         MANIFEST_FILE.parent.mkdir(parents=True, exist_ok=True)
-        valid_names = get_valid_pack_names()
 
         manifest_data = {"packs": {}}
 
@@ -174,10 +124,7 @@ def build_manifest():
             json.dump(manifest_data, f, indent=4)
 
         print(f"  Manifest written to {MANIFEST_FILE}")
-
-        update_overrides(valid_names)
-
-        messagebox.showinfo("Success", f"Manifest successfully built and overrides updated!")
+        messagebox.showinfo("Success", f"Manifest successfully built!")
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred while building the manifest:\n{e}")
 
@@ -247,7 +194,7 @@ def run_gui():
     btn_restore = tk.Button(root, text="Restore from Manifest", command=restore_from_manifest, width=20, pady=5)
     btn_restore.pack(pady=5)
 
-    btn_build = tk.Button(root, text="Build Manifest & Sync", command=build_manifest, width=20, pady=5)
+    btn_build = tk.Button(root, text="Build Manifest", command=build_manifest, width=20, pady=5)
     btn_build.pack(pady=5)
 
     root.mainloop()

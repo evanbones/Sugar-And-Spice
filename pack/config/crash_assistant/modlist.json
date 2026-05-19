@@ -61,14 +61,6 @@
     "curseForgeHash": 418634412,
     "modrinthHash": "6ca11d3cc136bf69bb8f4d56982481eb85b5100b"
   },
-  "astrocraft-1.5.1+1.21.jar": {
-    "jarName": "astrocraft-1.5.1+1.21.jar",
-    "modId": "astrocraft",
-    "name": "Astrocraft",
-    "version": "1.5.1+1.21",
-    "curseForgeHash": 1091444416,
-    "modrinthHash": "71648422d96b7b20ba906698c22c9a6458c5aa3d"
-  },
   "auditory-0.0.7-1.21.1.jar": {
     "jarName": "auditory-0.0.7-1.21.1.jar",
     "modId": "auditory",
@@ -196,14 +188,6 @@
     "version": "1.1+1.21",
     "curseForgeHash": 1406418159,
     "modrinthHash": "655a2f521636e5eb51c74e056cb0e07bbb0dfbaa"
-  },
-  "colorwheel-neoforge-1.2.6+mc1.21.1.jar": {
-    "jarName": "colorwheel-neoforge-1.2.6+mc1.21.1.jar",
-    "modId": "colorwheel",
-    "name": "Colorwheel",
-    "version": "1.2.6+mc1.21.1",
-    "curseForgeHash": 2561868415,
-    "modrinthHash": "d482d4b6bffe9809b7ca8774fa390cb7b28af3cd"
   },
   "configured-neoforge-1.21.1-2.6.3.jar": {
     "jarName": "configured-neoforge-1.21.1-2.6.3.jar",
@@ -610,14 +594,6 @@
     "curseForgeHash": 701602754,
     "modrinthHash": "2a42d21a354950ab6c205c5eeb86c1e0250f2f9b"
   },
-  "iris-neoforge-1.8.12+mc1.21.1.jar": {
-    "jarName": "iris-neoforge-1.8.12+mc1.21.1.jar",
-    "modId": "iris",
-    "name": "Iris",
-    "version": "1.8.12-snapshot+mc1.21.1-local",
-    "curseForgeHash": 2055048874,
-    "modrinthHash": "a3e6355915c7d3b2bc392724795113e51d289378"
-  },
   "item_descriptions-2.7.2+1.21.1-neoforge.jar": {
     "jarName": "item_descriptions-2.7.2+1.21.1-neoforge.jar",
     "modId": "item_descriptions",
@@ -642,13 +618,13 @@
     "curseForgeHash": 903616080,
     "modrinthHash": "144ffaf459b58db14614a7e1ef3425c2594e30b6"
   },
-  "Kiwi-1.21.1-NeoForge-15.8.3.jar": {
-    "jarName": "Kiwi-1.21.1-NeoForge-15.8.3.jar",
+  "Kiwi-1.21.1-NeoForge-15.8.4.jar": {
+    "jarName": "Kiwi-1.21.1-NeoForge-15.8.4.jar",
     "modId": "kiwi",
     "name": "Kiwi Library",
-    "version": "15.8.3+neoforge",
-    "curseForgeHash": 87612617,
-    "modrinthHash": "042592fb37494fb566ae43881fc3aeecd4880f50"
+    "version": "15.8.4+neoforge",
+    "curseForgeHash": 2802643408,
+    "modrinthHash": "6bbbf8c03a896b13f9d1b71b4d7261904637c7ef"
   },
   "konkrete_neoforge_1.9.9_MC_1.21.jar": {
     "jarName": "konkrete_neoforge_1.9.9_MC_1.21.jar",
@@ -1182,6 +1158,14 @@
     "version": "21.1.2",
     "curseForgeHash": 3643301168,
     "modrinthHash": "1e987d711f5f0321f4b82b393e1a34202f69165b"
+  },
+  "subtleskybox-forge-0.2.0.jar": {
+    "jarName": "subtleskybox-forge-0.2.0.jar",
+    "modId": "subtleskybox",
+    "name": "Subtle Skybox",
+    "version": "0.2.0",
+    "curseForgeHash": 2128746693,
+    "modrinthHash": "d3e5dccdc19b6aa30627e76c23dff71c361a6a60"
   },
   "superbsteeds-1.21-r1.jar": {
     "jarName": "superbsteeds-1.21-r1.jar",

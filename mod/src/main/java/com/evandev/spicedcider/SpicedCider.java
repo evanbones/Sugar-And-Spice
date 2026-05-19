@@ -46,13 +46,6 @@ public class SpicedCider {
     public SpicedCider(IEventBus modEventBus, ModContainer modContainer) {
         CLASSLOADER = SpicedCider.class.getClassLoader();
 
-        Path gameDir = FMLPaths.GAMEDIR.get();
-        Path cacheDir = gameDir.resolve(".spicedcider_cache");
-        Path manifestPath = FMLPaths.CONFIGDIR.get().resolve("spicedcider/spicedcider_manifest.json");
-        Path resourcePacksDir = gameDir.resolve("resourcepacks");
-
-        ResourceBaker.bakeFromManifest(cacheDir, manifestPath, resourcePacksDir);
-
         modEventBus.addListener(this::buildContents);
         modContainer.registerConfig(ModConfig.Type.COMMON, SpicedCiderConfig.COMMON_SPEC);
         modContainer.registerExtensionPoint(IConfigScreenFactory.class, (mc, screen) -> SpicedCiderConfigScreen.create(screen));

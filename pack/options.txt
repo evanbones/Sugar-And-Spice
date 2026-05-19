@@ -48,7 +48,7 @@ mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["openloader/C:\\Users\\evan\\AppData\\Roaming\\PrismLauncher\\instances\\Spiced Cider\\minecraft\\config\\openloader\\packs\\spicedcider_resources","spicedcider_DerpWood_jit","spicedcider_Fluff Clouds_jit","spicedcider_Item Sprites_jit","spicedcider_kev\u0027s Earth and Sky v1.2_jit","spicedcider_Nibble Bits 1.2_jit","spicedcider_Tears \u0026 Cheers 1.3 - Panorama_jit","openloader/C:\\Users\\evan\\AppData\\Roaming\\PrismLauncher\\instances\\Spiced Cider\\minecraft\\config\\openloader\\packs\\JavaUI Cursors [Slate].zip","spicedcider_You-Take-the-Moon-and-You-Take-the-Sun_jit","mod/bigwater:resourcepacks/rekindled","spicedcider_Compact Spawn Eggs 0.3_jit"]
+resourcePacks:[]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us

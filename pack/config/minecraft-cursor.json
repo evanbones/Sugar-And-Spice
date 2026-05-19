@@ -17,7 +17,7 @@
   "veilImGuiDisableCursorChanges": true,
   "blacklist": [],
   "global": {
-    "scaleActive": true,
+    "scaleActive": false,
     "xhotActive": false,
     "yhotActive": false,
     "scale": 2.4,

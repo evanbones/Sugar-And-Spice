@@ -12,6 +12,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent if Path(__file__).resolve().p
 PACK_DIR = REPO_ROOT / "pack"
 PACKWIZ_MODS_DIR = PACK_DIR / "mods"
 PRISM_MODS_DIR = Path(r"C:\Users\evan\AppData\Roaming\PrismLauncher\instances\Spiced Cider Dev\minecraft\mods")
+
 prism_mod_cache = {}
 
 
@@ -32,8 +33,8 @@ def query_modrinth(sha1):
         if resp.status_code == 200:
             data = resp.json()
             return data.get("project_id"), data.get("id")  # project_id, version_id
-    except:
-        pass
+    except Exception as e:
+        print(f"  [API Warning] Modrinth query failed for hash {sha1}: {e}")
     return None, None
 
 
@@ -42,10 +43,12 @@ def update_prism_cache(prism_jars):
     global prism_mod_cache
     current_filenames = set(prism_jars.keys())
 
+    # Remove deleted mods from cache
     for filename in list(prism_mod_cache.keys()):
         if filename not in current_filenames:
             del prism_mod_cache[filename]
 
+    # Add or update mods in cache
     for filename, jar_path in prism_jars.items():
         stat = jar_path.stat()
 
@@ -56,8 +59,10 @@ def update_prism_cache(prism_jars):
             if stat.st_size != jar_path.stat().st_size:
                 continue
 
+            print(f"  [Cache] Hashing and checking Modrinth for: {filename}...")
             sha1 = get_sha1(jar_path)
             project_id, version_id = query_modrinth(sha1)
+            
             prism_mod_cache[filename] = {
                 'mtime': stat.st_mtime,
                 'sha1': sha1,
@@ -100,13 +105,28 @@ def get_packwiz_state():
 
 
 def sync_loop():
-    print("Watching for changes in Prism Launcher...")
+    if not PRISM_MODS_DIR.exists():
+        print(f"ERROR: Prism mods directory not found at:\n{PRISM_MODS_DIR}")
+        print("Please double-check the path in the script.")
+        return
+
+    print("Starting sync loop. Watching for changes in Prism Launcher...")
     PACKWIZ_MODS_DIR.mkdir(parents=True, exist_ok=True)
+    
+    first_run = True
 
     while True:
         try:
             prism_jars = {f.name: f for f in PRISM_MODS_DIR.iterdir() if f.is_file() and f.suffix == '.jar'}
+            
+            if first_run:
+                print(f"Found {len(prism_jars)} mods in Prism. Building initial cache (this may take a minute)...")
+                
             update_prism_cache(prism_jars)
+            
+            if first_run:
+                print("Initial cache built successfully! Now monitoring for live changes...")
+                first_run = False
 
             packwiz_state = get_packwiz_state()
 
@@ -129,11 +149,11 @@ def sync_loop():
                     subprocess.run(["packwiz", "refresh"], cwd=PACK_DIR, shell=True, stdout=subprocess.DEVNULL)
                     print(f"    -> Removed from Packwiz.")
 
+            # ADDITIONS: Mod downloaded in Prism, but missing in Packwiz
             packwiz_state = get_packwiz_state()
             pw_filenames = {mod['filename'] for mod in packwiz_state}
             pw_versions = {mod['version_id'] for mod in packwiz_state if mod['version_id']}
 
-            # ADDITIONS: Mod downloaded in Prism, but missing in Packwiz
             for p_filename, p_cache in prism_mod_cache.items():
                 if p_filename in pw_filenames:
                     continue
@@ -148,7 +168,7 @@ def sync_loop():
                     print(f"    Found on Modrinth! Importing: {dl_url}")
                     subprocess.run(["packwiz", "modrinth", "add", dl_url], cwd=PACK_DIR, shell=True)
                 else:
-                    print(f"    Not found on Modrinth (likely CurseForge). Adding as local override...")
+                    print(f"    Not found on Modrinth (likely CurseForge or local). Adding as local override...")
                     jar_path = prism_jars[p_filename]
                     shutil.copy(jar_path, PACKWIZ_MODS_DIR / p_filename)
                     subprocess.run(["packwiz", "refresh"], cwd=PACK_DIR, shell=True, stdout=subprocess.DEVNULL)

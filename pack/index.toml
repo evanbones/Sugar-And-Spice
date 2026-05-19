@@ -18,7 +18,7 @@ hash = "08af36971d8987bee93ae860f2b3f7d35f26f5061b24ee5c6b6db06ec4661357"
 
 [[files]]
 file = "config/advancement_enhancement_layout.json"
-hash = "3427abb8dc663b7e00028d465f4c8c5b543db2afc5a0f48d7b0a83527d21ce70"
+hash = "a498de4c1ea1c5dac355e1de2e312bb40566e05fbebec5bd887c3d09182362f4"
 
 [[files]]
 file = "config/advancementplaques.toml"
@@ -46,7 +46,7 @@ hash = "c9712d9a1f7dbf2786d1b0d5f351b456e4c76528b4e9987c90cd21f48bfff78f"
 
 [[files]]
 file = "config/astrocraft.json"
-hash = "2234d066eda9551d0be55eacaeca1e457ea3891724c814fe397953f434e73d94"
+hash = "1175cf90306660bd75d7e07d6eaf24b7132e61198d33e009fccf3931fbe0191d"
 
 [[files]]
 file = "config/auditory.json"
@@ -170,7 +170,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "f19019c0afd8726d51b0e17eb2d049531066a491a8b85a37eb5df02007a1323c"
+hash = "69c8ff9428a88d06d3c4c269bdf57b191709b56a050074287d619bad9fbfad7c"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -278,7 +278,7 @@ hash = "2fede1a2083a3b775691cd6f6cbc4252436b8b331f7d78704d2ee6c3e7ca9a16"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "f208439f5ce54aa4fa2dec61d17f84ff4740b5e4b731990f15ce377abb4fa03e"
+hash = "c5d61227fe0b4a9f41ed1d32b028d2344a0e6808edbbdf76b3ebeb8b5efe80a1"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -406,7 +406,7 @@ hash = "38caa491964d6b75cad63212674c4567d4bd559b6439c05c7e19bef433b394e5"
 
 [[files]]
 file = "config/fancymenu/customization/title_screen_layout.txt"
-hash = "4416a4ecda70f4b1f5ebcea2811e4d283ecf88ab6c82b04052cdba3d7656e98b"
+hash = "6a8dfe78f07329e5a03500ccb265a63274ab35ab2a2b98296f736b5038f73615"
 
 [[files]]
 file = "config/fancymenu/layout_editor/widgets/element_layer_control.lewidget"
@@ -602,7 +602,7 @@ hash = "4d3264b58c502afaeca3f44e8d2db0843c54b8ba957afd21a2d450fe10dafefb"
 
 [[files]]
 file = "config/iris.properties"
-hash = "6c6697f90758408573aa09848b5f5a594edb35afcbc9d99e8bd4a0dc9e331d7b"
+hash = "4f01cec76c13394807cf91ca6ed21aee36844a2dd2e7bba19ee7f15b31d12ff3"
 
 [[files]]
 file = "config/item_descriptions.json"
@@ -714,7 +714,7 @@ hash = "98dd8e433bac38c2f8f96d7cfdaa7ae1133e2cc78555e6e6d695d9604c3563e5"
 
 [[files]]
 file = "config/minecraft-cursor.json"
-hash = "d14d99ef352720eca8e5b653f063721b686f8d964ded668da56855c36e7f0d9b"
+hash = "0603d4d93781c3a3bef3b527b57dc33792835d547f530a2d6a1002ce0ee794e1"
 
 [[files]]
 file = "config/misctweaks/client_config.toml"
@@ -842,7 +842,7 @@ hash = "05022be17b8d67f7f6e766884518e40b20efc01dbfd531ad10ec009af6724342"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "3168d7aa08c33e812fbd69c14cfa89d69b4a8ee2d9c22e85bf98a537958df701"
+hash = "afe26d57019aa5acffcaa72831e584569644c2a49f980e70e79d2c45fd4698cd"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -958,7 +958,7 @@ hash = "1c970fc0cc8a3989889a43fdc6c40c89cabf81ffac2405f92c6abf489a410674"
 
 [[files]]
 file = "config/resourcepackoverrides.json"
-hash = "1719d890acc2ebc385cf5411362ae42311a2feda0a437baa20ab11d528aecb04"
+hash = "74c184dacc07f9b0129aae7e6dc0e2dcc5dcb90d8d4a74e52b63aa4d60e62c48"
 
 [[files]]
 file = "config/scholar-client.toml"
@@ -1222,11 +1222,6 @@ hash = "ea336d25c3e21ef168aec20e1ea470c96949ad29632646ee8e8ab0d74b4bbfc9"
 metafile = true
 
 [[files]]
-file = "mods/astrocraft.pw.toml"
-hash = "ca03f3d49a4b330ce431a9bfa4aa6b9ef879fd2983d944e9c3a81752ca258887"
-metafile = true
-
-[[files]]
 file = "mods/auditory-continued.pw.toml"
 hash = "6bba42736ec89cf47af352b8759fbed389a2e9bd72a88320d85b5e48b62492ca"
 metafile = true
@@ -1314,11 +1309,6 @@ metafile = true
 [[files]]
 file = "mods/cloud-layers.pw.toml"
 hash = "c11a339c925739cae954df73eb4d7278a46997c6b918f1ecf346448f6793c3fe"
-metafile = true
-
-[[files]]
-file = "mods/colorwheel.pw.toml"
-hash = "577ad4473d0a330b375d5fbad7836f80c5e42483ea2c243daea353380b8b39d3"
 metafile = true
 
 [[files]]
@@ -1565,11 +1555,6 @@ hash = "5592a8c0d97106286f29cf1c67a5b8979265a7b22fc3ccefd4f7ff8bc2b77ddc"
 metafile = true
 
 [[files]]
-file = "mods/iris.pw.toml"
-hash = "f67aa60c765593a8c70f78296a460349c6aef5f4a16d173eae02e8803b545ad4"
-metafile = true
-
-[[files]]
 file = "mods/item-descriptions.pw.toml"
 hash = "96c5246d24014adb6a19ca92f26ddf4f96e388db35b88e63206598aad98745b9"
 metafile = true
@@ -1586,7 +1571,7 @@ metafile = true
 
 [[files]]
 file = "mods/kiwi.pw.toml"
-hash = "6bd99925d8c80d2032caae90b8a17552b14d9217e9cf9d522e54b303c061b3e2"
+hash = "c8467cb6639000d1be9e801702e028fd2ce9c0dce6f35e1be4c9264667c9efe6"
 metafile = true
 
 [[files]]
@@ -1928,6 +1913,11 @@ hash = "3aca3ff7c21d644f10a5511fd37c39628b4300e41200710e2a670cc28e1c29f3"
 metafile = true
 
 [[files]]
+file = "mods/subtle-skybox.pw.toml"
+hash = "ed372669a465c3c7e0881c27960c75040c50e66e9ccdfc6fbf6dabc8c4ef57ad"
+metafile = true
+
+[[files]]
 file = "mods/superb-steeds.pw.toml"
 hash = "3484c19ab6590fcef8db523fd37a877567498581ad0dd88a5274b73ba41672c3"
 metafile = true
@@ -2024,7 +2014,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "0c97f6219949b5ef70012518bef94cd7835d936daa8be2d8ea36845bea004d20"
+hash = "72289afe0c240890f38ad93fcb052ae0da9e7fc3a05c5e15e57160eebcec5276"
 
 [[files]]
 file = "resourcepacks/als-boss-rush.pw.toml"

@@ -1,0 +1,13 @@
+name = "Subtle Skybox"
+filename = "subtleskybox-forge-0.2.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/18yT8qGk/versions/5koYSf65/subtleskybox-forge-0.2.0.jar"
+hash-format = "sha512"
+hash = "d7e4b6128153ebdfe93926c760faa521cb3d9b8e91399696473cf3a34413000049fe763bff1c1cdfedcf4809d3f354caf282959fc8283878a0722b286d8a2a7e"
+
+[update]
+[update.modrinth]
+mod-id = "18yT8qGk"
+version = "5koYSf65"
